@@ -21,6 +21,7 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
+    @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 size: 16:9
 paginate: true
 _paginate: false
@@ -44,8 +45,14 @@ math: true
 ## Why Use Header Files?
 
 - **Modularity:** Separate interface from implementation.
+
 - **Reusability:** Share functions and data structures.
+
 - **Readability:** Enhance code organisation.
+
+- **Function Prototypes:** Allows the compiler to check function signatures during compilation.
+
+- **Precompiled Headers:** Speeds up compilation by avoiding redundant parsing of headers in multiple source files.
 
 ---
 
@@ -59,93 +66,152 @@ graph TD
 ```
 ---
 
+<div style="font-size:26px; margin-left:410px">
+
+## Header Example
+
+</div>
+
+<div class="grid grid-cols-2 gap-4">
+<div style="font-size:26px; margin-top:1px ">
+
+```h
+// header.h
+#ifndef HEADER_H // Header guard
+#define HEADER_H // Macro
+
+#include <stdio.h> // Other libraries
+
+void greeter(); // Function prototype
+
+#define PI 3.14159 // Shared constant
+#define GR ((double)1.61803) // ""
+
+// Shared DataStorage
+struct Student {
+  char name[50];
+  int studentId;
+  float classification;
+};
+#endif // HEADER_H
+```
+</div>
+
+
+<div class="grid grid-rows-2 gap-4">
+<div style="font-size:26px">
 
 ```c
 // main.c
 #include "header.h"
-
 int main() {
-    greet();
+    greeter();
     return 0;
 }
 ```
 
+</div>
+
+<div style="font-size:26px;margin-bottom:88px">
+
+```c
+#include "header.h"
+
+void greeter(){
+    printf("Hello World!")!
+}
+
+```
+
+</div>
+
+</div>
+
+</div>
+
+---
+
+## What are Header Guards?
+
+- **Purpose:** Prevent multiple inclusions of the same header file.
+- **Issue:** Without guards, redefinitions can occur during multiple inclusions.
+- **Solution:** Use preprocessor directives to conditionally include the contents.
+
+---
+
+## Why Use Header Guards?
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+- **Avoid Redefinitions:** Prevent compilation errors due to duplicate declarations.
+
+- **Ensure Once-Only Inclusion:** Each header is included only once in a translation unit.
+
+- **Improve Compilation Efficiency:** Reduce redundant parsing of header contents.
+
+</div>
+
+<div style="margin-top:110px">
 
 ```h
-// header.h
 #ifndef HEADER_H
 #define HEADER_H
 
-// Function prototype
-void greet();
+...
 
-// Shared constant
-#define PI 3.14159
+#endif //end of HEADER_H
 
-#endif // HEADER_H
+```
+
+</div>
+</div>
+
+---
+## How Header Guards Work
+
+```mermaid
+graph TD
+  A[Main Program] -->|Include| B[Header File]
+  B -->|Include Guard Check| C[Header Content]
+  C --> D[...]
+
+  style B fill:#f9f9f9,stroke:#ddd,stroke-width:2px;
+```
+
+---
+
+## Macros
+
+Macros in C are a way to **define** constants or simple functions using the `#define` directive. They are preprocessor directives, meaning they are processed before the actual compilation of the code.
+
+```h
+// example_macros.h
+
+#ifndef EXAMPLE_MACROS_H
+#define EXAMPLE_MACROS_H
+
+#define PI 3.14159 // Shared Constant
+#define SQUARE(x) ((x) * (x)) // Function
+
+#ifdef _MSC_VER
+// Code specific to Microsoft Version C/C++
+#endif //end of _MSC_VER
+
+#endif // end of EXAMPLE_MACROS_H
 ```
 ---
 
+## Preprocessor Directive: `#include` `""` vs `<>` 
 
+- Use `#include ""` 
+  - for including header files that are part of your project or are in the current directory.
 
-## Function Prototypes
-
-- **Purpose:** Declare function prototypes for functions in other source files.
-- **Benefits:**
-  - Allows the compiler to check function signatures during compilation. 
-  - Enables type-checking and error-catching early in the compilation process.
-
-<!-- signature: return type, name and parameters -->
-
+- Use `#include <>` for 
+  - including standard library header files or other headers that are part of the system include directories.
 ---
 
-## Shared Constants and Variables
-
-- **Content:** Declarations of constants, global variables, or shared data structures.
-- **Usage:**
-  - Ensures consistency by including the header file in different program parts.
-  - Facilitates the use of shared values and data structures across files.
-
----
-
-## Code Reusability
-
-- **Promotes:** Code reusability across multiple source files.
-- **Advantages:**
-  - Utilize common functions and data structures without duplicating code.
-  - Especially beneficial for managing libraries of reusable functions.
-
----
-
-## Modularity and Readability
-
-- **Achieves:** Enhanced code modularity and readability.
-- **Structure:**
-  - Each source file focuses on its implementation.
-  - Header file serves as an interface for interactions in the program.
-
----
-
-## Separation of Interface and Implementation
-
--  **Modularity**: Header files define the module interface.
-- **Implementation:** Actual implementation resides in separate source files `.c`.
-- **Advantages:**
-  - Follows the principle of information hiding.
-  - Facilitates changes to implementations without affecting the entire program.
-
----
-
-## Precompiled Headers
-
-- **Compiler Support:** Some compilers offer precompiled headers.
-- **Purpose:**
-  - Preprocess frequently used headers and store in binary format.
-  - Speeds up compilation by avoiding redundant parsing of headers in multiple source files.
-
----
-
-## Examples:
+## Standardised Header Examples:
 
 [stdio.h](https://github.com/lattera/glibc/blob/master/libio/stdio.h)
 
@@ -163,7 +229,7 @@ void greet();
 ```
 ---
 
-## Examples:
+## Standardised Header Examples:
 
 [math.h](https://github.com/openbsd/src/blob/master/include/math.h)
 ```h
