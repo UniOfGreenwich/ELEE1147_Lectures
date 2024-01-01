@@ -99,8 +99,6 @@ But ultimately programming provides instructions on how hardware is controlled, 
 - Answer set - Prolog
 
 -->
----
-
 
 ---
 
