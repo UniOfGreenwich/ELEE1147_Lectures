@@ -1,6 +1,6 @@
 ---
-title: DOCUMENT TITLE
-description: DESCRIPTION OF DOCUMENT
+title: Union And Structs
+description: Union And Structs Slides
 class: gaia
 _class:
   - lead
@@ -28,7 +28,7 @@ marp: true
 math: true
 ---
 
-# LECTURE TITLE
+# Union And Structs
 
     Module Code: ELEE1147
 

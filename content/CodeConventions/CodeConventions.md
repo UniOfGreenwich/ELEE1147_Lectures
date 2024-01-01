@@ -1,6 +1,6 @@
 ---
-title: DOCUMENT TITLE
-description: DESCRIPTION OF DOCUMENT
+title: Code Conventions and Documentation
+description: Code Conventions and Documentation
 class: gaia
 _class:
   - lead
@@ -28,7 +28,7 @@ marp: true
 math: true
 ---
 
-# LECTURE TITLE
+# Code Conventions and Documentation
 
     Module Code: ELEE1147
 
