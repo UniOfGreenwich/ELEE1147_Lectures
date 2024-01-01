@@ -48,7 +48,7 @@ math: true
 
     Module Code: $modulecode
 
-    Module Name: $modulecoursename
+    Module Name: $modulename
 
     Credits: $credits
 
