@@ -58,12 +58,8 @@ math: true
 
 ## How Does It Work?
 
-```mermaid
-graph TD
-  A[Main Program] -->|Include| B[Header File]
-  B -->|Contains| C[Function Prototypes]
-  B -->|And| D[Shared Constants]
-```
+![w:900 center](../../figures/header_links.png)
+
 ---
 
 <div style="font-size:26px; margin-left:410px">
@@ -170,14 +166,7 @@ void greeter(){
 ---
 ## How Header Guards Work
 
-```mermaid
-graph TD
-  A[Main Program] -->|Include| B[Header File]
-  B -->|Include Guard Check| C[Header Content]
-  C --> D[...]
-
-  style B fill:#f9f9f9,stroke:#ddd,stroke-width:2px;
-```
+![w:900 center](../../figures/headerGuard.png)
 
 ---
 
