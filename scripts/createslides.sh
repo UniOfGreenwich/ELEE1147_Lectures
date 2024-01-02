@@ -37,6 +37,7 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
+    @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 size: 16:9
 paginate: true
 _paginate: false
