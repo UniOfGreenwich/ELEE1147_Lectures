@@ -72,32 +72,7 @@ scanf("%d", &num);
 
 ## Standard Input flow:
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant Keyboard
-    participant Kernel
-    participant Terminal
-    participant Program
-
-    User->>Keyboard: Press 'A'
-    Keyboard->>Kernel: Hardware Interrupt (Key 'A')
-    Kernel->>Terminal: Transmit Key Code ('A' - ASCII: 65, Binary: 01000001)
-    Terminal->>Program: Send Character ('A' - ASCII: 65, Binary: 01000001) to stdin
-
-    Program->>Program: Buffering in C Library
-    Program->>Program: Read from stdin (e.g., getchar())
-
-    Program-->>Terminal: Request for Input
-    Terminal-->>User: Display Prompt or Request
-
-    User->>Terminal: Input (e.g., 'B')
-
-    Terminal->>Program: Send Character ('B' - ASCII: 66, Binary: 01000010) to stdin
-
-    Program->>Program: Buffering in C Library
-    Program->>Program: Read from stdin (e.g., getchar())
-```
+![](../../figures/stdin_diagram.svg)
 
 ---
 
@@ -133,27 +108,9 @@ if (file == NULL) {
 
 ---
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant Program
-    participant Kernel
-    participant Terminal
-    participant Screen
+## Standard Ouput and Error flow:
 
-    User->>Program: Trigger Output (e.g., printf())
-    Program->>Program: Format Output (if applicable)
-
-    alt Output to Standard Output (stdout)
-        Program->>Kernel: Send Output to stdout
-        Kernel->>Terminal: Receive stdout
-        Terminal->>Screen: Display Output on Screen
-    else Output to Standard Error (stderr)
-        Program->>Kernel: Send Output to stderr
-        Kernel->>Terminal: Receive stderr
-        Terminal->>Screen: Display Error on Screen (e.g., in red)
-    end
-```
+![](../../figures/stdouterr_diagram.svg)
 
 ---
 
