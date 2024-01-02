@@ -220,31 +220,7 @@ table, th,tr, td {
 }
 ;" data-size="16:9">
 <h2>Standard Input flow:</h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-mermaid">sequenceDiagram
-    participant User
-    participant Keyboard
-    participant Kernel
-    participant Terminal
-    participant Program
-
-    User-&gt;&gt;Keyboard: Press 'A'
-    Keyboard-&gt;&gt;Kernel: Hardware Interrupt (Key 'A')
-    Kernel-&gt;&gt;Terminal: Transmit Key Code ('A' - ASCII: 65, Binary: 01000001)
-    Terminal-&gt;&gt;Program: Send Character ('A' - ASCII: 65, Binary: 01000001) to stdin
-
-    Program-&gt;&gt;Program: Buffering in C Library
-    Program-&gt;&gt;Program: Read from stdin (e.g., getchar())
-
-    Program--&gt;&gt;Terminal: Request for Input
-    Terminal--&gt;&gt;User: Display Prompt or Request
-
-    User-&gt;&gt;Terminal: Input (e.g., 'B')
-
-    Terminal-&gt;&gt;Program: Send Character ('B' - ASCII: 66, Binary: 01000010) to stdin
-
-    Program-&gt;&gt;Program: Buffering in C Library
-    Program-&gt;&gt;Program: Read from stdin (e.g., getchar())
-</code></pre>
+<p><img src="../../figures/stdin_diagram.svg" alt="" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
@@ -373,26 +349,8 @@ table, th,tr, td {
   vertical-align: middle;
 }
 ;" data-size="16:9">
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-mermaid">sequenceDiagram
-    participant User
-    participant Program
-    participant Kernel
-    participant Terminal
-    participant Screen
-
-    User-&gt;&gt;Program: Trigger Output (e.g., printf())
-    Program-&gt;&gt;Program: Format Output (if applicable)
-
-    alt Output to Standard Output (stdout)
-        Program-&gt;&gt;Kernel: Send Output to stdout
-        Kernel-&gt;&gt;Terminal: Receive stdout
-        Terminal-&gt;&gt;Screen: Display Output on Screen
-    else Output to Standard Error (stderr)
-        Program-&gt;&gt;Kernel: Send Output to stderr
-        Kernel-&gt;&gt;Terminal: Receive stderr
-        Terminal-&gt;&gt;Screen: Display Error on Screen (e.g., in red)
-    end
-</code></pre>
+<h2>Standard Ouput and Error flow:</h2>
+<p><img src="../../figures/stdouterr_diagram.svg" alt="" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
