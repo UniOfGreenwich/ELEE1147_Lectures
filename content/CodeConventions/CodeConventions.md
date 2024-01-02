@@ -209,20 +209,6 @@ int AddNumbers(int a, int b) {
 ![bg right:30% 100% vertical](../../figures/codefacebook2.png)
 
 ---
-
-## README.md
-
-A brief description of the project
-- Installation instructions
-- A short example/tutorial
-- Contributors
-- Licenses
-- Citations 
-- Contacts
-![bg right:50% 100%](../../figures/Readme.png)
-
----
-
 ## Tools for Documentantion
 - **Python**
   - Sphinx, Doctest, Numpydoc
