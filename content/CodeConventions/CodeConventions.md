@@ -143,7 +143,7 @@ int AddNumbers(int a, int b) {
 ## Other conventions
 
 **GNU C:**
-- Naming: Typically follows the lowercase with underscores for variables and functions (e.g., my_variable, my_function()).
+- Naming: Typically follows the lowercase with underscores for variables and functions (e.g., `my_variable`,` my_function()`).
 - Indentation: Uses spaces for indentation (often 2 or 4 spaces).
 - Brace Style: Opening braces are usually on the same line as the statement, following the Kernighan and Ritchie style.
 
@@ -156,42 +156,42 @@ int AddNumbers(int a, int b) {
 ## Other conventions
 
 **LLVM:**
-- Naming: Uses camelCase for function names and lowercase with underscores for variable names (e.g., myVariable, my_function()).
+- Naming: Uses camelCase for function names and lowercase with underscores for variable names (e.g., `myVariable`, `my_function()`).
 - Indentation: Typically 2 spaces.
 - Brace Style: Opening braces are on the same line.
 
 **Microsoft Visual Studio C++:**
-- Naming: Uses PascalCase for function and method names, and camelCase for variable names (e.g., MyFunction(), myVariable).
+- Naming: Uses PascalCase for function and method names, and camelCase for variable names (e.g., `MyFunction()`, `myVariable`).
 - Indentation: Typically 4 spaces.
 - Brace Style: Opening braces are on the same line.
 
 ---
 ## Other conventions
 **Google C++ Style Guide:**
-- Naming: Uses camelCase for variable names, and underscores for function names (e.g., myVariable, my_function()).
+- Naming: Uses camelCase for variable names, and underscores for function names (e.g., `myVariable`,` my_function()`).
 - Indentation: Typically 2 spaces.
 - Brace Style: Opening braces are on the same line.
 
 **Mozilla C++ Coding Style:**
-- Naming: Uses camelCase for variable names and function parameters, and PascalCase for function names (e.g., myVariable, MyFunction()).
+- Naming: Uses camelCase for variable names and function parameters, and PascalCase for function names (e.g., `myVariable`, `MyFunction()`).
 - Indentation: Typically 2 spaces.
 - Brace Style: Opening braces are on the same line.
 
 ---
 ## Other conventions
 **Linux Kernel Coding Style:**
-- Naming: Uses lowercase with underscores for variables and functions (e.g., my_variable, my_function()).
+- Naming: Uses lowercase with underscores for variables and functions (e.g., `my_variable`, `my_function()`).
 - Indentation: Typically 8 spaces.
 - Brace Style: Opening braces are on the same line.
 
 **Qt Coding Style:**
-- Naming: Uses camelCase for variables and functions (e.g., myVariable, myFunction()).
+- Naming: Uses camelCase for variables and functions (e.g., `myVariable`, `myFunction()`).
 - Indentation: Typically 4 spaces.
 - Brace Style: Opening braces are on the same line.
 
 --- 
 
-## Documentation, Doc as you go...
+## Documentation, 'doc as you go...'
 
 **Why Documentation**
 
@@ -221,7 +221,9 @@ int AddNumbers(int a, int b) {
 - **Ruby**
   - Docurium
 - **Doxygen**
-  - r C, C#, PHP, Java, Python, and Fortran.
+  - r, C, C#, PHP, Java, Python, and Fortran.
+
+![bg right:40% 80% vertical](../../figures/doxygenlogo.jpeg)
 
 ---
 
@@ -334,7 +336,7 @@ int main() {
 <div style="font-size:22px">
 
 ```sh
-doxygen.exe doxygenConfigFile
+PM> doxygen.exe doxygenConfigFile
 ```
 
 ```
