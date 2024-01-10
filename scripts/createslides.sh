@@ -15,8 +15,8 @@ source ${LECTURES_DIR}/config
 
 cat >> ${LECTURE_FOLDER}/${LECTURE_FILENAME}.md << EOF
 ---
-title: DOCUMENT TITLE
-description: DESCRIPTION OF DOCUMENT
+title: ${LECTURE_FILENAME}
+description: ${LECTURE_FILENAME} slides
 class: gaia
 _class:
   - lead
@@ -37,7 +37,18 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
-    @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+    grid {
+      display: grid;
+    }
+    grid-cols {
+      grid-template-columns: repeat(var(--columns, 2), minmax(0, 1fr));
+    }
+    grid-rows {
+      grid-template-rows: repeat(var(--rows, 2), minmax(0, 1fr));
+    }
+    gap {
+      gap: var(--gap, 4px);
+    }
 size: 16:9
 paginate: true
 _paginate: false
@@ -45,7 +56,7 @@ marp: true
 math: true
 ---
 
-# LECTURE TITLE
+# ${LECTURE_FILENAME}
 
     Module Code: $modulecode
 
