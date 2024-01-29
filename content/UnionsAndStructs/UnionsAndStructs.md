@@ -21,7 +21,7 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
-    @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+    @import url(../utilities.css);;
 size: 16:9
 paginate: true
 _paginate: false
@@ -54,13 +54,36 @@ A struct is a user-defined data type in which different data types can be groupe
 
 It is declared using the `struct` **keyword**, followed by the structure's name and a block of members enclosed in curly braces `{...}`.
 
+<table align=center style="font-size:28px">
+<tr>
+<td>
+
+```c
+struct [NameOfStruct] {
+    char var1;
+    int var2;
+    float var3;
+};
+```
+</td>
+<td>
+
+$\Rightarrow$
+
+</td>
+<td>
+
 ```c
 struct Person {
     char name[50];
     int age;
     float height;
 };
+
 ```
+</td>
+</tr>
+</table>
 
 ---
 
@@ -113,7 +136,7 @@ struct Person {
 
 --- 
 ## Unions
-Definition
+Definition:
 
 ```c
 union Data {
@@ -123,8 +146,8 @@ union Data {
 };
 ```
 
-Members share the same memory location.
-Size of union is the size of the largest member.
+- Members share the same memory location.
+- Size of union is the size of the largest member.
 
 --- 
 
