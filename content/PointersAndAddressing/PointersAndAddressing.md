@@ -63,6 +63,14 @@ math: true
 
 ![center w:1100](../../figures/memory_types.png)
 
+<div style="font-size:10px">
+
+Static RAM, Dynamic RAM
+
+Programmable read-only Memory
+
+</div>
+
 ---
 
 ## SDRAM & DDR
@@ -74,6 +82,14 @@ math: true
 |DDR2 SDRAM (2003) | 1.8 V, 1.55 V​ |200 – 400 MHz​ | 400 – 1066  MT/s​|
 |DDR3 SDRAM (2007)​ | 1.5 V, 1.35 V​  | 400 MHz – 1066 MHz |800 – 2133 MT/s​|
 |DDR4 SDRAM (2014)​ |1.2 V​ | 1066 – 1600 MHz​ | 1600 – 3200 MT/s​|
+|DDR5 SDRAM (2020)​ |1.1 V​ | 2000 – 4000 MHz​ | 3200 – 8000 MT/s​|
+
+<div style="font-size:10px">
+
+**S**ynchronous **D**ynamic
+**D**ouble **D**ata **R**ate
+
+</div>
 
 ---
 
@@ -94,8 +110,6 @@ math: true
 ![vertical center 90%](../../figures/cache_analogy.png)
 
 Every time you (CPU ) like to eat or drink (Access) something (Data) you first look into refrigerator (Cache), because it saves lot of time (Fast)! ​
-
-
 If the item (Data) is not there you have to spend extra time (Slow) to get it (Data) from the supermarket (RAM or main memory)​
 
 ---
