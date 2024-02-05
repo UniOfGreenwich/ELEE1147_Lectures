@@ -21,6 +21,7 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
+    @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 size: 16:9
 paginate: true
 _paginate: false
@@ -56,14 +57,14 @@ math: true
 
 - **stdin** is the **st**andar**d** **in**put stream.
 - It is used to read input from the user or from another program.
-- Functions like `scanf()` and `getchar()` read from stdin.
+- Functions like `scanf()`/`scanf_s` and `getchar()` read from stdin.
 
 ```c
 int num;
 printf("Enter a number: ");
-scanf("%d", &num);
+scanf_s("%d", &num);
 ```
-- `scanf()` reads input from the standard input (usually the keyboard) and stores it in the specified variable.
+- `scanf_s()` reads input from the standard input (usually the keyboard) and stores it in the specified variable.
 
 - In this example, it waits for the user to input an integer and stores it in the variable `num`.
 
@@ -106,6 +107,9 @@ if (file == NULL) {
 }
 ```
 
+> Note:
+>> `printf` uses stdout
+>> `fprintf` can use different streams
 ---
 
 ## Standard Ouput and Error flow:
@@ -155,7 +159,39 @@ FILE *filePtr = fopen("example.txt", "r"); // Open for reading
 
 - **Append (`"a"`) Mode**: Open a file for writing, but append data to the end. If the file doesn't exist, it is created.
 
+
+>**Note:**
+>> Linux file modes, `r`, `w`, `x`, whereas here there is no execute.
+
 ---
+
+## File Mode FLow
+
+![w:1000 center](../../figures/read_write_append_diagram.png)
+
+---
+
+## File Modes
+
+
+|                | `r`  | `r+`|   `w`|   `w+` |  `a`|   `a+`|
+|----------------|----|---|-----|------|---|----|
+read - reading from file is allowed| +  | + |     |  +   |   |  +|
+||||||
+| write - writing to file is allowed|    | + |   + |  +   | + |  +|
+||||||
+|write after seek  |    + |   + |  +|||
+|create - file is created if it does not exist yet |   |   |   + |  +   | + |  +|
+|||||
+|truncate - during opening of the file it is made empty (all content of the file is erased)   |   |   + |  +|||
+||||||
+|
+|position at end - after file is opened, initial position is set to the end of the file|    |   |     |      | + |  +|
+
+
+---
+
+
 
 
 ## Write and Read
@@ -189,7 +225,7 @@ FILE *writeFile2 = fopen("example.txt", "w");
 ---
 
 ## Dirty Files
-When a file is opened for writing, it becomes a "dirty" file. This means changes are made in memory but not yet saved to disk. To persist changes, use the fclose function.
+When a file is opened for writing, it becomes a "dirty" file. This means changes are made in memory but not yet saved to disk. To persist changes, use the `fclose()` function.
 
 Example:
 
