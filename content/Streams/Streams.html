@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US"><head><title>Streams</title><meta property="og:title" content="Streams"><meta name="description" content="Streams Slides"><meta property="og:description" content="Streams Slides"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDAgMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwIDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNSIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTIgNTBoODBNNTIgOTBWMTAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTIgNTBoODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::page-transition-container(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::page-transition-incoming-image(*),::page-transition-outgoing-image(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::page-transition-outgoing-image(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::page-transition-incoming-image(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::page-transition-incoming-image(root),::page-transition-outgoing-image(root){animation-timing-function:linear}::page-transition-incoming-image(__bespoke_marp_transition_osc__),::page-transition-outgoing-image(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::page-transition-incoming-image(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::page-transition-container(*),.bespoke-marp-transition-warming-up::page-transition-incoming-image(*),.bespoke-marp-transition-warming-up::page-transition-outgoing-image(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{page-transition-tag:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{page-transition-tag:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{page-transition-tag:__bespoke_marp_transition_osc__;background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{bottom:0;display:block;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:rgba(0,0,0,.65);border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}}@media screen{body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;scrollbar-color:hsla(0,0%,93%,.5) transparent;scrollbar-width:thin;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section :is(h1,marp-h1){font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+<!DOCTYPE html><html lang="en-US"><head><title>Streams</title><meta property="og:title" content="Streams"><meta name="description" content="Streams Slides"><meta property="og:description" content="Streams Slides"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDAgMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwIDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNSIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTIgNTBoODBNNTIgOTBWMTAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTIgNTBoODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::page-transition-container(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::page-transition-incoming-image(*),::page-transition-outgoing-image(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::page-transition-outgoing-image(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::page-transition-incoming-image(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::page-transition-incoming-image(root),::page-transition-outgoing-image(root){animation-timing-function:linear}::page-transition-incoming-image(__bespoke_marp_transition_osc__),::page-transition-outgoing-image(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::page-transition-incoming-image(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::page-transition-container(*),.bespoke-marp-transition-warming-up::page-transition-incoming-image(*),.bespoke-marp-transition-warming-up::page-transition-outgoing-image(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{page-transition-tag:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{page-transition-tag:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{page-transition-tag:__bespoke_marp_transition_osc__;background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{bottom:0;display:block;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:rgba(0,0,0,.65);border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}}@media screen{body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;scrollbar-color:hsla(0,0%,93%,.5) transparent;scrollbar-width:thin;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section :is(h1,marp-h1){font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
 /*!
  * Marp default theme.
  *
@@ -24,6 +24,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 " class="lead invert" style="--class:lead invert;--style:#img-right{
   float: right;
 }
@@ -39,6 +40,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h1>Streams</h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>Module Code: ELEE1147
@@ -65,7 +67,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="2" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="2" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -80,7 +83,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-;--marpit-advanced-background-split:50%;" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../../figures/usestreams.jpg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="2" data-class="gaia" data-paginate="true" data-style="#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');--marpit-advanced-background-split:50%;" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../../figures/usestreams.jpg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="2" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -95,7 +98,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="2" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="2" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -110,7 +114,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-;--marpit-advanced-background-split:50%;" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');--marpit-advanced-background-split:50%;" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2>Introduction to Streams</h2>
 <ul>
 <li>Streams are sequences of data elements.</li>
@@ -138,7 +142,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="2" data-marpit-pagination-total="16" style="" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="gaia" data-paginate="true" data-style="#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="2" data-marpit-pagination-total="18" style="" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -153,7 +158,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="3" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="3" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -168,20 +174,21 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>Standard Input (stdin)</h2>
 <ul>
 <li><strong>stdin</strong> is the <strong>st</strong>andar<strong>d</strong> <strong>in</strong>put stream.</li>
 <li>It is used to read input from the user or from another program.</li>
-<li>Functions like <code>scanf()</code> and <code>getchar()</code> read from stdin.</li>
+<li>Functions like <code>scanf()</code>/<code>scanf_s</code> and <code>getchar()</code> read from stdin.</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-type">int</span> num;
 <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Enter a number: &quot;</span>);
-<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;num);
+scanf_s(<span class="hljs-string">&quot;%d&quot;</span>, &amp;num);
 </code></pre>
 <ul>
 <li>
-<p><code>scanf()</code> reads input from the standard input (usually the keyboard) and stores it in the specified variable.</p>
+<p><code>scanf_s()</code> reads input from the standard input (usually the keyboard) and stores it in the specified variable.</p>
 </li>
 <li>
 <p>In this example, it waits for the user to input an integer and stores it in the variable <code>num</code>.</p>
@@ -203,7 +210,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="4" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="4" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -218,6 +226,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>Standard Input flow:</h2>
 <p><img src="../../figures/stdin_diagram.svg" alt="" /></p>
@@ -237,7 +246,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="5" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="5" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -252,6 +262,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>Standard Output (stdout)</h2>
 <ul>
@@ -284,7 +295,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="6" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="6" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -299,6 +311,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>Standard Error (stderr)</h2>
 <ul>
@@ -317,6 +330,13 @@ table, th,tr, td {
     <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Error: Unable to open the file!\n&quot;</span>);
 }
 </code></pre>
+<blockquote>
+<p>Note:</p>
+<blockquote>
+<p><code>printf</code> uses stdout<br />
+<code>fprintf</code> can use different streams</p>
+</blockquote>
+</blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
@@ -333,7 +353,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="7" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="7" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -348,6 +369,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>Standard Ouput and Error flow:</h2>
 <p><img src="../../figures/stdouterr_diagram.svg" alt="" /></p>
@@ -367,7 +389,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="8" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="8" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -382,6 +405,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>Stream Functions in C</h2>
 <p>C provides functions to interact with streams in the &lt;stdio.h&gt; header, like these for handling files:</p>
@@ -415,7 +439,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="9" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="9" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -430,6 +455,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>File Operations in C: Open, Read, Write, Execute</h2>
 <p>In C programming, file operations are crucial for interacting with files on a computer system. The primary operations include:</p>
@@ -458,7 +484,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="10" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="10" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -473,6 +500,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>Opening a File</h2>
 <p>To operate on a file, you must first open it using the <code>fopen</code> function. This function allows you to specify the file's path, mode (read, write, execute), and returns a file pointer for further operations.</p>
@@ -495,7 +523,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="11" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="11" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -510,6 +539,7 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>File Modes</h2>
 <ul>
@@ -523,6 +553,12 @@ table, th,tr, td {
 <p><strong>Append (<code>&quot;a&quot;</code>) Mode</strong>: Open a file for writing, but append data to the end. If the file doesn't exist, it is created.</p>
 </li>
 </ul>
+<blockquote>
+<p><strong>Note:</strong></p>
+<blockquote>
+<p>Linux file modes, <code>r</code>, <code>w</code>, <code>x</code>, whereas here there is no execute.</p>
+</blockquote>
+</blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
@@ -539,7 +575,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="12" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="12" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -554,18 +591,10 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
-<h2>Write and Read</h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-comment">// Write Mode</span>
-FILE *writeFile = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>);
-<span class="hljs-built_in">fprintf</span>(writeFile, <span class="hljs-string">&quot;Hello, World!&quot;</span>);
-fclose(writeFile);
-
-<span class="hljs-comment">// Append Mode</span>
-FILE *appendFile = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;a&quot;</span>);
-<span class="hljs-built_in">fprintf</span>(appendFile, <span class="hljs-string">&quot;\nAppended Content&quot;</span>);
-fclose(appendFile);
-</code></pre>
+<h2>File Mode FLow</h2>
+<p><img src="../../figures/read_write_append_diagram.png" alt="center" style="width:1000px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
@@ -582,7 +611,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="13" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="13" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -597,15 +627,123 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
-<h2>Single Write Instance</h2>
-<p><strong>Only one</strong> instance of a file can be opened for writing at a time. This prevents multiple processes from simultaneously modifying the same file, avoiding data corruption.</p>
-<p>Example:</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c">FILE *writeFile1 = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>);
-
-<span class="hljs-comment">// Error: Cannot open for write concurrently</span>
-FILE *writeFile2 = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>);
-</code></pre>
+<h2>File Modes</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>r</code></th>
+<th><code>r+</code></th>
+<th><code>w</code></th>
+<th><code>w+</code></th>
+<th><code>a</code></th>
+<th><code>a+</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>read - reading from file is allowed</td>
+<td>+</td>
+<td>+</td>
+<td></td>
+<td>+</td>
+<td></td>
+<td>+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>write - writing to file is allowed</td>
+<td></td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>write after seek</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>create - file is created if it does not exist yet</td>
+<td></td>
+<td></td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>truncate - during opening of the file it is made empty (all content of the file is erased)</td>
+<td></td>
+<td>+</td>
+<td>+</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>position at end - after file is opened, initial position is set to the end of the file</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>+</td>
+<td>+</td>
+</tr>
+</tbody>
+</table>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
@@ -622,7 +760,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="14" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="14" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -637,13 +776,18 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
-<h2>Dirty Files</h2>
-<p>When a file is opened for writing, it becomes a &quot;dirty&quot; file. This means changes are made in memory but not yet saved to disk. To persist changes, use the fclose function.</p>
-<p>Example:</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c">FILE *dirtyFile = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>);
-<span class="hljs-built_in">fprintf</span>(dirtyFile, <span class="hljs-string">&quot;Hello, World!&quot;</span>);
-fclose(dirtyFile); <span class="hljs-comment">// Save changes to disk</span>
+<h2>Write and Read</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-comment">// Write Mode</span>
+FILE *writeFile = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>);
+<span class="hljs-built_in">fprintf</span>(writeFile, <span class="hljs-string">&quot;Hello, World!&quot;</span>);
+fclose(writeFile);
+
+<span class="hljs-comment">// Append Mode</span>
+FILE *appendFile = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;a&quot;</span>);
+<span class="hljs-built_in">fprintf</span>(appendFile, <span class="hljs-string">&quot;\nAppended Content&quot;</span>);
+fclose(appendFile);
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="gaia" data-paginate="true" data-style="#img-right{
@@ -661,7 +805,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="15" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="15" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -676,20 +821,16 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
-<h2>Why Close Files?</h2>
-<p>When working with files in C, it's crucial to close them properly after operations. Failing to do so can lead to unexpected behavior, data corruption, and resource leaks.</p>
-<ol>
-<li>
-<p><strong>Data Persistence:</strong> Closing a file ensures that any changes made during read or write operations are saved to the underlying storage. Without proper closure, changes may be lost.</p>
-</li>
-<li>
-<p><strong>Resource Management:</strong> File operations involve system resources. Closing a file releases these resources, preventing potential memory leaks or system resource exhaustion.</p>
-</li>
-<li>
-<p><strong>Avoiding Data Corruption:</strong> Closing files properly helps avoid data corruption, especially when multiple programs or processes access the same file. It ensures exclusive access when needed.</p>
-</li>
-</ol>
+<h2>Single Write Instance</h2>
+<p><strong>Only one</strong> instance of a file can be opened for writing at a time. This prevents multiple processes from simultaneously modifying the same file, avoiding data corruption.</p>
+<p>Example:</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c">FILE *writeFile1 = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>);
+
+<span class="hljs-comment">// Error: Cannot open for write concurrently</span>
+FILE *writeFile2 = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>);
+</code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
@@ -706,7 +847,8 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
-" class="gaia" data-marpit-pagination="16" data-marpit-pagination-total="16" style="--class:gaia;--paginate:true;--style:#img-right{
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="16" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
   float: right;
 }
 img[alt~=&quot;center&quot;] {
@@ -721,6 +863,95 @@ table, th,tr, td {
   border: none!important;
   vertical-align: middle;
 }
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+;" data-size="16:9">
+<h2>Dirty Files</h2>
+<p>When a file is opened for writing, it becomes a &quot;dirty&quot; file. This means changes are made in memory but not yet saved to disk. To persist changes, use the <code>fclose()</code> function.</p>
+<p>Example:</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c">FILE *dirtyFile = fopen(<span class="hljs-string">&quot;example.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>);
+<span class="hljs-built_in">fprintf</span>(dirtyFile, <span class="hljs-string">&quot;Hello, World!&quot;</span>);
+fclose(dirtyFile); <span class="hljs-comment">// Save changes to disk</span>
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="gaia" data-paginate="true" data-style="#img-right{
+  float: right;
+}
+img[alt~=&quot;center&quot;] {
+  display: block;
+  margin: 0 auto;
+}
+table {
+  border-collapse: collapse;
+  font-size: 22px;
+}
+table, th,tr, td {
+  border: none!important;
+  vertical-align: middle;
+}
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="17" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
+  float: right;
+}
+img[alt~=&quot;center&quot;] {
+  display: block;
+  margin: 0 auto;
+}
+table {
+  border-collapse: collapse;
+  font-size: 22px;
+}
+table, th,tr, td {
+  border: none!important;
+  vertical-align: middle;
+}
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+;" data-size="16:9">
+<h2>Why Close Files?</h2>
+<p>When working with files in C, it's crucial to close them properly after operations. Failing to do so can lead to unexpected behavior, data corruption, and resource leaks.</p>
+<ol>
+<li>
+<p><strong>Data Persistence:</strong> Closing a file ensures that any changes made during read or write operations are saved to the underlying storage. Without proper closure, changes may be lost.</p>
+</li>
+<li>
+<p><strong>Resource Management:</strong> File operations involve system resources. Closing a file releases these resources, preventing potential memory leaks or system resource exhaustion.</p>
+</li>
+<li>
+<p><strong>Avoiding Data Corruption:</strong> Closing files properly helps avoid data corruption, especially when multiple programs or processes access the same file. It ensures exclusive access when needed.</p>
+</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-class="gaia" data-paginate="true" data-style="#img-right{
+  float: right;
+}
+img[alt~=&quot;center&quot;] {
+  display: block;
+  margin: 0 auto;
+}
+table {
+  border-collapse: collapse;
+  font-size: 22px;
+}
+table, th,tr, td {
+  border: none!important;
+  vertical-align: middle;
+}
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+" class="gaia" data-marpit-pagination="18" data-marpit-pagination-total="18" style="--class:gaia;--paginate:true;--style:#img-right{
+  float: right;
+}
+img[alt~=&quot;center&quot;] {
+  display: block;
+  margin: 0 auto;
+}
+table {
+  border-collapse: collapse;
+  font-size: 22px;
+}
+table, th,tr, td {
+  border: none!important;
+  vertical-align: middle;
+}
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ;" data-size="16:9">
 <h2>Proper File Closure Example</h2>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
