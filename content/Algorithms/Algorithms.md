@@ -41,11 +41,16 @@ math: true
 
 ---
 
-## What is Big O?
+## O Notation
 
-**Definition:**
+- **Big-O Notation (O-notation):**
+  -  Represents the upper bound of the running time of an algorithm. Therefore, it gives the worst-case complexity of an algorithm. 
 
-- Big O notation is a mathematical notation used to describe the upper bound on the growth rate of a function, especially in the context of algorithm efficiency.
+- **Omega Notation (Ω-notation):**
+  -  Represents the lower bound of the running time of an algorithm. Thus, it provides the best case complexity of an algorithm. 
+
+- **Theta Notation (Θ-notation):** 
+  - Theta notation encloses the function from above and below. Since it represents the upper and the lower bound of the running time of an algorithm, it is used for analysing the average-case complexity of an algorithm.
 
 ---
 
