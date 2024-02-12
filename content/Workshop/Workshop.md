@@ -50,6 +50,6 @@ math: true
 
     Module Leader: Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA
 
-![bg right:40% 90%](../../figures/xkcd_Automation.png)
+![bg right:40% 90%](../../figures/xkcd_automation.png)
 
 ---
