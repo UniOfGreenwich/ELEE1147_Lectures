@@ -44,13 +44,16 @@ math: true
 ## O Notation
 
 - **Big-O Notation (O-notation):**
-  -  Represents the upper bound of the running time of an algorithm. Therefore, it gives the worst-case complexity of an algorithm. 
+  -  Represents the upper bound of the running time of an algorithm. 
+  - Shows the worst-case complexity of an algorithm. 
 
 - **Omega Notation (Ω-notation):**
-  -  Represents the lower bound of the running time of an algorithm. Thus, it provides the best case complexity of an algorithm. 
+  -  Represents the lower bound of the running time of an algorithm. 
+  -  Provides the best case complexity of an algorithm. 
 
 - **Theta Notation (Θ-notation):** 
-  - Theta notation encloses the function from above and below. Since it represents the upper and the lower bound of the running time of an algorithm, it is used for analysing the average-case complexity of an algorithm.
+  - Theta notation encloses the function from above and below. 
+  - Used for analysing the average-case complexity of an algorithm.
 
 ---
 
@@ -93,6 +96,31 @@ Time complexity represents the amount of time an algorithm takes to complete as 
 
 - Quadratic Time $\Longrightarrow  O(n^2)$
 
+- ...
+
+---
+
+## Time Complexity Metrics
+
+<div align=center>
+
+| Big O Notation | $n$ | $n\ log\ n$ | $n^2$ | $n^3$ | $2^n$ | $n!$ | 
+|---|---|---|---|---|--|----|
+|n = 10       | < 1 sec |< 1 sec |< 1 sec |< 1 sec |< 1 sec | 4 sec | 
+|n = 30       | < 1 sec |< 1 sec |< 1 sec |< 1 sec |< 18 min | $10^{25}$ years|
+|n = 100      | < 1 sec |< 1 sec |< 1 sec |1s      |$10^{17}$ years|Very Long Time|
+|n = 1000     |< 1 sec |< 1 sec |1 sec |18 min  |Very Long Time|Very Long Time|
+|n = 10,000   |< 1 sec |< 1 sec |2 min |12 days    |Very Long Time|Very Long Time|
+|n = 100,000  |< 1 sec |2 sec |3 hours |32 years |Very Long Time|Very Long Time|
+|n = 1,000,000|1 sec |20 sec |12 days |31,710 years    |Very Long Time|Very Long Time|
+
+</div>
+
+<!-- 
+- 2^128 340 undecillion
+- 2^92 grams earth 
+-->
+
 ---
 
 ## Space Complexity
@@ -107,12 +135,53 @@ Space complexity represents the amount of memory space an algorithm requires as 
 
 - Quadratic Space $\Longrightarrow O(n^2)$
 
+- ...
+
 ---
 
-##  Recogonising Algorithms Complexity, Graph
 
-![w:950 center](https://devopedia.org/images/article/17/4996.1513922020.jpg)
+##  Recogonising Algorithms Complexity
 
+
+- Constant runtime is represented by $O(1)$
+- linear growth is $O(n)$
+- logarithmic growth is $O(log\ n)$
+- log-linear growth is $O(n\ log\ n)$
+- quadratic growth is $O(n^2)$
+- exponential growth is $O(2^n)$
+- factorial growth is $O(n!)$ 
+![bg right:50% 100% ](../../figures/BigO.jpg)
+
+---
+
+## Table of Big O
+
+| Big O Notation | Relationship with 'n'            | Description                                       | Assumption                           |
+|----------------|----------------------------------|---------------------------------------------------|-------------------------------------|
+| O(1)           | Constant                         | The algorithm's runtime is constant regardless of the input size. | The algorithm performs a single operation. |
+| O(log n)       | Logarithmic                      | The algorithm's runtime grows logarithmically as the input size increases. | The algorithm divides the input in half at each step (e.g., binary search). |
+| O(n)           | Linear                           | The algorithm's runtime grows linearly with the input size. | The algorithm iterates through the input once. |
+| O(n log n)     | Linearithmic                     | The algorithm's runtime grows in between linear and logarithmic as the input size increases. | Typically seen in efficient sorting algorithms like merge sort or quicksort. |
+| O(n^2)         | Quadratic                        | The algorithm's runtime grows quadratically with the input size. | The algorithm has nested iterations over the input (e.g., nested loops). |
+| O(n^3)         | Cubic                            | The algorithm's runtime grows cubically with the input size. | The algorithm has triple nested iterations over the input. |
+| O(2^n)         | Exponential                      | The algorithm's runtime grows exponentially with the input size. | The algorithm performs exhaustive search or generates all subsets of the input. |
+
+---
+
+## Real-world Applications
+
+- Choosing the right data structures and algorithms for software development.
+
+- Optimizing database queries.
+  
+  ||Seach in a table|Seach in an index|
+  |---|---|---|
+  |Seach Algorithm| Linear Scan|Binary Scan|
+  | Complexity| $O (N)$|$O\ (Log\ N)$|
+
+- Designing efficient algorithms for large-scale data processing.
+
+<!-- worth a read: https://under-the-hood.dev/blog/databases/database-indexes-complexity/ -->
 
 ---
 
@@ -128,29 +197,9 @@ Space complexity represents the amount of memory space an algorithm requires as 
 
 - ...
 
----
-
-
-## Real-world Applications
-
-- Choosing the right data structures and algorithms for software development.
-
-- Optimizing database queries.
-
-- Designing efficient algorithms for large-scale data processing.
-
----
-
-## Recogonising Algorithms Complexity
-
-- Constant runtime is represented by $O(1)$
-- linear growth is $O(n)$
-- logarithmic growth is $O(log\ n)$
-- log-linear growth is $O(n\ log\ n)$
-- quadratic growth is $O(n^2)$
-- exponential growth is $O(2^n)$
-- factorial growth is $O(n!)$
-
+<!--
+- This is worth knowing for coding interviews
+-->
 ---
 
 ## Linear Search Example, $O(n)$:
@@ -289,20 +338,18 @@ int main() {
 
 ## Binary search $O(log\ n)$ and Linear Search $O(n)$
 
-![w:800 center](https://www.mathwarehouse.com/programming/images/binary-vs-linear-search/binary-and-linear-search-animations.gif)
+![bg right:50% 100%](../../figures/binary_sequential.gif)
 
----
 
-## Binary search $O(log\ n)$ Tree view
-
-![w:600 center](https://www.mathwarehouse.com/programming/images/binary-search-tree/binary-search-tree-sorted-array-animation.gif)
+![w:1000 center](../../figures/binary-search-tree-sorted-array-animation.gif)
 
 
 ---
+
 
 ## Exponential growth is $O(2^n)$, Fibonacci:
 
-![w:550 center](https://www.mathwarehouse.com/programming/images/fibonacci-recursion-demonstration-animation-python.gif )
+![w:550 center](../../figures/fibonacci-recursion-demonstration-animation-python.gif)
 
 ---
 
@@ -422,7 +469,7 @@ for (c = 0 ; c < n - 1; c++)
     }
   }
 ```
-![bg right:50% 90%](https://upload.wikimedia.org/wikipedia/commons/5/54/Sorting_bubblesort_anim.gif?20140912160204)
+![bg right:50% 90%](../../figures/Sorting_bubblesort_anim.gif)
 
 --- 
 
@@ -457,7 +504,7 @@ void quicksortMiddle(int arr[], int low, int high) {
 ```
 
 
-![bg right:40% 90%](https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif)
+![bg right:40% 90%](../../figures/Sorting_quicksort_anim.gif)
 
 <!--
 sorting algorithm based on the divide and conquer approach
