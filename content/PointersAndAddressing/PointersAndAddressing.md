@@ -73,25 +73,6 @@ Programmable read-only Memory
 
 ---
 
-## SDRAM & DDR
-
-| Standard (Approximate Year Introduced)​ | Operating Voltage​ | Associated RAM Clock Rates​ |Approximate Transfer Rates​|
-|---|---|---|---|
-|SDRAM (1993)​| 3.3 V​|66 – 133 MHz | 100 – 166  MT/s​ |
-|DDR SDRAM (2000)​ |2.6 V, 2.5 V​|  100 – 200 MHz​| 200 – 400  MT/s​|
-|DDR2 SDRAM (2003) | 1.8 V, 1.55 V​ |200 – 400 MHz​ | 400 – 1066  MT/s​|
-|DDR3 SDRAM (2007)​ | 1.5 V, 1.35 V​  | 400 MHz – 1066 MHz |800 – 2133 MT/s​|
-|DDR4 SDRAM (2014)​ |1.2 V​ | 1066 – 1600 MHz​ | 1600 – 3200 MT/s​|
-|DDR5 SDRAM (2020)​ |1.1 V​ | 2000 – 4000 MHz​ | 3200 – 8000 MT/s​|
-
-<div style="font-size:10px">
-
-**S**ynchronous **D**ynamic
-**D**ouble **D**ata **R**ate
-
-</div>
-
----
 
 ## Memory Access
 
@@ -113,6 +94,11 @@ Every time you (CPU ) like to eat or drink (Access) something (Data) you first l
 If the item (Data) is not there you have to spend extra time (Slow) to get it (Data) from the supermarket (RAM or main memory)​
 
 ---
+
+
+![center](../../figures/cache_layout.PNG)
+
+---
  
 ## Principle of Locality 
 
@@ -127,6 +113,42 @@ Spatial Locality: Items with nearby addresses tend to be referenced close togeth
 ![center](../../figures/spatial_local.png)
 
 ---
+
+
+## SDRAM & DDR
+
+| Standard (Approximate Year Introduced)​ | Operating Voltage​ | Associated RAM Clock Rates​ |Approximate Transfer Rates​|
+|---|---|---|---|
+|SDRAM (1993)​| 3.3 V​|66 – 133 MHz | 100 – 166  MT/s​ |
+|DDR SDRAM (2000)​ |2.6 V, 2.5 V​|  100 – 200 MHz​| 200 – 400  MT/s​|
+|DDR2 SDRAM (2003) | 1.8 V, 1.55 V​ |200 – 400 MHz​ | 400 – 1066  MT/s​|
+|DDR3 SDRAM (2007)​ | 1.5 V, 1.35 V​  | 400 MHz – 1066 MHz |800 – 2133 MT/s​|
+|DDR4 SDRAM (2014)​ |1.2 V​ | 1066 – 1600 MHz​ | 1600 – 3200 MT/s​|
+|DDR5 SDRAM (2020)​ |1.1 V​ | 2000 – 4000 MHz​ | 3200 – 8000 MT/s​|
+
+<div style="font-size:10px">
+
+**S**ynchronous **D**ynamic
+**D**ouble **D**ata **R**ate
+
+</div>
+
+---
+
+## RAM is volatlie and mainly comes in two varietys:
+
+<div align=center>
+
+|SRAM|DRAM|
+|-----|----|
+|It has less storage capacity| It has large storage capacity|
+|SRAMs are low denisty devices| DRAMS are high density devices|
+|These are used in cache memories|These are used in main memories|
+|SRAM is more expensive than DRAM| DRAM is cheaper than SRAM|
+
+</div>
+
+----
 
 ## Locality Example
 
@@ -157,7 +179,7 @@ for ( int i = 0; i < n; i++ )​
 
 ## General Memory Layout
 
-![bg right:50% 100%](../../figures/memory_layout.png)
+![bg right:50% 100%](../../figures/memory_layout.PNG)
 
 - **stack**: stores local variables
 >>
@@ -218,22 +240,10 @@ static int somenumber = 5;
 ```
 ---
 
-## Stack
-
-- The stack segment is near the top of memory with high address
->>
-- Every time a function is called, the machine allocates some stack memory for it.
->>
-- The allocation and deallocation for stack memory is automatically done
->>
-- Stores variables used on the inside of a function (including the `main()` function). 
->>
-- It’s a LIFO, “Last-In,-First-Out”, structure. Every time a function declares a new variable it is “pushed” onto the stack. 
-
----
 
 ## Stack
 
+![bg right:45% 100%](../../figures/stack_segments.PNG)
 - The stack is managed by the CPU, there is no ability to modify it
 >>
 - Variables are allocated and freed automatically
@@ -246,25 +256,42 @@ static int somenumber = 5;
 
 ---
 
+## Stack
+
+- It’s a `LIFO`, “Last-In,-First-Out”, structure. Every time a function declares a new variable it is “pushed” onto the stack. 
+>>
+- The stack is managed by the CPU, there is `no ability` to modify it
+>>
+- Variables are allocated and freed `automatically`
+>> 
+- The stack it not limitless – most have an `upper bound`
+>>
+- The stack `grows and shrinks` as variables are created and destroyed
+>>
+- Stack variables only exist `whilst` the `function` that created them `exists`
+---
+
 ## Stack Overflow
 
-![bg right:50% 100%](../../figures/stackoverflow.png)
 
-A stack overflow occurs if the call stack pointer exceeds the stack bound. The call stack may consist of a limited amount of address space, often determined at the start of the program.
+
+A stack overflow `occurs if the call stack pointer exceeds the stack bound`. The call stack may consist of a limited amount of address space, often determined at the start of the program.
+
+![bg right:50% 100%](../../figures/stackoverflow.png)
 
 ---
 
 ## Heap
 
-The heap is the diametrical opposite of the stack. 
+The heap is the diametrically `opposite of the stack`. 
 
-- The heap is managed by the programmer, the ability to modify it is somewhat boundless
+- The heap is `managed` by the `programmer`, the ability to modify it is somewhat boundless
 >>
-- The heap is large, and is usually limited by the physical memory available in an embedded environment and in a PC it is stored within paging files on main memory (SSD)
+- The heap is large, and is usually `limited` by the `physical memory` available in an embedded environment and in a PC it is stored within paging files on main memory (SSD)
 >>
 - This is memory that is not automatically managed – you have to explicitly allocate (using functions such as `malloc()`,`calloc()`,`realloc()`), and deallocate (`free()`) the memory. 
 >>
-- The heap requires pointers to access it
+- The heap **requires pointers** to access it
 ---
 
 ```c
