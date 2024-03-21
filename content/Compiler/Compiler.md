@@ -223,9 +223,150 @@ public class startup class​
 
 ---
 
+## Compiler
+
+A compiler is a program that `processes` source code written in a programming language.
+
+- **Program Processing:** A compiler serves as a crucial tool in handling programs written in various programming languages.
+
+- **Program Generation:** It functions as a program generator, capable of producing executable programs in a specified language.
+
+- **Language Translation:** The compiler translates programs written in one language into equivalent programs in another language.
+
+---
+
+ ## A tool to enable you to program at a higher level , by mapping high level concepts to low level implementation
+
+- **Increased Productivity:** Allows for faster and more efficient development by focusing on the logic and design rather than intricate details.
+
+- **Enhanced Readability:** Code becomes more readable and understandable, facilitating collaboration and maintenance.
+
+- **Code Portability:** Encourages code portability by minimizing dependencies on specific hardware or architecture
+
+---
+
+![bg right:50% 100%](../../figures/compilerFlowExample.PNG)
+
+- Translates from one language into another
+
+- Output a low level program which behaves as specified by
+the input, higher level program.
+
+- Mediate between higher level human concepts, and the
+word by word data manipulation which the machine performs.
+
+---
+
+## Compliler and Interpreter
+
+<details>
+<summary>Compiler?</summary>
+
+Compiler translates code from a high-level programming language (like Python, JavaScript or Go) into machine code **before the program runs**.
+
+</details>
+
+<details>
+<summary>Interpreter?</summary>
+
+Interpreter translates code written in a high-level programming language into machine code **line-by-line as the code runs**.
+
+</details>
+
+
+---
+
+## GCC compiler example
+
+
+- `$ gcc -S -O test.c`
+
+<div align=center>
+
+<table style="font-size:29px">
+<tr>
+<td>
+
+Input file `test.c`
+
+```c
+int A;
+int B;
+test_fun()
+{
+  A = b + 123;
+}
+```
+
+
+</td>
+<td>
+
+Output file `test.out`
+```asm
+.comm _A,4
+.comm _B,4
+_test_fun:
+pushl %ebp
+movl %esp,%ebp 
+movl _B,%eax 
+addl $123,%_A
+movl %ebp,%esp 
+popl %ebp
+ret
+```
+</td>
+</td>
+</table>
+
+The flag `S` tells the compiler to produce assembly code, `O` turns optimisation on
+
+</div>
+
+---
+
+## Assembly code
+
+**Assembly code** is a `low-level` programming language that serves as an `interface` between `high-level` programming languages and the computer's `hardware`.
+
+- **Human-Readable Machine Code**: Assembly code is a human-readable representation of machine code, making it more understandable than binary machine code.
+
+- **Close to Hardware**: Unlike high-level languages, assembly code provides a direct correspondence to the architecture and operations of the underlying hardware.
+
+---
+
+## Symbolic Representation
+
+-  Uses mnemonics and symbols to represent machine instructions, making it more comprehensible than raw machine code.
+
+<div align=center>
+
+|**Binary**|**Opcode**|**Mnemonic**|**Description**|
+|---|---|---|---|
+|1000 0111|87|`ADD A`|Add the contents of the register A to that of the accumulator|
+|0011 1010| 3A| `LDA` | Load data stored in the given memory address|
+|0111 1001|79|`MOV A C`| Move data from register A to C|
+|1100 0011| C3|`JMP`| Jump to instruction in specified memory address|
+|1100 0001| C1 |`POP` B|Pop from stack and copy to memory register B + C|
+
+</div>
+
+---
+
+**Example:**
+
+- The .data section declares a null-terminated string "Hello, Assembly!".
+- The .text section contains the program logic.
+- The _start label marks the entry point of the program.
+
+![bg right:50% 100%](../../figures/symbolicRepresentations.PNG
+)
+
+---
+
 ## Compiling Code
 
-![center:110%](../../figures/compiler_stages.png)
+![center w:700](../../figures/compiler_stages.png)
 
 ---
 
@@ -408,7 +549,7 @@ int square(int num) {​
 ```
 </div>
 
-\\(\therefore\\)
+$\therefore$
 
 <div class="grid grid-cols-2 gap-4">
 <div>
