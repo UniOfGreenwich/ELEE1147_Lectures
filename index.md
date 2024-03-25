@@ -3,5 +3,5 @@
 |[HeaderFilesGuardsMacros](content/HeaderFilesGuardsMacros/HeaderFilesGuardsMacros.html)|[Union and Stucts](content/UnionsAndStructs/UnionsAndStructs.html)|
 |[PointersAndAddressing](content/PointersAndAddressing/PointersAndAddressing.html)|[Streams](content/Streams/Streams.html)|
 |[Debugging](content/Debugging/Debugging.html)|[Code Conventions](content/CodeConventions/CodeConventions.html)|
-|[Compilers](content/Compiler/Compiler.html)|[Algorithms]()|
-|[Revision]()|[]()|
+|[Compilers](content/Compiler/Compiler.html)|[Algorithms](content/Algorithms/Algorithms.html)|
+|[Revision]()|[Debugging](content/Debugging/Debugging.html)|
