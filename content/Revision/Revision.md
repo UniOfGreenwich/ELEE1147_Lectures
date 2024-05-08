@@ -45,16 +45,16 @@ math: true
 
 <div style="font-size:22px">
 
-[Example Questions and Answers]([../Revision/Revision.html](https://teachingmaterial.github.io/ELEE1147_Exercises/Revision/Revision.html))
+[Example Questions and Answers](https://uniofgreenwich.github.io/ELEE1147_Exercises/Revision/Revison.html)
 
 - Fundamentals of C programming
   - [Headers, Files, Guards and Macros](../HeaderFilesGuardsMacros/HeaderFilesGuardsMacros.html)
-    - [Header Lab](https://teachingmaterial.github.io/ELEE1147_Exercises/HeaderFilesGuardsMacros/HeaderFilesGuardsMacros.html)
+    - [Header Lab](https://uniofgreenwich.github.io/ELEE1147_Exercises/HeaderFilesGuardsMacros/HeaderFilesGuardsMacros.html)
   - [Structs and Unions](../UnionsAndStructs/UnionsAndStructs.html)
-    - [Union Lab](https://teachingmaterial.github.io/ELEE1147_Exercises/UnionsAndStructs/UnionsAndStructs.html)
+    - [Union Lab](https://uniofgreenwich.github.io/ELEE1147_Exercises/UnionsAndStructs/UnionsAndStructs.html)
 - Recogonising Algorithms Complexity   
   - [Algortims](../Algorithms/Algorithms.html)
-    - [Algorithms Lab](https://teachingmaterial.github.io/ELEE1147_Exercises/Algorithms/Algorithms.html)
+    - [Algorithms Lab](https://uniofgreenwich.github.io/ELEE1147_Exercises/Algorithms/Algorithms.html)
 - Memory Management
   - [Pointers and Addressing](../PointersAndAddressing/PointersAndAddressing.html)
 - Debugging
