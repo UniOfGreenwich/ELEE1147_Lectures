@@ -58,7 +58,7 @@ math: true
 - Memory Management
   - [Pointers and Addressing](../PointersAndAddressing/PointersAndAddressing.html)
 - Debugging
-  - [Debugging](../Debugging/Debugging.htmls)
+  - [Debugging](../Debugging/Debugging.html)
 
 ---
 
