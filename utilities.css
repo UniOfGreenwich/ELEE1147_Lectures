@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+}
+  
+.grid-cols {
+grid-template-columns: repeat(var(--columns, 2), minmax(0, 1fr));
+}
+
+.grid-rows {
+grid-template-rows: repeat(var(--rows, 2), minmax(0, 1fr));
+}
+
+.gap {
+gap: var(--gap, 4px);
+}
+
+/* Add this for handling long words */
+.grid-rows, .grid-cols, .gap, #img-right, img[alt~="center"], table {
+    overflow: hidden;
+    word-wrap: break-word;
+  }

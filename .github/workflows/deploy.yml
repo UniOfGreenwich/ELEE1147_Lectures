@@ -1,0 +1,37 @@
+name: deploy-content
+concurrency: deploy-content
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: make build directory
+        run:  mkdir build/ && cp -r figures build/figures
+
+      - name: build index
+        uses: docker://marpteam/marp-cli:latest
+        with:
+          args: index.md -o build/index.html
+        env:
+          MARP_USER: root:root
+
+      - name: build content
+        uses: docker://marpteam/marp-cli:latest
+        with:
+          args: -I content/ -o build/content/ --html --allow-local-files
+        env:
+          MARP_USER: root:root
+
+      - name: deploy content
+        if: ${{ github.event_name == 'push' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: ./build/ 
