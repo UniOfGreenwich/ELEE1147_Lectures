@@ -53,7 +53,7 @@ On successful completion of this module a student will be able to:
 
 ## Indicative Content
 
-<div style="font-size:26px">
+<div style="font-size:25px">
 
 - Introduction to programming languages commonly used in engineering, such as Python, C, or C++, highlighting their strengths and applications in different domains. 
 
