@@ -180,10 +180,12 @@ Goodbye World!
 
 ---
 
+<div style="font-size:20px">
+
 ## Primitive Data Types
 
-C has several data types and all variables **must** have a data type.
 
+C has several data types and all variables **must** have a data type
 
 |Data Type	|Size (Bytes)|	Range | Format Specifier |
 |---|---|---|---|
@@ -195,6 +197,8 @@ C has several data types and all variables **must** have a data type.
 |float | at least 2 |	$3.4e-038$ to $3.4e+038$|`%f`|
 |(unsigned)double	| at least 8 |	$1.7e-308$ to $1.7e+308$| `%lf`|
 |long double |	  at least 10 |   $1.7e-4932$ to $1.7e+4932$| `%Lf`|
+
+</div>
 
 ---
 
@@ -268,7 +272,7 @@ Supports:
 -  Fortran, 
 -  Ada, 
 -  Go, 
--  and D, 
+-  and D 
 
 ---
 
@@ -295,4 +299,3 @@ int main( int argc, char *argv[] )  {
 ```
 
 Let's do this now...
-
