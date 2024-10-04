@@ -185,6 +185,7 @@ table, th,tr, td {
 @import url(../utilities.css);;
 ;" data-marpit-pagination-total="9" data-size="16:9">
 <h2 id="accessing-members">Accessing Members</h2>
+<div style="font-size:25px">
 <ul>
 <li>
 <p><strong>Accessing Members with Pointers</strong></p>
@@ -208,6 +209,7 @@ personPointer-&gt;age = <span class="hljs-number">25</span>;
 </code></pre>
 </li>
 </ul>
+</div>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
@@ -243,6 +245,7 @@ table, th,tr, td {
 @import url(../utilities.css);;
 ;" data-marpit-pagination-total="9" data-size="16:9">
 <h2 id="arrays-of-structs-and-struct-members">Arrays of Structs and Struct Members</h2>
+<div style="font-size:25px">
 <ul>
 <li>
 <p><strong>Array of Structs</strong></p>
@@ -267,6 +270,7 @@ table, th,tr, td {
 </code></pre>
 </li>
 </ul>
+</div>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-class="gaia" data-paginate="true" data-style="#img-right{
   float: right;
@@ -460,8 +464,7 @@ table, th,tr, td {
 @import url(../utilities.css);;
 ;" data-marpit-pagination-total="9" data-size="16:9">
 <h2 id="example-of-type-conversion">Example of Type Conversion</h2>
-<div class="grid grid-cols-2 gap-4">
-<div style="font-size:26px">
+<div style="font-size:24px">
 <ul>
 <li>
 <p>In this example, a float value (3.14) is stored in converter.floatValue.</p>
@@ -471,10 +474,6 @@ table, th,tr, td {
 </li>
 <li>
 <p>This essentially converts the floating-point value to an integer.</p>
-</li>
-</ul>
-</div>
-<div>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c"><span class="hljs-class"><span class="hljs-keyword">union</span> <span class="hljs-title">TypeConverter</span> {</span>
     <span class="hljs-type">int</span> intValue;
     <span class="hljs-type">float</span> floatValue;
@@ -485,9 +484,10 @@ table, th,tr, td {
     converter.floatValue = <span class="hljs-number">3.14</span>;
     <span class="hljs-type">int</span> convertedInt = converter.intValue;
 }
+
 </code></pre>
-</div>
-</div>
+</li>
+</ul>
 <p><strong>Caution:</strong></p>
 <ul>
 <li>It's crucial to be cautious when using unions for type conversion to avoid undefined behavior or unexpected results.</li>
