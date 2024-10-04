@@ -89,6 +89,8 @@ struct Person {
 
 ## Accessing Members
 
+<div style="font-size:25px">
+
 - **Accessing Members with Pointers**
   - For structs and unions, the arrow operator (`->)` is used when accessing members through pointers.
 
@@ -109,9 +111,13 @@ struct Person {
   (*personPointer).age = 25;
   ```
 
+</div>
+
 --- 
 
 ## Arrays of Structs and Struct Members
+
+<div style="font-size:25px">
 
 - **Array of Structs**
   - You can create an array of structs to manage multiple records efficiently.
@@ -133,6 +139,8 @@ struct Person {
   class[0].grades[0] = 90.5;
 
   ```
+  
+</div>
 
 --- 
 ## Unions
@@ -185,10 +193,7 @@ union Data {
 
 ## Example of Type Conversion
 
-<div class="grid grid-cols-2 gap-4">
-
-
-<div style="font-size:26px">
+<div style="font-size:24px">
 
 - In this example, a float value (3.14) is stored in converter.floatValue.
 
@@ -196,26 +201,20 @@ union Data {
 
 - This essentially converts the floating-point value to an integer.
 
-</div>
 
-<div>
+  ```c
+  union TypeConverter {
+      int intValue;
+      float floatValue;
+  };
 
-```c
-union TypeConverter {
-    int intValue;
-    float floatValue;
-};
+  int main() {
+      union TypeConverter converter;
+      converter.floatValue = 3.14;
+      int convertedInt = converter.intValue;
+  }
 
-int main() {
-    union TypeConverter converter;
-    converter.floatValue = 3.14;
-    int convertedInt = converter.intValue;
-}
-```
-
-</div>
-
-</div>
+  ```
 
 **Caution:**
 

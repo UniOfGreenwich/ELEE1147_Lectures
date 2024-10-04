@@ -124,7 +124,7 @@ math: true
 
 - **Print Statements:** Adding print statements to the code to output variable values or checkpoints during execution can help trace the flow of the program and identify the source of errors.
 
-    <div style="font-size:22px">
+    <div style="font-size:20px">
 
     ```c
     int main() {
@@ -166,7 +166,7 @@ math: true
 
 - **Code Review:** Collaborating with peers to review code can help identify bugs and provide alternative perspectives on problem-solving.
 
-![center w:750](../../figures/codeReview.PNG)
+![center w:650](../../figures/codeReview.PNG)
 
 ----
 

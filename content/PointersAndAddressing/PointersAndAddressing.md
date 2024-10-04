@@ -173,13 +173,13 @@ for ( int i = 0; i < n; i++ )​
 
 ## Stack and Heap
 
-![center](../../figures/heap_stack_books.png)
+![center w:800](../../figures/heap_stack_books.png)
 
 ---
 
 ## General Memory Layout
 
-![bg right:50% 100%](../../figures/memory_layout.PNG)
+![bg right:50% 100%](../../figures/memory_layout.png  )
 
 - **stack**: stores local variables
 >>
