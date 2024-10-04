@@ -20,11 +20,11 @@ math: true
 ---
 # Introduction to C
 
-    Course Code: ELEE1119 
+    Course Code: ELEE1147
     
-    Course Name: Advanced Computer Engineering
+    Course Name: Programming for Engineers
 
-    Credits: 30
+    Credits: 15
 
     Module Leader: Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA
     
