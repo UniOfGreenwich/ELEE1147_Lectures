@@ -127,7 +127,7 @@ math: true
   name = "Alice"
   ```
 
-- **Basic Data Types**:
+- **Basic Data Types** (implicit):
   - `int`: Integer numbers (e.g., 5)
   - `float`: Decimal numbers (e.g., 5.0)
   - `str`: String (e.g., "Hello")

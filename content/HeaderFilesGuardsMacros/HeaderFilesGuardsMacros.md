@@ -58,7 +58,7 @@ math: true
 
 ## How Does It Work?
 
-![w:900 center](../../figures/header_links.png)
+![w:700 center](../../figures/header_links.png)
 
 ---
 
@@ -166,7 +166,7 @@ void greeter(){
 ---
 ## How Header Guards Work
 
-![w:900 center](../../figures/headerGuard.png)
+![w:800 center](../../figures/headerGuard.png)
 
 ---
 
