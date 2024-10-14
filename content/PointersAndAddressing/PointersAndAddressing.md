@@ -43,19 +43,19 @@ math: true
 ## Memory 
 
 - Anything that stores information
-<details>
-<summary>Characteristics</summary>
+- <details>
+  <summary> What are the Characteristics?</summary>
 
-  - Cost
-  - Speed
-  - Density (size)
-  - Non-volatile/volatile
-  - Read and write
-  - Power
-  - Durability
-  - Removable
+    - Cost
+    - Speed
+    - Density (size)
+    - Non-volatile/volatile
+    - Read and write
+    - Power
+    - Durability
+    - Removable
 
-</details>
+  </details>
 
 ---
 
@@ -114,42 +114,6 @@ Spatial Locality: Items with nearby addresses tend to be referenced close togeth
 
 ---
 
-
-## SDRAM & DDR
-
-| Standard (Approximate Year Introduced)​ | Operating Voltage​ | Associated RAM Clock Rates​ |Approximate Transfer Rates​|
-|---|---|---|---|
-|SDRAM (1993)​| 3.3 V​|66 – 133 MHz | 100 – 166  MT/s​ |
-|DDR SDRAM (2000)​ |2.6 V, 2.5 V​|  100 – 200 MHz​| 200 – 400  MT/s​|
-|DDR2 SDRAM (2003) | 1.8 V, 1.55 V​ |200 – 400 MHz​ | 400 – 1066  MT/s​|
-|DDR3 SDRAM (2007)​ | 1.5 V, 1.35 V​  | 400 MHz – 1066 MHz |800 – 2133 MT/s​|
-|DDR4 SDRAM (2014)​ |1.2 V​ | 1066 – 1600 MHz​ | 1600 – 3200 MT/s​|
-|DDR5 SDRAM (2020)​ |1.1 V​ | 2000 – 4000 MHz​ | 3200 – 8000 MT/s​|
-
-<div style="font-size:10px">
-
-**S**ynchronous **D**ynamic
-**D**ouble **D**ata **R**ate
-
-</div>
-
----
-
-## RAM is volatlie and mainly comes in two varietys:
-
-<div align=center>
-
-|SRAM|DRAM|
-|-----|----|
-|It has less storage capacity| It has large storage capacity|
-|SRAMs are low denisty devices| DRAMS are high density devices|
-|These are used in cache memories|These are used in main memories|
-|SRAM is more expensive than DRAM| DRAM is cheaper than SRAM|
-
-</div>
-
-----
-
 ## Locality Example
 
 ```c
@@ -199,10 +163,19 @@ By convention, we express these addresses in base 16 numbers:
 >>
 - and the largest possible address could be 0xFFFFFFFF.
 
+<p></p>
+<p></p>
+<p></p>
+
+
 <details>
 <summary>Which is what in decimal?</summary>
 
 $$4,294,967,295_{10}$$
+
+
+
+*hint:* $4,026,531,840\ +\ ...\ 0\ \leftarrow\ 15(F)\ \cdot\ 16^7\ +\ ...\ +\  F\ \cdot\ 16^0$ 
 
 </details>
 
