@@ -94,22 +94,22 @@ struct Person {
 - **Accessing Members with Pointers**
   - For structs and unions, the arrow operator (`->)` is used when accessing members through pointers.
 
-  ```c
-  struct Person {
-      char name[50];
-      int age;
-      float height;
-  };
+    ```c
+    struct Person {
+        char name[50];
+        int age;
+        float height;
+    };
 
-  struct Person person1;
-  struct Person *personPointer = &person1;
+    struct Person person1;
+    struct Person *personPointer = &person1;
 
-  // Using the arrow operator
-  personPointer->age = 25;
+    // Using the arrow operator
+    personPointer->age = 25;
 
-  // Equivalent longhand notation
-  (*personPointer).age = 25;
-  ```
+    // Equivalent longhand notation
+    (*personPointer).age = 25;
+    ```
 
 </div>
 
@@ -122,23 +122,23 @@ struct Person {
 - **Array of Structs**
   - You can create an array of structs to manage multiple records efficiently.
 
-  ```c
-  struct Student {
-      char name[50];
-      int age;
-      float grades[5]; // Member is an array
-  };
+    ```c
+    struct Student {
+        char name[50];
+        int age;
+        float grades[5]; // Member is an array
+    };
 
-  int n = 20; // Number of students
-  struct Student *class = (struct Student *)malloc(n * sizeof(struct Student));
+    int n = 20; // Number of students
+    struct Student *class = (struct Student *)malloc(n * sizeof(struct Student));
 
-  --- 
+    --- 
 
-  class[0].age = 20;
-  strcpy(class[0].name, "John Doe");
-  class[0].grades[0] = 90.5;
+    class[0].age = 20;
+    strcpy(class[0].name, "John Doe");
+    class[0].grades[0] = 90.5;
 
-  ```
+    ```
   
 </div>
 
@@ -193,7 +193,7 @@ union Data {
 
 ## Example of Type Conversion
 
-<div style="font-size:24px">
+<div style="font-size:23px">
 
 - In this example, a float value (3.14) is stored in converter.floatValue.
 
