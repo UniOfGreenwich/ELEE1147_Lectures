@@ -543,7 +543,7 @@ server_info.get(<span class="hljs-string">&quot;uptime&quot;</span>, <span class
 
 server_info[<span class="hljs-string">&quot;disk_usage&quot;</span>] = <span class="hljs-number">85.2</span> <span class="hljs-comment"># server_info now contains disk_usage</span>
 
-server_info[<span class="hljs-string">&quot;disk_usage&quot;</span>].pop(<span class="hljs-number">0</span>)  <span class="hljs-comment"># &quot;httpd&quot; removed from &quot;services&quot;</span>
+server_info[<span class="hljs-string">&quot;services&quot;</span>].pop(<span class="hljs-number">0</span>)  <span class="hljs-comment"># &quot;httpd&quot; removed from &quot;services&quot;</span>
 
 server_info.keys() <span class="hljs-comment"># Output: dict_keys([&quot;hostname&quot;, &quot;status&quot;, &quot;cpu_load&quot;, &quot;services&quot;])</span>
 
@@ -631,17 +631,17 @@ gap {
 </tr>
 <tr>
 <td>Mutable</td>
-<td>Mutable</td>
 <td>Yes</td>
 <td>No</td>
+<td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
 <td>Duplicate</td>
-<td>Duplicate</td>
 <td>Allowed</td>
 <td>Allowed</td>
-<td>Not Allowed</td>
+<td>Allowed</td>
+<td>Allowed (Keys have to be Unique)</td>
 </tr>
 <tr>
 <td>====</td>
