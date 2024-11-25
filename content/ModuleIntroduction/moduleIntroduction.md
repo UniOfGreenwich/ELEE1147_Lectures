@@ -12,12 +12,19 @@ style: |
     table{
       font-size: 18 px;
     }
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
+
 
 # Module Introduction
 

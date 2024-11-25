@@ -33,12 +33,18 @@ style: |
     gap {
       gap: var(--gap, 4px);
     }
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
 
 # Introudction To Python
 
@@ -186,6 +192,8 @@ math: true
 
 ## Conditionals and Loops
 
+<div style="font-size:26px">
+
 - **Conditionals**: `if`, `elif`, `else`
   
   ```python
@@ -208,6 +216,8 @@ math: true
   while x > 0:
       x -= 1
   ```
+
+</div>
 
 ---
 

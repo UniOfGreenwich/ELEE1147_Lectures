@@ -21,12 +21,18 @@ style: |
          border: none!important; 
           vertical-align: middle;
       }
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
 
 # Version Control Systems
 
@@ -85,8 +91,9 @@ math: true
 
 ## VCS - List
 
-![bg right:50% 50%](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Apache_Subversion_logo.svg/1280px-Apache_Subversion_logo.svg.png)
-<div style="font-size:22px">
+![bg right:60% 60%](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Apache_Subversion_logo.svg/1280px-Apache_Subversion_logo.svg.png)
+
+<div style="font-size:20px">
 
 **Local Data Model**
 - Revision Control System (RCS) [OS]

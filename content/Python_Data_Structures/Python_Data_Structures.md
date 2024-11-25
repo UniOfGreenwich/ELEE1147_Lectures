@@ -33,13 +33,18 @@ style: |
     }
     gap {
       gap: var(--gap, 4px);
+    }    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
     }
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
 
 # Python - Data Structures
 
@@ -141,7 +146,7 @@ math: true
 
 ## Dictionaries
 
- <div style="font-size:22px">
+ <div style="font-size:20px">
 
 - Key-value pairs, unordered, mutable
 - Defined with curly braces `{key: value}`

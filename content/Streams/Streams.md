@@ -21,13 +21,19 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
     @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
 
 # Streams
 

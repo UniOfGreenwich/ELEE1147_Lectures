@@ -21,12 +21,18 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
 
 # Pointers And Addressing
 
@@ -61,7 +67,7 @@ math: true
 
 ## Types of Memory
 
-![center w:1100](../../figures/memory_types.png)
+![center w:900](../../figures/memory_types.png)
 
 <div style="font-size:10px">
 
@@ -96,7 +102,7 @@ If the item (Data) is not there you have to spend extra time (Slow) to get it (D
 ---
 
 
-![center](../../figures/cache_layout.PNG)
+![center w:850](../../figures/cache_layout.PNG)
 
 ---
  

@@ -34,12 +34,18 @@ style: |
     gap {
       gap: var(--gap, 4px);
     }
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
 
 ## Python - Modules
 
@@ -70,7 +76,7 @@ math: true
 
 ---
 
-<div style="font-size:24px">
+<div style="font-size:22px">
 
 ```python
 # math_utils.py
@@ -215,6 +221,9 @@ To get a list of all 65 Built-in modules:
 
 ## Checking Installed Modules
 
+<div style="font-size:25px">
+
+
 - Use the following command to see installed packages
 
     ```bash
@@ -237,6 +246,7 @@ To get a list of all 65 Built-in modules:
     Requires: idna, charset-normalizer, certifi, urllib3
     Required-by:
     ```
+</div>
 
 ---
 
