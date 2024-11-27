@@ -25,12 +25,20 @@ style: |
           vertical-align: middle;
       }
     @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+    @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
+
 # Compliers
 
     Module Code: U10793
@@ -105,7 +113,7 @@ But ultimately programming provides instructions on how hardware is controlled, 
 
 ## C Influences
 
-[![center w:620](../../figures/c_relationships.png)](https://programminglanguages.info/influence-network/#language=C)
+[![bg right:70% 80% ](../../figures/c_relationships.png)](https://programminglanguages.info/influence-network/#language=C)
 
 <!--
 Direct influences 60+ langauages

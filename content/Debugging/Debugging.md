@@ -21,13 +21,19 @@ style: |
       border: none!important;
       vertical-align: middle;
     }
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
     @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
 
 # Understanding and Mastering Debugging Techniques in Software Development
 
@@ -122,7 +128,10 @@ math: true
 
 ## Debugging Techniques
 
+<div style="font-size:24px">
+
 - **Print Statements:** Adding print statements to the code to output variable values or checkpoints during execution can help trace the flow of the program and identify the source of errors.
+
 
     <div style="font-size:20px">
 
@@ -150,6 +159,7 @@ math: true
     }
     ```
     </div>
+</div>
 
 ----
 
@@ -166,7 +176,7 @@ math: true
 
 - **Code Review:** Collaborating with peers to review code can help identify bugs and provide alternative perspectives on problem-solving.
 
-![center w:650](../../figures/codeReview.PNG)
+![center w:630](../../figures/codeReview.PNG)
 
 ----
 

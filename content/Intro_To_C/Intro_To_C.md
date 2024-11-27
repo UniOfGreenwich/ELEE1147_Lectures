@@ -12,12 +12,19 @@ style: |
     table{
       font-size: 18 px;
     }
+    section::after {
+      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: "ELEE1147 | Programming for Engineers"
 size: 16:9
 paginate: true
 _paginate: false
 marp: true
 math: true
 ---
+
+<!-- _footer: "" -->
+
 # Introduction to C
 
     Course Code: ELEE1147
@@ -107,6 +114,8 @@ To solve this, programs are split into c/h files which are each individually com
 
 ## Header Files Continued
 
+<div style="font-size:25px">
+
 **usefulfunctions.h**
 ```c
 #ifndef USEFULFUNCTIONS_H_   /* Include guard */
@@ -127,6 +136,9 @@ int sqr(int x)    /* Function definition */
     return x * x;
 }
 ```
+
+</div>
+
 ---
 ## Revist helloworld.c
 
@@ -261,6 +273,8 @@ TRISB = 0;
 
 ## Compilation
 
+<div style="font-size:24px">
+
 Throughout this lab we have been using `gcc` or `the GNU Compiler Collection'. The GNU is a recursive acronym: ‘GNU’s Not Unix!'
 
 Supports:
@@ -274,9 +288,13 @@ Supports:
 -  Go, 
 -  and D 
 
+</div>
+
 ---
 
 ## Command Line Arguments
+
+<div style="font-size:24px">
 
 ```c
 #include <stdio.h>
@@ -297,5 +315,7 @@ int main( int argc, char *argv[] )  {
    return 0;
 }
 ```
+
+</div>
 
 Let's do this now...
