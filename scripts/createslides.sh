@@ -11,7 +11,7 @@ if [[ ! -d ${LECTURE_FOLDER} ]];then
 	mkdir ${LECTURE_FOLDER}
 fi
 
-source ${LECTURES_DIR}/config
+source ${LECTURES_DIR}/scripts/config
 
 cat >> ${LECTURE_FOLDER}/${LECTURE_FILENAME}.md << EOF
 ---
@@ -49,6 +49,9 @@ style: |
     gap {
       gap: var(--gap, 4px);
     }
+    content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    }
+footer: $modulecode  | $modulename
 size: 16:9
 paginate: true
 _paginate: false
@@ -70,4 +73,4 @@ math: true
 EOF
 
 # declutter environment variables
-unset $coursecode $coursename $credits $moduleleader
+unset $modulecode $modulename $credits $moduleleader
