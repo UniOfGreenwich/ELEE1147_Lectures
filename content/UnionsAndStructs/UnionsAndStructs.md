@@ -34,7 +34,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147-Lectures/raw/gh-pages/content/UnionsAndStructs/UnionsAndStructs.pdf)" -->
 
 # Union And Structs
 

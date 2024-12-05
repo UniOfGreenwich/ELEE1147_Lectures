@@ -23,7 +23,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147-Lectures/raw/gh-pages/content/ModuleIntroduction/moduleIntroduction.pdf)" -->
 
 
 # Module Introduction

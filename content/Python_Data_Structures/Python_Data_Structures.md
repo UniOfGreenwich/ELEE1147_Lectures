@@ -44,7 +44,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147-Lectures/raw/gh-pages/content/Python_Data_Structures/Python_Data_Structures.pdf)" -->
 
 # Python - Data Structures
 

@@ -45,7 +45,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147-Lectures/raw/gh-pages/content/Python_Modules/Python_Modules.pdf)" -->
 
 ## Python - Modules
 
