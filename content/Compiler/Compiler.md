@@ -37,7 +37,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147-Lectures/raw/gh-pages/content/Compiler/Compiler.pdf)" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/Compiler/Compiler.pdf)" -->
 
 # Compliers
 
@@ -67,8 +67,9 @@ math: true
 
 <details>
 <summary>?</summary>
+<p></p>
 
-A programming language is a computer language programmers use to develop software programs, scripts, or other sets of instructions for computers to execute​...
+- A programming language is a computer language programmers use to develop software programs, scripts, or other sets of instructions for computers to execute​...
 
 </details>
 
@@ -76,9 +77,11 @@ A programming language is a computer language programmers use to develop softwar
 <details>
 <summary>Why program?​</summary>
 
-Automate process​, Create digital records​, Communication ,Simulation/emulation​, …​
+<p></p>
 
-But ultimately programming provides instructions on how hardware is controlled, remember at the end of the day it is all zeroes and ones that represent electrical signals.​
+- Automate process​, Create digital records​, Communication ,Simulation/emulation​, …​
+
+- But ultimately programming provides instructions on how hardware is controlled, remember at the end of the day it is all zeroes and ones that represent electrical signals.​
 
 </details>
 
@@ -129,7 +132,9 @@ Python: 33
 
 <summary>Are all programming languages in English?​</summary>
 
-No, but the vast majority are because they are the most used.​
+<p></p>
+
+- No, but the vast majority are because they are the most used.​
 
 </details>
 
@@ -138,7 +143,9 @@ No, but the vast majority are because they are the most used.​
 
 <summary>Does it matter when these are compiled down to machine code?​</summary>
 
-No, because it’s all ones and zeroes​
+<p></p>
+
+- No, because it’s all ones and zeroes​
 
 </details>
 
@@ -210,6 +217,8 @@ end proc
 
 易语言 (Easy Programming Language, as known as EPL):​
 
+<div style="font-size:25px">
+
 ```cshjarp
 公开 类 启动类​
 {​
@@ -228,6 +237,8 @@ public class startup class​
   }
 }
 ```
+
+</div>
 
 ---
 
@@ -270,14 +281,18 @@ word by word data manipulation which the machine performs.
 <details>
 <summary>Compiler?</summary>
 
-Compiler translates code from a high-level programming language (like Python, JavaScript or Go) into machine code **before the program runs**.
+<p></p>
+
+- Compiler translates code from a high-level programming language (like Python, JavaScript or Go) into machine code **before the program runs**.
 
 </details>
 
 <details>
 <summary>Interpreter?</summary>
 
-Interpreter translates code written in a high-level programming language into machine code **line-by-line as the code runs**.
+<p></p>
+
+- Interpreter translates code written in a high-level programming language into machine code **line-by-line as the code runs**.
 
 </details>
 
@@ -467,6 +482,8 @@ Arranges the sequence of statements to speed up the execution of the program wit
 
 Consider the following code, how can we remove unnecessary code? ​
 
+<div style="font-size:24px">
+
 ```c
 a = int_to_float(10)​
 b = c * a​
@@ -482,6 +499,8 @@ b = c * 10.0​
 f = e+b​
 ```
 </details>
+
+</div>
 
 ---
 
@@ -625,4 +644,4 @@ During compilation process error(s) may occur in all the below-given phases:​
 
 ## Labs
 
-Begin the lab from blackboard, where you are going experience programming in several languages <C , Python and Ada> to do similar operations, and see how the code compiles and the subsequent outputs!​,
+Begin the lab from blackboard, where you are going experience programming in several languages <C , Python and Ada> to do similar operations, and see how the code compiles and the subsequent outputs!​
