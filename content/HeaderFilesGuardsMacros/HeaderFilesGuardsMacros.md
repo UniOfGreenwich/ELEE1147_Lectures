@@ -33,7 +33,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147-Lectures/raw/gh-pages/content/HeaderFilesGuardsMacros/HeaderFilesGuardsMacros.pdf)" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/HeaderFilesGuardsMacros/HeaderFilesGuardsMacros.pdf)" -->
 
 # Header Files, Guards and Macros
 
