@@ -199,6 +199,8 @@ int AddNumbers(int a, int b) {
 
 ## Documentation, 'doc as you go...'
 
+<div style="font-size:27px">
+
 **Why Documentation**
 
 - **You**
@@ -211,11 +213,16 @@ int AddNumbers(int a, int b) {
   - Advances
   - Open collaboration
   - Reproducibility and transparency
+
+</div> 
+
 ![bg right:30% 100% vertical](../../figures/codefacebook.png)
 ![bg right:30% 100% vertical](../../figures/codefacebook2.png)
 
 ---
 ## Tools for Documentantion
+<div style="font-size:27px">
+
 - **Python**
   - Sphinx, Doctest, Numpydoc
 - **R**
@@ -228,6 +235,8 @@ int AddNumbers(int a, int b) {
   - Docurium
 - **Doxygen**
   - r, C, C#, PHP, Java, Python, and Fortran.
+
+</div>
 
 ![bg right:40% 80% vertical](../../figures/doxygenlogo.jpeg)
 
@@ -339,7 +348,7 @@ int main() {
 
 ## Doxygen Configuration file
 
-<div style="font-size:22px">
+<div style="font-size:21px">
 
 ```sh
 PM> doxygen.exe doxygenConfigFile
