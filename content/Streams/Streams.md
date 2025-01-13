@@ -59,17 +59,47 @@ math: true
 
 ---
 
+## Kernel
+
+When using streams, we need to remember that all of this is handled by the kernel.
+
+System calls, such as `open()`, `write()` and `exit()` can be invoked by user and system level program:
+
+- `open()`: It is the system call to open a file.​
+
+- `read()`:​ This system call opens the file in reading mode. Multiple processes can execute the `read()` system call on the same file simultaneously.​
+
+- `write()`:​ This system call opens the file in writing mode. Multiple processes can not execute the `write()` system call on the same file simultaneously.​
+
+- `close()`: This system call closes the opened file.​
+
+---
+
+## But what about concurrent `write()`
+
+OneDrive and GoogleDrive etc implement mechanisms to allow concurrent access while avoiding conflicts when multiple processes or users attempt to write to the same file:
+
+- **Granular Locking Mechanism**, portion of the file is locked
+
+- **Conflict Detection and Resolution**, versioning and merging
+
+- **Real-Time Collaboration**, syncing changes at the character or paragraph level. Changes are merged in real time, allowing multiple users to work on a file simultaneously. 
+
+- **Metadata, State & Periodic syncing, and local caching**, managed by using timestamping, version numbers and checksums/hashes
+
+---
+
 ## Standard Input (stdin)
 
 - **stdin** is the **st**andar**d** **in**put stream.
 - It is used to read input from the user or from another program.
 - Functions like `scanf()`/`scanf_s` and `getchar()` read from stdin.
 
-```c
-int num;
-printf("Enter a number: ");
-scanf_s("%d", &num);
-```
+  ```c
+  int num;
+  printf("Enter a number: ");
+  scanf_s("%d", &num);
+  ```
 - `scanf_s()` reads input from the standard input (usually the keyboard) and stores it in the specified variable.
 
 - In this example, it waits for the user to input an integer and stores it in the variable `num`.
@@ -79,7 +109,7 @@ scanf_s("%d", &num);
 
 ## Standard Input flow:
 
-![](../../figures/stdin_diagram.svg)
+![w:1100 center](../../figures/stdin_diagram.svg)
 
 ---
 
@@ -120,7 +150,7 @@ if (file == NULL) {
 
 ## Standard Ouput and Error flow:
 
-![](../../figures/stdouterr_diagram.svg)
+![w:1000 center](../../figures/stdouterr_diagram.svg)
 
 ---
 
@@ -173,12 +203,11 @@ FILE *filePtr = fopen("example.txt", "r"); // Open for reading
 
 ## File Mode FLow
 
-![w:1000 center](../../figures/read_write_append_diagram.png)
+![w:800 center](../../figures/read_write_append_diagram.png)
 
 ---
 
 ## File Modes
-
 
 |                | `r`  | `r+`|   `w`|   `w+` |  `a`|   `a+`|
 |----------------|----|---|-----|------|---|----|
@@ -194,11 +223,7 @@ read - reading from file is allowed| +  | + |     |  +   |   |  +|
 |
 |position at end - after file is opened, initial position is set to the end of the file|    |   |     |      | + |  +|
 
-
 ---
-
-
-
 
 ## Write and Read
 
@@ -236,9 +261,9 @@ When a file is opened for writing, it becomes a "dirty" file. This means changes
 Example:
 
 ```c
-FILE *dirtyFile = fopen("example.txt", "w");
-fprintf(dirtyFile, "Hello, World!");
-fclose(dirtyFile); // Save changes to disk
+FILE *dirtyFile = fopen("example.txt", "w"); // file is open for writing too
+fprintf(dirtyFile, "Hello, World!"); // File is dirty
+fclose(dirtyFile); // Save changes to disk, file is "clean"
 ```
 
 ---
@@ -271,3 +296,34 @@ int main() {
     return 0;
 }
 ```
+
+---
+
+## Python
+
+<div style="font-size:25px">
+
+Same concepts, ever so slightly different syntax:
+
+**Reading**:
+
+```python
+file = open("example.txt", "r") # Open file for reading
+content = file.read()  # Read entire file
+line = file.readline()  # Read single line
+lines = file.readlines()  # Read all lines into a list
+```
+
+**Writing**
+
+```python
+file = open("example.txt", "w")  # Open file for writing
+file.write("Hello, World!")  # Write a string to the file
+```
+**Remember to close**
+
+```python
+file.close()  # Close the file
+```
+
+</div>
