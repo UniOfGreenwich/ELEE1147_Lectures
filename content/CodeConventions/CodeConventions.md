@@ -199,7 +199,7 @@ int AddNumbers(int a, int b) {
 
 ## Documentation, 'doc as you go...'
 
-<div style="font-size:27px">
+<div style="font-size:24px">
 
 **Why Documentation**
 
@@ -379,3 +379,98 @@ GENERATE_HTML          = YES
 
 </div>
 
+
+---
+
+## Python Documentation Generators
+
+- Sphinx
+    - Python, Linux Kernel and Project Jupter
+- MkDocs
+  -  a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. 
+- Doxygen
+- Pydoc
+- Pydoctor
+
+---
+
+## `pydoc` (`builtin`)
+
+```py
+def add_numbers(a, b):
+    """
+    Adds two numbers together and returns the result.
+    
+    Parameters:
+    a (int): The first number.
+    b (int): The second number.
+    
+    Returns:
+    int: The sum of the two numbers.
+    """
+    return a + b
+```
+
+![bg right 100% 90%](../../figures/pydoc_add.png)
+
+---
+
+## Sphinx ![w:50](https://www.sphinx-doc.org/en/master/_static/sphinx-logo.svg)
+
+- GitHub link -> [https://github.com/sphinx-doc/sphinx](https://github.com/sphinx-doc/sphinx)
+- Webpage -> [https://www.sphinx-doc.org/en/master/](https://www.sphinx-doc.org/en/master/)
+- is a third-party tool
+- Prefered tool for Python, Linux Kernel and Project Jupyter
+
+![bg right:35% 29% vertical](https://www.sphinx-doc.org/en/master/_images/python-logo.png)
+![bg right:35% 29% vertical](https://www.sphinx-doc.org/en/master/_images/linux-logo.png)
+![bg right:35% 29% vertical](https://www.sphinx-doc.org/en/master/_images/jupyter-logo.png)
+
+---
+
+## Sphinx ![w:50](https://www.sphinx-doc.org/en/master/_static/sphinx-logo.svg)
+
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+`add.py`
+
+```py
+def add_numbers(a, b):
+    """
+    Adds two numbers together and returns the result.
+
+    :param a: The first number.
+    :type a: int
+    :param b: The second number.
+    :type: b: int
+
+    returns: The sum of the two numbers.
+    rtype: int
+    """
+    return a + b
+```
+
+
+</div>
+<div>
+
+`conf.py`
+```
+project = 'adding'
+copyright = '2025, Seb Blair'
+author = 'Seb Blair'
+release = '0.1'
+
+extensions = []
+
+templates_path = ['_templates']
+exclude_patterns = []
+
+html_theme = 'alabaster'
+html_static_path = ['_static']
+```
+
+</div>
+</div>

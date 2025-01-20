@@ -47,7 +47,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/Compiler/Compiler.pdf)" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/${LECTURE_FOLDER}/${LECTURE_FILENAME}.pdf)" -->
 
 # LECTURE TITLE
 
@@ -61,4 +61,4 @@ math: true
 EOF
 
 # declutter environment variables
-unset $coursecode $coursename $lecturer
+unset $modulecode $modulename $lecturer
