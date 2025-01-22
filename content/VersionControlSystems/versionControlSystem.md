@@ -91,9 +91,9 @@ math: true
 
 ## VCS - List
 
-![bg right:60% 60%](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Apache_Subversion_logo.svg/1280px-Apache_Subversion_logo.svg.png)
+![bg right:50% 50%](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Apache_Subversion_logo.svg/1280px-Apache_Subversion_logo.svg.png)
 
-<div style="font-size:20px">
+<div style="font-size:22px">
 
 **Local Data Model**
 - Revision Control System (RCS) [OS]
@@ -106,8 +106,6 @@ math: true
 - Subversion (SVN) [OS]
 - Vesta [OS]
 - AccuRev [P]
-- Autodesk Vault [P]
-- CADES [P]
 - ...
 - Vault [P]
 - Visual Source Safe [P]
@@ -122,6 +120,8 @@ math: true
 ![bg right:50% 25% vertical](../../figures/git.png)
 ![bg right:50% 25% vertical](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Mercurial_no_border_logo.svg/800px-Mercurial_no_border_logo.svg.png)
 
+<div style="font-size:24px">
+
 **Distrubted Model**
 
 - ArX [OS]
@@ -134,9 +134,14 @@ math: true
 - Code Co-op [P]
 - Sun WorkShop TeamWare [P]
 - Plastic SCM [P]
+
+</div>
+
 ---
 
 ## Git Characteristics 
+
+<div style="font-size:26px">
 
 - A very popular VCS
 - Performance
@@ -149,6 +154,8 @@ math: true
   - Non-linear development
   - Detailed log of information
 
+</div>
+
 ![bg right:40% 60%](../../figures/git.png)
 
 --- 
@@ -159,6 +166,8 @@ math: true
 ![bg right:50% 30% vertical](https://www.guru99.com/images/1/120718_0548_13BestGithu2.png)
 ![bg right:50% 30% vertical](https://www.guru99.com/images/2/taravault-logo.png)
 ![bg right:50% 30% vertical](https://www.guru99.com/images/1/120718_0548_13BestGithu6.png)
+
+<div style="font-size:24px">
 
 - TaraVault
 - BitBucket
@@ -171,6 +180,9 @@ math: true
 - BeanStalk
 - Phabricator
 - ...many more
+
+</div>
+
 ---
 
 ## GitHub - What is it and features?
@@ -184,35 +196,23 @@ math: true
 
 ---
 
-## Fundemental Git Functions
-
-All commands are prepended with `git`
-
-- `fetch`, `pull`: Get a working copy of a repository
-
-- `add`,`commit`,`push`: Record a change or changes in at least one of the files stored in the repository.
-
-- `branch`: Create a copy of a repository to be worked independently.
-
-- `merge`: Collates changes of two different copies of a repository.
-
-- `log`: Records information of each change within a repository
-
----
-
 ## Git - Branching
 
 ![horizontal](../../figures/gitBranching.png)
 
  - **Main**: The default development branch. Whenever you create a Git repository, a branch named "master" is created, and becomes the active branch. 
 
-- **Develop**: This is another branch, which is a way to `edit/develop/test` code without changing the Master branch.
+- **Develop**: This is another branch, which is a way to edit/develop/test code without changing the Master branch. T
 
 - **Topic**: A regular Git branch that is used by a developer to identify a conceptual line of development. 
 
 ---
 
-## Git Commands Explained
+## `git` Command arguments Explained
+
+<div style="font-size:26px">
+
+`init`: Initialise a git repository
 
 `clone`​: Get a working copy of the repository​
 
@@ -227,6 +227,8 @@ All commands are prepended with `git`
 `branch​`: Creates a copy of the repository that can be worked independently from the main branch​
 
 `Merge`: Combine two copies of a repository.​ Conflicts may be present.​
+
+</div>
 
 ---
 
