@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+
 MODULE_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]%/*}" )" &> /dev/null && pwd )
 
 LECTURE_FOLDER=${MODULE_DIR}/content/$1
@@ -10,7 +11,8 @@ if [[ ! -d ${LECTURE_FOLDER} ]];then
 	mkdir ${LECTURE_FOLDER}
 fi
 
-source ${MODULE_DIR}/config
+#set environmental variables
+source ${MODULE_DIR}/scripts/config
 
 cat >> ${LECTURE_FOLDER}/${LECTURE_FILENAME}.md << EOF
 ---
@@ -39,7 +41,7 @@ style: |
     section::after {
       content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
     }
-footer: "$modulecode | $modulename"
+footer: "${MODULECODE} | ${MODULENAME}"
 size: 16:9
 paginate: true
 _paginate: false
@@ -47,18 +49,18 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/${MODULECODE}-Lectures/raw/gh-pages/content/${LECTURE_FOLDER}/${LECTURE_FILENAME}.pdf)" -->
 
 # LECTURE TITLE
 
-    Module Code: $modulecode
+    Module Code: ${MODULECODE}
 
-    Module Name: $modulename
+    Module Name: ${MODULENAME}
 
-    Lecturer: $moduleleader
+    Module Leader: ${MODULELEADER}
 
 ---
 EOF
 
-# declutter environment variables
-unset $coursecode $coursename $lecturer
+# remove environment variables from current shell
+unset ${MODULECODE} ${MODULENAME} ${MODULELEADER}
