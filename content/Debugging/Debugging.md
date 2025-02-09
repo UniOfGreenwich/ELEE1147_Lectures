@@ -1,6 +1,6 @@
 ---
-title: Understanding and Mastering Debugging Techniques in Software Development
-description: Understanding and Mastering Debugging Techniques in Software Development
+title: Debugging
+description: Debugging
 class: gaia
 _class:
   - lead
@@ -33,9 +33,9 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147-Lectures/raw/gh-pages/content/Debugging/Debugging.pdf)" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/Debugging/Debugging.pdf)" -->
 
-# Understanding and Mastering Debugging Techniques in Software Development
+# Debugging
 
     Module Code: ELEE1147
     
@@ -50,13 +50,33 @@ math: true
 
 ## Introduction to Debugging
 
+<div style="font-size:27px">
+
 - Debugging is a crucial aspect of software development that involves identifying and fixing errors or defects (bugs) in computer programs. 
 
 - Regardless of programming language or development environment, all software developers encounter bugs during the development process. 
 
 - Debugging is the systematic process of locating and resolving these bugs to ensure that the software behaves as expected.
 
+</div>
+
 ![bg right:40% 100%](../../figures/debugginMemeOne.jpg)
+
+----
+
+## Origin of Debugging?
+
+<div style="font-size:28px">
+
+Name: Admiral Grace Hopper (USN)
+When: 1947 
+How: Working on the Mark II computer in Harvard and discoved a moth stuck in one of the relays which was causing the errors in the computer... she remarked that she was "debugging" the computer. 
+
+*she created the first compiler and contributed to the programming language COBOL
+
+</div>
+
+![bg right:50% 75%](https://www.bugsnag.com/wp-content/uploads/2023/06/61421ad447224dc0904ae2c8_h-LpQEPx6E2m0-d23cg-wJsDvSADKDPQLGcpLDeq2B6UnzA-MuQvzMICjegJj08MEAn6dPSi3qsKeUMoSkTGjZwmSvUsfwv-Yqrs0QDqEgP9QehJVjTmFd1wgpQWMdEGR.jpg)
 
 ----
 
@@ -128,37 +148,38 @@ math: true
 
 ## Debugging Techniques
 
+![bg right:30% 100%](https://preview.redd.it/an6kr96taj761.jpg?auto=webp&s=bf9ea4807b7b15cbb474013bd8f27f210b5ca842)
+
 <div style="font-size:24px">
 
-- **Print Statements:** Adding print statements to the code to output variable values or checkpoints during execution can help trace the flow of the program and identify the source of errors.
-
+- **Print Statements:**
 
     <div style="font-size:20px">
 
-    ```c
-    int main() {
-        int x = 5, y = 3;
+```c
+int main() {
+    int x = 5, y = 3;
 
-        printf("Program start\n"); // Print statement to indicate the start of the program
+    printf("Program start\n"); // Print statement to indicate the start of the program
 
-        // Print statements to output variable values
-        printf("Value of x: %d\n", x);
-        printf("Value of y: %d\n", y);
+    // Print statements to output variable values
+    printf("Value of x: %d\n", x);
+    printf("Value of y: %d\n", y);
 
-        printf("Checkpoint reached\n"); // Print statement to indicate a checkpoint
+    printf("Checkpoint reached\n"); // Print statement to indicate a checkpoint
 
-        printf("Calculating sum\n"); // Print statement to perform a calculation
+    printf("Calculating sum\n"); // Print statement to perform a calculation
 
-        int sum = x + y;
+    int sum = x + y;
 
-        printf("The sum of x and y is: %d\n", sum); // Print statement to output the result
+    printf("The sum of x and y is: %d\n", sum); // Print statement to output the result
 
-        printf("Program end\n"); // Print statement to indicate the end of the program
+    printf("Program end\n"); // Print statement to indicate the end of the program
 
-        return 0;
-    }
-    ```
-    </div>
+    return 0;
+}
+```
+</div>
 </div>
 
 ----
@@ -174,17 +195,21 @@ math: true
 
 ## Debugging Techniques
 
+<div style="padding-top:60px">
+
 - **Code Review:** Collaborating with peers to review code can help identify bugs and provide alternative perspectives on problem-solving.
 
-![center w:630](../../figures/codeReview.PNG)
+![bg right:50% w:590](../../figures/codeReview.PNG)
 
 ----
 
 ## Debugging Techniques
 
+<div style="padding-top:60px">
+
 - **Unit Testing:** Writing and executing unit tests to validate individual components of the software can help catch bugs early in the development process.
 
-![center](../../figures/unitTesting.png)
+![bg right:50% w:590](../../figures/unitTesting.png)
 
 ----
 
@@ -192,11 +217,13 @@ math: true
 
 - **Logging:** Incorporating logging mechanisms into the software to record relevant events and errors can aid in post-mortem analysis and troubleshooting.
 
-![center w:850](../../figures/logging.jpg)
+![center w:800](../../figures/logging.jpg)
 
 ----------
 
 ## Best Practices for Effective Debugging
+
+<div style="font-size:24px">
 
 - **Reproduce the Issue**: Attempt to reproduce the bug consistently to understand its scope and conditions.
 
@@ -207,3 +234,5 @@ math: true
 - **Document Findings:** Documenting the debugging process, including the steps taken and the solutions attempted, can provide valuable insights for future reference.
 
 - **Continuous Learning:** Stay updated on debugging techniques and tools, and learn from past debugging experiences to improve problem-solving skills.
+
+</div>
