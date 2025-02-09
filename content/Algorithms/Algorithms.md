@@ -15,7 +15,7 @@ style: |
       }
       table {
           border-collapse: collapse;
-          font-size: 22px;
+          
       }
       table, th,tr, td {
           border: none!important;
@@ -108,7 +108,7 @@ Time complexity represents the amount of time an algorithm takes to complete as 
 
 ## Time Complexity Metrics
 
-<div align=center>
+<div align=center style="font-size:22px">
 
 | Big O Notation | $n$ | $n\ log\ n$ | $n^2$ | $n^3$ | $2^n$ | $n!$ | 
 |---|---|---|---|---|--|----|
@@ -162,6 +162,8 @@ Space complexity represents the amount of memory space an algorithm requires as 
 
 ## Table of Big O
 
+<div align=center style="font-size:18px">
+
 | Big O Notation | Relationship with 'n'            | Description                                       | Assumption                           |
 |----------------|----------------------------------|---------------------------------------------------|-------------------------------------|
 | O(1)           | Constant                         | The algorithm's runtime is constant regardless of the input size. | The algorithm performs a single operation. |
@@ -171,6 +173,8 @@ Space complexity represents the amount of memory space an algorithm requires as 
 | O(n^2)         | Quadratic                        | The algorithm's runtime grows quadratically with the input size. | The algorithm has nested iterations over the input (e.g., nested loops). |
 | O(n^3)         | Cubic                            | The algorithm's runtime grows cubically with the input size. | The algorithm has triple nested iterations over the input. |
 | O(2^n)         | Exponential                      | The algorithm's runtime grows exponentially with the input size. | The algorithm performs exhaustive search or generates all subsets of the input. |
+
+</div>
 
 ---
 
@@ -342,7 +346,7 @@ int main() {
 
 ---
 
-## Binary search $O(log\ n)$ and Linear Search $O(n)$
+## Binary search $O(log\ n)$ and Linear(Seq) Search $O(n)$
 
 ![bg right:50% 100%](../../figures/binary_sequential.gif)
 
@@ -418,7 +422,7 @@ As a result, the time complexity is O(2^n), where n is the input to the Fibonacc
 ## Greatest Common Demonator $O(log\ n)$
 
 <div class="grid" style="columns: 2; gap: 8px;">
-<div style="font-size:30px;">
+<div style="font-size:20px;">
 
 ```c
 // logarithmic growth is O(log n)
@@ -481,6 +485,8 @@ for (c = 0 ; c < n - 1; c++)
 
 ## Quick Sort $\Longrightarrow O(n\ log\ n)$:
 
+<div style="font-size:20px">
+
 ```c
 void quicksortMiddle(int arr[], int low, int high) {
   if (low < high) {
@@ -509,6 +515,7 @@ void quicksortMiddle(int arr[], int low, int high) {
 }
 ```
 
+</div>
 
 ![bg right:40% 90%](../../figures/Sorting_quicksort_anim.gif)
 
