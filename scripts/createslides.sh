@@ -49,7 +49,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/${MODULECODE}-Lectures/raw/gh-pages/content/${LECTURE_FOLDER}/${LECTURE_FILENAME}.pdf)" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/${MODULECODE}_Lectures/raw/gh-pages/content/${LECTURE_FOLDER}/${LECTURE_FILENAME}.pdf)" -->
 
 # LECTURE TITLE
 

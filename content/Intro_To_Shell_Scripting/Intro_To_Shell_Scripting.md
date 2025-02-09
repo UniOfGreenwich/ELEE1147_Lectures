@@ -32,7 +32,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147-Lectures/raw/gh-pages/content/Intro_To_Shell_Scripting/Intro_To_Shell_Scripting.pdf)" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/Intro_To_Shell_Scripting/Intro_To_Shell_Scripting.pdf)" -->
 
 # Introduction to Shell Scripting
 
