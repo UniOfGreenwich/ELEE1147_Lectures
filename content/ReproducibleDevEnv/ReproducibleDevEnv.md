@@ -198,7 +198,7 @@ Fast tracking;
 - let's start off with using `curl`, pipe (`|`) and `bash`:
 
   ```
-  curl https://github.com/uniofgreenwich/VirtualEnv/install.sh | bash
+  curl https://githubusercontent.com/uniofgreenwich/VirtualEnv/master/install.sh | bash
   ```
 
 - Pipe `|` is the key next to the `z` key, use the `shift` at the same time
