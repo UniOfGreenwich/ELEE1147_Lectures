@@ -193,11 +193,15 @@ Library A depends on libraries B and C, and both B and C depend on D—but B req
 
 ## Build our environment
 
-Fast tracking; let's start off with using `curl`, pipe (`|`) and `bash`:
+Fast tracking; 
 
-```
-curl https://github.com/uniofgreenwich/VirtualEnvironments/install.sh | bash
-```
+- let's start off with using `curl`, pipe (`|`) and `bash`:
+
+  ```
+  curl https://github.com/uniofgreenwich/VirtualEnv/install.sh | bash
+  ```
+
+- Pipe `|` is the key next to the `z` key, use the `shift` at the same time
 
 ---
 
@@ -205,4 +209,4 @@ curl https://github.com/uniofgreenwich/VirtualEnvironments/install.sh | bash
 
 Go to the Markdown Book start:
 
-[Virtual Environments](http://uniofgreenwich.github.io/VirtualEnvironments/VirtualEnvironments.html)
+[Virtual Environments](https://uniofgreenwich.github.io/ELEE1147_Exercises/VirtualEnvironments/VirtualEnvironments.html)
