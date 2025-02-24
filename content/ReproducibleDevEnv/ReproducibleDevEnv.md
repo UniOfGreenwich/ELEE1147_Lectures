@@ -121,7 +121,7 @@ With a sufficient number of users of an API, it does not matter what you promise
 
 ---
 
-## Semantic Versioning
+## Sermantic Versioning
 
 <div style="font-size:22px">
 
@@ -198,7 +198,7 @@ Fast tracking;
 - let's start off with using `curl`, pipe (`|`) and `bash`:
 
   ```
-  curl https://githubusercontent.com/uniofgreenwich/VirtualEnv/master/install.sh | bash
+  curl https://raw.githubusercontent.com/uniofgreenwich/VirtualEnv/master/install.sh | bash
   ```
 
 - Pipe `|` is the key next to the `z` key, use the `shift` at the same time
