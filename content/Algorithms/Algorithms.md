@@ -145,9 +145,9 @@ Space complexity represents the amount of memory space an algorithm requires as 
 
 ---
 
-
 ##  Recogonising Algorithms Complexity
 
+<div style="font-size:24px">
 
 - Constant runtime is represented by $O(1)$
 - linear growth is $O(n)$
@@ -156,6 +156,9 @@ Space complexity represents the amount of memory space an algorithm requires as 
 - quadratic growth is $O(n^2)$
 - exponential growth is $O(2^n)$
 - factorial growth is $O(n!)$ 
+
+</div>
+
 ![bg right:50% 100% ](../../figures/BigO.jpg)
 
 ---
@@ -175,6 +178,28 @@ Space complexity represents the amount of memory space an algorithm requires as 
 | O(2^n)         | Exponential                      | The algorithm's runtime grows exponentially with the input size. | The algorithm performs exhaustive search or generates all subsets of the input. |
 
 </div>
+
+---
+
+$O(1)$
+```c
+int add(int a, int b){
+  return a + b;
+}
+```
+
+$O(n)$ 
+
+```c
+int prod(int[] array, int size*){
+    product = 0;
+    for (int i =0; i < size){
+        prod *= array[i];
+    }
+    return prod;
+}
+```
+
 
 ---
 
@@ -199,8 +224,7 @@ Space complexity represents the amount of memory space an algorithm requires as 
 
 - Linear Search $\Longrightarrow O(n)$
 
-- Binary Search $\Longrightarrow O(log\ n)$
-
+- Binary Search $\Longrightarrow O(log\ n)
 - Bubble Sort $\Longrightarrow O(n^2)$
 
 - Merge Sort $\Longrightarrow O(n\ log\ n)$
@@ -524,3 +548,37 @@ sorting algorithm based on the divide and conquer approach
 
 https://hackr.io/blog/quick-sort-in-c
 -->
+
+
+---
+
+
+$O(n^4)$ Polynomial
+<div style="font-size:23px">
+
+```c
+// Function to brute-force a 4-digit password
+char* passwordCrack(const char *target_md5) {
+    static char found_password[5]; 
+    char attempt[5], md5_str[33]; 
+    unsigned char digest[MD5_DIGEST_LENGTH];
+
+    for (int i = 0; i <= 9; i++) {
+        for (int j = 0; j <= 9; j++) {
+            for (int k = 0; k <= 9; k++) {
+                for (int l = 0; l <= 9; l++) {
+                    compute_md5(attempt, digest);
+                    md5_to_string(digest, md5_str);
+                    if (strcmp(md5_str, target_md5) == 0) {
+                        strcpy(found_password, attempt);
+                        return found_password;
+                    }
+                }
+            }
+        }
+    }
+    return NULL;  // Return NULL if no match is found
+}
+```
+
+</div>
