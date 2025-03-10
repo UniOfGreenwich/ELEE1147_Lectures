@@ -561,12 +561,13 @@ Bogosort
 from random import shuffle
 
 def sort(list):
-    while not is_sorted(list):
-      shuffle(list)
+    while not is_sorted(nums):
+      shuffle(nums)
+    return nums
 
-def is_sorted(list):
-    for i in range(1, len(list)):
-      if list[i] < list[i-1]:
+def is_sorted(nums):
+    for i in range(1, len(nums)):
+      if nums[i] < nums[i-1]:
           return False
       return True
 
