@@ -145,9 +145,9 @@ Space complexity represents the amount of memory space an algorithm requires as 
 
 ---
 
-
 ##  Recogonising Algorithms Complexity
 
+<div style="font-size:24px">
 
 - Constant runtime is represented by $O(1)$
 - linear growth is $O(n)$
@@ -156,6 +156,9 @@ Space complexity represents the amount of memory space an algorithm requires as 
 - quadratic growth is $O(n^2)$
 - exponential growth is $O(2^n)$
 - factorial growth is $O(n!)$ 
+
+</div>
+
 ![bg right:50% 100% ](../../figures/BigO.jpg)
 
 ---
@@ -175,6 +178,28 @@ Space complexity represents the amount of memory space an algorithm requires as 
 | O(2^n)         | Exponential                      | The algorithm's runtime grows exponentially with the input size. | The algorithm performs exhaustive search or generates all subsets of the input. |
 
 </div>
+
+---
+
+$O(1)$
+```c
+int add(int a, int b){
+  return a + b;
+}
+```
+
+$O(n)$ 
+
+```c
+int prod(int[] array, int size*){
+    product = 0;
+    for (int i =0; i < size){
+        prod *= array[i];
+    }
+    return prod;
+}
+```
+
 
 ---
 
@@ -199,8 +224,7 @@ Space complexity represents the amount of memory space an algorithm requires as 
 
 - Linear Search $\Longrightarrow O(n)$
 
-- Binary Search $\Longrightarrow O(log\ n)$
-
+- Binary Search $\Longrightarrow O(log\ n)
 - Bubble Sort $\Longrightarrow O(n^2)$
 
 - Merge Sort $\Longrightarrow O(n\ log\ n)$
@@ -524,3 +548,54 @@ sorting algorithm based on the divide and conquer approach
 
 https://hackr.io/blog/quick-sort-in-c
 -->
+
+
+---
+
+## Some Funny Algorithms
+
+<div style="font-size:26px">
+
+Bogosort
+```py
+from random import shuffle
+
+def sort(list):
+    while not is_sorted(list):
+      shuffle(list)
+
+def is_sorted(list):
+    for i in range(1, len(list)):
+      if list[i] < list[i-1]:
+          return False
+      return True
+
+# Example usage:
+arr = [3, 1, 2, 5, 4, 6]
+sorted_arr = sort(arr)
+print(sorted_arr)
+
+```
+
+---
+
+## Some Funny Algorithms
+
+<div style="font-size:26px">
+
+Stalin sort
+```py
+def stalin_sort(arr):
+    if not arr:
+        return arr
+    sorted_arr = [arr[0]]
+    for i in range(1, len(arr)):
+        if arr[i] >= sorted_arr[-1]:
+            sorted_arr.append(arr[i])
+    return sorted_arr
+
+# Example usage
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+sorted_arr = stalin_sort(arr)
+print("Sorted array:", sorted_arr)
+```
