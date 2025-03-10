@@ -552,38 +552,6 @@ https://hackr.io/blog/quick-sort-in-c
 
 ---
 
-$O(n^4)$ Polynomial
-<div style="font-size:23px">
-
-```c
-// Function to brute-force a 4-digit password
-char* passwordCrack(const char *target_md5) {
-    static char found_password[5]; 
-    char attempt[5], md5_str[33]; 
-    unsigned char digest[MD5_DIGEST_LENGTH];
-
-    for (int i = 0; i <= 9; i++) {
-        for (int j = 0; j <= 9; j++) {
-            for (int k = 0; k <= 9; k++) {
-                for (int l = 0; l <= 9; l++) {
-                    compute_md5(attempt, digest);
-                    md5_to_string(digest, md5_str);
-                    if (strcmp(md5_str, target_md5) == 0) {
-                        strcpy(found_password, attempt);
-                        return found_password;
-                    }
-                }
-            }
-        }
-    }
-    return NULL;  // Return NULL if no match is found
-}
-```
-
-</div>
-
-----
-
 ## Some Funny Algorithms
 
 <div style="font-size:26px">
