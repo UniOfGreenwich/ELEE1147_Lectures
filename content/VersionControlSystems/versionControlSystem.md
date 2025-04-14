@@ -1,5 +1,6 @@
 ---
 marp: true
+math: true
 ---
 
 <!--
@@ -486,11 +487,7 @@ header strong { view-transition-name: header2-alt; }
 
 ## List
 
-![bg right:50% 30% vertical drop-shadow](https://www.guru99.com/images/1/120718_0548_13BestGithu7.png)
-![bg right:50% 20% vertical drop-shadow](https://www.guru99.com/images/1/120718_0548_13BestGithu4.png)
-![bg right:50% 30% vertical drop-shadow](https://www.guru99.com/images/1/120718_0548_13BestGithu2.png)
-![bg right:50% 30% vertical drop-shadow](https://www.guru99.com/images/2/taravault-logo.png)
-![bg right:50% 30% vertical drop-shadow](https://www.guru99.com/images/1/120718_0548_13BestGithu6.png)
+![bg right:50% 40% drop-shadow](../../figures/vcs_hosts_lists.png)
 
 - TaraVault
 - BitBucket
@@ -503,6 +500,7 @@ header strong { view-transition-name: header2-alt; }
 - BeanStalk
 - Phabricator
 - ...many more
+
 ---
 
 <!-- _class: lead -->
