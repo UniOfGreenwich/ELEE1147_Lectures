@@ -1,66 +1,80 @@
 ---
-title:  Module Introduction
-description: Module Introduction ppt
-class: gaia
-_class:
-  - lead
-  - invert
-style: |
-    #img-right{
-      float: right;
-    }
-    table{
-      font-size: 18 px;
-    }
-    section::after {
-      content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-    }
-footer: "ELEE1147 | Programming for Engineers"
-size: 16:9
-paginate: true
-_paginate: false
 marp: true
-math: true
 ---
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/ModuleIntroduction/moduleIntroduction.pdf)" -->
+<!--
+# Metadata
+title: Module Introduction
+author: Seb Blair (CompEng0001)
+description: Summary of module handbook
+keywords: module handbook
+lang: en
 
+# Slide styling
+theme: uog-theme
+_class: lead title
+paginate: true
+_paginate: false
+transition: fade 250ms
+
+style: |
+  header em { font-style: normal; view-transition-name: header; }
+  header strong { font-weight: inherit; view-transition-name: header2; }
+  header:not:has(em) { view-transition-name: header; }
+-->
 
 # Module Introduction
 
-    Course Code: ELE1147
-    
-    Course Name: Programming for Engineers
+<div align=center style="font-size:76px; padding-left:300px;padding-right:300px;" >
 
-    Credits: 15
+```py
+module = Module(
+    code="ELEE1147",
+    name="Programming for Engineers",
+    credits=15,
+    module_leader="Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA"
+)
+```
 
-    Module Leader: Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA
+</div>
+
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/ModuleIntroduction/moduleIntroduction.pdf)" -->
 
 ---
 
 ## Module Aims
 
+<div style="padding-top:150px;">
+
 This module aims to equip [you] with the skills to leverage programming languages effectively to address complex engineering challenges. It emphasizes utilizing both open-source and proprietary tools, mastering version control systems, and honing the ability to develop and manage codebases. [You] will enhance [your] proficiency in improving legacy code and integrating new features into existing systems. 
 
+</div>
+
 ---
+
+<style scoped>ul { list-style: list; padding: 100; }</style>
 
 ## Module Learning Outcomes 
 
 On successful completion of this module a student will be able to:
 
-[1] Utilize programming languages proficiently to solve various non-trivial problems 
+<div style="padding-left:100px;padding-right:200px;">
 
-[2] Employ version control systems effectively to manage codebases, demonstrating competency in tasks such as branching, merging, and resolving conflicts to maintain code integrity 
+- Utilize programming languages proficiently to solve various non-trivial problems 
 
-[3] Evaluate and enhance existing codebases, identifying opportunities for improvement and implementing strategies to refactor legacy code while ensuring compatibility with new features to solve a complex engineering problem. 
+- Employ version control systems effectively to manage codebases, demonstrating competency in tasks such as branching, merging, and resolving conflicts to maintain code integrity 
 
-[4] Demonstrate proficiency in adhering to industry best practices and considering scalability, maintainability, and performance 
+- Evaluate and enhance existing codebases, identifying opportunities for improvement and implementing strategies to refactor legacy code while ensuring compatibility with new features to solve a complex engineering problem. 
+
+- Demonstrate proficiency in adhering to industry best practices and considering scalability, maintainability, and performance 
+
+</div>
 
 ---
 
 ## Indicative Content
 
-<div style="font-size:25px">
+<div style="font-size:28px;padding-left:100px;padding-right:200px;">
 
 - Introduction to programming languages commonly used in engineering, such as Python, C, or C++, highlighting their strengths and applications in different domains. 
 
@@ -78,13 +92,20 @@ On successful completion of this module a student will be able to:
 
 --- 
 
-## Assessments ELEE1147
+<style scoped>ul { list-style: square; padding: 100; }</style>
+
+## Assessments
+
+<div style="padding-top:50px; padding-left:100px;padding-right:200px;">
 
 1. Logbook  - 30%
    - LO - 1,2.
    - Pass mark - 40%
    - [You] will be tasked with solving non-trivial problems using a variety of programming languages. 
+  
 2. Coursework - 70%
    - LO - 2,3,4.
    - Pass mark - 40%
    - Challenge based design and programming exercises that will need to be reported upon. 
+
+</div>

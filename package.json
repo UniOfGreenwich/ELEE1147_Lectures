@@ -1,0 +1,23 @@
+{
+  "name": "lecture-slides",
+  "version": "0.0.0",
+  "author": "Seb Blair (CompEng0001)",
+ "scripts": {
+  "theme:build": "sass themes:dist --pkg-importer=node",
+  "theme:watch": "npm run theme:build -- -w",
+  "marp:start": "marp -s .",
+  "marp:build:index": "marp index.md -o public/index.html",
+  "marp:build:pdf": "marp index.md -o public/index.pdf",
+  "marp:build:og": "marp index.md -o public/og.png",
+  "marp:build:assets": "mkdir -p ./public && cp -r ./assets ./public/assets",
+  "marp:build:figures": "mkdir -p ./public && cp -r ./figures ./public/figures",
+  "marp:build:content": "marp -I content/ -o public/content/ --html --pdf --allow-local-files",
+  "build": "npm run theme:build && npm run marp:build:assets && npm run marp:build:figures && npm run marp:build:og && npm run marp:build:index && npm run marp:build:pdf && npm run marp:build:content",
+  "start": "concurrently -k \"npm:theme:watch\" \"npm:marp:start\""
+},
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.1.2",
+    "concurrently": "^8.2.2",
+    "sass": "^1.75.0"
+  }
+}
