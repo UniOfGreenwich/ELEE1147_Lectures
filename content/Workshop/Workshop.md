@@ -1,53 +1,42 @@
 ---
-title: Workshop
-description: Workshop slides
-class: gaia
-_class:
-  - lead
-  - invert
-style: |
-    #img-right{
-      float: right;
-    }
-    img[alt~="center"] {
-      display: block;
-      margin: 0 auto;
-    }
-    table {
-      border-collapse: collapse;
-      font-size: 22px;
-    }
-    table, th,tr, td {
-      border: none!important;
-      vertical-align: middle;
-    }
-    grid {
-      display: grid;
-    }
-    grid-cols {
-      grid-template-columns: repeat(var(--columns, 2), minmax(0, 1fr));
-    }
-    grid-rows {
-      grid-template-rows: repeat(var(--rows, 2), minmax(0, 1fr));
-    }
-    gap {
-      gap: var(--gap, 4px);
-    }
-size: 16:9
-paginate: true
-_paginate: false
 marp: true
 math: true
 ---
 
+<!--
+# Metadata
+title: Version Control Systems
+author: Seb Blair (CompEng0001)
+description: Lecture slides on version control systems.
+keywords: module handbook
+lang: en
+
+# Slide styling
+theme: uog-theme
+_class: lead title
+paginate: true
+_paginate: false
+transition: fade 250ms
+
+style: |
+  header em { font-style: normal; view-transition-name: header; }
+  header strong { font-weight: inherit; view-transition-name: header2; }
+  header:not:has(em) { view-transition-name: header; }
+  header:not:has(strong) { view-transition-name: header; }
+-->
+
+
 # Workshop
 
-    Module Code: ELEE1147
+<div align=center style="font-size:76px;" >
 
-    Module Name: Programming for Engineers
+```py
+module = Module(
+    code="ELEE1147",
+    name="Programming for Engineers",
+    credits=15,
+    module_leader="Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA"
+)
+```
 
-    Credits: 15
-
-    Module Leader: Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA
-
-![bg right:40% 90%](../../figures/xkcd_automation.png)
+![drop-shadow bg right:40% 90%](../../figures/xkcd_automation.png)

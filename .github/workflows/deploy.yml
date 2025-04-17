@@ -28,13 +28,6 @@ jobs:
           args: -I content/ -o build/content/ --html --allow-local-files --theme themes/uog-theme.css
         env:
           MARP_USER: root:root
-
-      - name: build content pdf
-        uses: docker://marpteam/marp-cli:latest
-        with:
-          args: -I content/ -o build/content/ --pdf --allow-local-files --theme themes/uog-theme.css
-        env:
-          MARP_USER: root:root
   
       - name: deploy content
         if: ${{ github.event_name == 'push' }}

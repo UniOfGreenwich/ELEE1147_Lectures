@@ -38,7 +38,7 @@ module = Module(
 
 </div>
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/ModuleIntroduction/moduleIntroduction.pdf)" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/main/content/ModuleIntroduction/moduleIntroduction.pdf)" -->
 
 ---
 

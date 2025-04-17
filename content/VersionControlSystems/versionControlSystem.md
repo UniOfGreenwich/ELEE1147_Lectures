@@ -22,52 +22,65 @@ style: |
   header em { font-style: normal; view-transition-name: header; }
   header strong { font-weight: inherit; view-transition-name: header2; }
   header:not:has(em) { view-transition-name: header; }
-  header:not:has(strong) { view-transition-name: header; }
--->
+
+  -->
+
+<style scoped>
+h1 {
+view-transition-name: header;
+display: flex;
+align-items: center;
+margin: 0 auto;
+}
+</style>
+
+
 
 # Version Control Systems
 
-<div align=center style="font-size:76px; padding-left:300px;padding-right:300px;" >
+<div align=center style="font-size:76px;padding-left:300px;padding-right:300px;" >
 
 ```py
 module = Module(
-    code="ELEE1147",
-    name="Programming for Engineers",
-    credits=15,
-    module_leader="Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA"
+  code="ELEE1147",
+  name="Programming for Engineers",
+  credits=15,
+  module_leader="Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA"
 )
 ```
 
 </div>
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content/VersionControlSystem/versionControlSystem.pdf)" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/main/content/VersionControlSystems/versionControlSystem.pdf)" -->
 
 ---
 
 <style scoped>
 h1 {
-  view-transition-name: header;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
+view-transition-name: header;
+display: flex;
+align-items: center;
+margin: 0 auto;
 }
 </style>
 
 
 <!-- header: "_Version Control Systems_" -->
 
-## What are Version Control Systems (VCS)
+## What are VCS?
+
+<div style="padding-top:80px">
 
 - Tracking and managing changes: 
-  - Work faster and more reliably
-  
+- Work faster and more reliably
+
 - Keeps track of all code modifications:
-  - Specialised Database (Repository)
-  
+- Specialised Database (Repository)
+
 - Solves Common Team Problems:
-  -  Conflicitng concurrent work, 
-  - incompatiables due to concurrent working, 
-  - having unstable releases
+-  Conflicitng concurrent work, 
+- incompatiables due to concurrent working, 
+- having unstable releases
 
 ![drop-shadow bg right:50% 90% ](../../figures/vcs-branching.png)
 
@@ -75,7 +88,7 @@ h1 {
 
 ## Common Benefits of VCS
 
-<div style="font-size:28px;padding-left:100px;padding-right:200px;padding-top:100px;">
+<div style="font-size:32px;padding-left:100px;padding-right:200px;padding-top:100px;">
 
 **Historical information​** : Looking at the history of changes it is a lot easier to find where bugs have originated. Also, it might be easier to find the right team member best suited to fix an error.​
 
@@ -94,7 +107,7 @@ h1 {
 
 ## Types of VCS
 
-<div style="font-size:28px;padding-left:100px;padding-right:200px;padding-top:100px;">
+<div style="font-size:32px;padding-left:100px;padding-right:200px;padding-top:100px;">
 
 - **Local**:
   - Creates a database on the your hardware ​
@@ -190,28 +203,25 @@ h1 { view-transition-name: header2; }
 
 ```
 
-                   GIT - the stupid content tracker
+                  GIT - the stupid content tracker
 
 "git" can mean anything, depending on your mood.
 
- - random three-letter combination that is pronounceable, and not
-   actually used by any common UNIX command.  The fact that it is a
-   mispronounciation of "get" may or may not be relevant.
- - stupid. contemptible and despicable. simple. Take your pick from the
-   dictionary of slang.
- - "global information tracker": you're in a good mood, and it actually
-   works for you. Angels sing, and a light suddenly fills the room. 
- - "goddamn idiotic truckload of sh*t": when it breaks
+- random three-letter combination that is pronounceable, and not
+  actually used by any common UNIX command.  The fact that it is a
+  mispronounciation of "get" may or may not be relevant.
+- stupid. contemptible and despicable. simple. Take your pick from the
+  dictionary of slang.
+- "global information tracker": you're in a good mood, and it actually
+  works for you. Angels sing, and a light suddenly fills the room. 
+- "goddamn idiotic truckload of sh*t": when it breaks
 
- ...
+...
 
- ```
+```
 
- <!-- _footer: https://github.com/git/git/tree/e83c5163316f89bfbde7d9ab23ca2e25604af290 -->
+<!-- _footer: https://github.com/git/git/tree/e83c5163316f89bfbde7d9ab23ca2e25604af290 -->
 ---
-
-
-
 
 ![bg right:40% 60%](../../figures/git.png)
 
@@ -221,18 +231,79 @@ h1 { view-transition-name: header2; }
 
 - A very popular VCS
 - Performance
-  - Better performance compared to competitors
-  - Deals with the data in the file rather than the file properties
+- Better performance compared to competitors
+- Deals with the data in the file rather than the file properties
 - Security
-  - Designed to provide security
-  - Uses SHA-256 encryption
+- Designed to provide security
+- Uses SHA-256 encryption
 - Flexibility
-  - Non-linear development
-  - Detailed log of information
+- Non-linear development
+- Detailed log of information
 
 </div>
 
 ---
+
+## Global Configuration
+
+`git config` is a allows you to set important configuration settings, it’s easy to get Git to work exactly the way you, your company, or your group needs it to.
+
+<div class="columns-2">
+
+<div>
+
+  Location of config:
+  ```
+  $HOME\.gitconfig
+  ```
+
+  ```
+  ~/.gitconfig
+  ```
+
+  Set via CLI:
+
+  ```
+  $ git config --global user.name "your user name"
+  $ git config --global user.email "your email"
+  ```
+
+  or modify the configuration file directly:
+
+  ```
+  $ git config --global --edit
+  ```
+
+  ```
+  <nano/vim/vi/...> ~/.gitconfig
+  ```
+
+</div>
+
+<div style="padding-top:125px">
+  
+  .gitconfig file
+  
+  ```
+  [user]
+          name = CompEng0001
+          email = s.blair@gre.ac.uk
+  [core]
+          editor = vim
+          excludesFile = "~/.config/git/.gitignore"
+          attributesFile = "~/.config/git/.gitattributes"
+  [grep]
+          lineNumber = true
+          patternType = perl                               
+  ```
+
+</div>
+</div>
+
+<!-- _footer: https://git-scm.com/docs/git-config -->
+
+---
+
 
 ![drop-shadow bg right:40% 90%](../../figures/git_cli_help.png)
 
@@ -240,7 +311,7 @@ h1 { view-transition-name: header2; }
 
 <style scoped>ul { list-style: square; padding: 100; }</style>
 
-<div style="font-size:28px;padding-left:100px;padding-right:200px;padding-top:100px;">
+<div style="font-size:28px;padding-left:100px;padding-right:200px;padding-top:50px;">
 
 All commands are prepended with `git`
 
@@ -258,15 +329,62 @@ All commands are prepended with `git`
 
 ---
 
-![drop-shadow bg right 50% 80%](../../figures/git_first_repo_example.png)
+<style scoped>
+  code {
+    --highlight-line-begin: 11;
+    --highlight-lines: 1;
+    --highlight-line-color: rgb(255 255 255 / 20%);
+  }
+</style>
 
-<div align=center style="font-size:28px;padding-top:380px;">
+## Structure of the .git directory
 
-## Example
+
+
+<div style="padding-left:400px;padding-right:400px;padding-top:50px;">
+
+```
+.git/
+├── objects/               # Git's object database
+│   ├── pack/              # Compressed repository data
+│   └── info/              # Additional object information
+│   └── [sha1]/            # Object storage using hash prefixes
+├── refs/                  # Reference storage
+│   ├── heads/             # Branch references
+│   ├── tags/              # Tag references
+│   └── remotes/           # Remote repository references
+├── HEAD                   # Points to current branch
+├── config                 # Repository configuration
+├── index                  # Staging area information
+├── hooks/                 # Scripts for automation
+│   ├── pre-commit         # Run before commit is created
+│   └── post-commit        # Run after commit is created
+├── info/                  # Repository information
+│   └── exclude            # Local ignore patterns
+└── logs/                  # Reference history
+    ├── HEAD               # History of HEAD updates
+    └── refs/              # Branch update history
+```
 
 </div>
 
 ---
+
+<!-- _class: lead -->
+
+<div align=center style="font-size:28px;">
+
+# Example
+
+</div>
+
+![drop-shadow bg right 50% 80%](../../figures/git_first_repo_example.png)
+
+---
+
+
+
+![drop-shadow bg right:40% 90%](../../figures/gitStagingArea.png 'centered')
 
 ## Repository Staging Area
 
@@ -276,18 +394,60 @@ All commands are prepended with `git`
 
 - As part of the version control features there is the **Staging Area**. ​
 
-- This is feature enables the developer to move files independently of each other  `git add <filename>` to the repository. Of course you can do this all in one go with `git commit -a​`
+- This is feature enables the developer to move files independently of each other to the repository.
 
-![drop-shadow](../../figures/gitStagingArea.png 'centered')
+<div style="padding-left:50px">
+
+```
+git add <filename>
+```
+```
+git add .
+```
+
+```
+git commit 
+```
+```
+git commit -a
+```
+
+```
+git commit -m
+```
+
+```
+git commit -am
+```
+
+</div>
 
 --- 
 
-## Hashing
+<!-- header: "_Version Control Systems > Git_" -->
+<!-- _class: lead -->
+
+<style scoped>
+h1 { view-transition-name: header2-alt; }
+</style>
+
+# Hashing 
+
+
+<a name="hashing"></a>
+
+---
+
+<style scoped>
+header strong { view-transition-name: header2-alt; }
+</style>
+
+<!-- header: "_Version Control Systems > Git_ > **Hashing**" -->
 
 - Often referred to as a commit hash, is a unique identifier for every single commit in a Git repository
 -  SHA-1 cryptographic hash function
-   - 40-character string of hexadecimal characters (0-9 and a-f)
- - Hashes are calculated based on the contents of the files in the commit, the metadata of the commit (like timestamp and author), and the parent commit's hash.
+  - 40-character string of hexadecimal characters (0-9 and a-f)
+- Hashes are calculated based on the contents of the files in the commit, the metadata of the commit (like timestamp and author), and the parent commit's hash.
 
 
 ![drop-shadow w:800](../../figures/commit_hash.png 'centered')
@@ -305,8 +465,6 @@ git diff 43ba0aa4935549d2d4245bedf455bbc25a5d1636 a1b2c3d4e5f67890abcdef12345678
 </div>
 
 ---
-
-<!-- header: "_Version Control Systems_ > Git > Hashing > **Collisions**" -->
 
 ## Collisions!
 
@@ -341,8 +499,6 @@ The probability $P(n)$ of at least one collision is approximately:
 -->
 ---
 
-<!-- header: "_Version Control Systems_ > Git > Hashing > **sha1sum**" -->
-
 ## Example of `sha1sum`
 
 
@@ -364,7 +520,7 @@ sha1sum.exe <<< Hello
 
 ---
 
-<!-- header: "_Version Control Systems_ > **Git**" -->
+<!-- header: "_Version Control Systems > Git_" -->
 <!-- _class: lead -->
 
 <style scoped>
@@ -373,9 +529,11 @@ h1 { view-transition-name: header2-alt; }
 
 # Branching
 
+<a name="branching"></a>
+
 ---
 
-<!-- header: "_Version Control Systems_ > **Git** > **Branching**" -->
+<!-- header: "_Version Control Systems > Git_ > **Branching**" -->
 <!-- _class: lead -->
 
 <style scoped>
@@ -410,19 +568,20 @@ header strong { view-transition-name: header2-alt; }
 
 
 ---
-<!-- header: "_Version Control Systems_ > **Git**" -->
+<!-- header: "_Version Control Systems > Git_" -->
 <!-- _class: lead -->
-
-# Merging & Rebasing
 
 <style scoped>
 h1 { view-transition-name: header2-alt; }
 </style>
 
+
+# Merging & Rebasing
+
+
 ---
 
-<!-- header: "_Version Control Systems_ > **Git** > **Merging & Rebasing**" -->
-<!-- _class: lead -->
+<!-- header: "_Version Control Systems > Git_ > **Merging & Rebasing**" -->
 
 <style scoped>
 header strong { view-transition-name: header2-alt; }
@@ -445,14 +604,25 @@ header strong { view-transition-name: header2-alt; }
 </div>
 
 ---
-<!-- header: "_Version Control Systems_ > **Git**" -->
+<!-- header: "_Version Control Systems > Git_" -->
 <!-- _class: lead -->
 
+<style scoped>
+h1 { view-transition-name: header2-alt; }
+</style>
+
+
 # Distribution
+
+<a name="dist"></a>
 
 ---
 
 <!-- header: "_Version Control Systems > Git_ > **Distribution**" -->
+
+<style scoped>
+header strong { view-transition-name: header2-alt; }
+</style>
 
 ## Flow Diagram
 
@@ -463,7 +633,6 @@ header strong { view-transition-name: header2-alt; }
 </div>
 
 ---
-
 
 <!-- header: "_Version Control Systems_" -->
 
@@ -479,11 +648,12 @@ h1 { view-transition-name: header2-alt; }
 
 ---
 
+<!-- header: "_Version Control Systems_ > **Hosts**" -->
+
 <style scoped>
 header strong { view-transition-name: header2-alt; }
 </style>
 
-<!-- header: "_Version Control Systems_ > **Hosts**" -->
 
 ## List
 
@@ -503,13 +673,16 @@ header strong { view-transition-name: header2-alt; }
 
 ---
 
+
+<!-- header: "_Version Control Systems > Hosts_" -->
+
 <!-- _class: lead -->
 
-# GitHub
-
 <style scoped>
-h1 { view-transition-name: header; }
+h1 { view-transition-name: header2; }
 </style>
+
+# GitHub
 
 ![bg right:40% 60% drop-shadow](../../figures/githublogo.png)
 
@@ -518,6 +691,10 @@ h1 { view-transition-name: header; }
 ---
 
 <!-- header: "_Version Control Systems > Hosts_ > **GitHub**" -->
+
+<style scoped>
+header strong { view-transition-name: header2; }
+</style>
 
 ![bg right:55% 95% drop-shadow](../../figures/gh_online_example.png)
 
@@ -529,9 +706,9 @@ h1 { view-transition-name: header; }
 
 - Web-based graphical user interface (GUI)
 - Features
-  - Can act as a project manager
-  - Hosts Git repositories
-  - Secure with keys
+- Can act as a project manager
+- Hosts Git repositories
+- Secure with keys
 
 </div>
 
@@ -548,6 +725,39 @@ h1 { view-transition-name: header; }
 *Hint: use your username@gre.ac.uk (you can register for education package later)
 
 <!-- _footer: https://github.com/ -->
+---
+
+## Encryption - ed25519
+
+- The ED25519 key fingerprint is a unique identifier for an SSH key, ensuring secure connections between clients and servers. It is generated using the SHA-256 hashing algorithm.
+
+<div style="font-size:28px; padding-left:400px; padding-right:400px;">
+
+```
+$ ssh-keygen -t ed25519 -C "s.blair@gre.ac.uk"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/user/.ssh/id_ed25519): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/user/.ssh/id_ed25519
+Your public key has been saved in /home/user/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:Ue/4v8XYf6tK8DZ1zN8KHZl1k+GJZNmjqTz3KbR1nCo s.blair@gre.ac.uk
+The key's randomart image is:
++--[ED25519 256]--+
+|       .+.o=.    |
+|      + B.Eo     |
+|     o B.+       |
+|    . + X        |
+|     o S o       |
+|      = .        |
+|     . .         |
+|      .          |
+|                 |
++----[SHA256]-----+
+```
+
+
 ---
 
 <div style="padding-top:50px">

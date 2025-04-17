@@ -55,7 +55,9 @@ section::after {
   font-size: 14px;
   font-weight: 700;
   text-shadow: 0 0 3px var(--background);
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
 }
+
 section :is(h1, h2, h3, h4, h5, h6, p, table, blockquote, pre, ul, ol):last-child {
   margin-bottom: 0;
 }
@@ -522,6 +524,19 @@ section .centered {
   display: block;
   margin: 0.8rem auto;
   width: auto;
+}
+
+
+.columns-2 {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.columns-2 > * {
+  flex: 1;
+  min-width: 0;
 }
 
 /*# sourceMappingURL=uog-theme.css.map */

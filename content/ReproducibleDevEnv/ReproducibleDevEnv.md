@@ -32,7 +32,7 @@ marp: true
 math: true
 ---
 
-<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/gh-pages/content//c/Users/SebDev/Git/Teaching/ELEE1147/Lectures/content/ReproducibleDevEnv/ReproducibleDevEnv.pdf)" -->
+<!-- _footer: "[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/main/content//c/Users/SebDev/Git/Teaching/ELEE1147/Lectures/content/ReproducibleDevEnv/ReproducibleDevEnv.pdf)" -->
 
 # Reproducible Developement Environments
 
