@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="POSIX"><head><title>Introduction to Shell Scripting</title><meta property="og:title" content="Introduction to Shell Scripting"><meta name="description" content="Introduction to Shell Scripting Slides"><meta property="og:description" content="Introduction to Shell Scripting Slides"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin:0.67em 0}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1920px 1080px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > section :where(*, *::before, *::after){box-sizing:border-box;margin:0;padding:0}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--black-rgb: 38 38 38;--white-rgb: 255 255 255;--navy-rgb: 1 3 60;--blue-rgb: 58 191 240;--black: rgb(var(--black-rgb));--white: rgb(var(--white-rgb));--navy: rgb(var(--navy-rgb));--blue: rgb(var(--blue-rgb));--font-sans: "DejaVu Sans Mono", "Courier New";--font-monospace: "DejaVu Sans Mono", "Courier New";--font-line-height: 1.5;--font-letter-spacing: 0.04em;font-size:32px}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--marpit-root-font-size: 32px;}div#\:\$p > svg > foreignObject > section{--background-rgb: var(--black-rgb);--background: rgb(var(--background-rgb));--foreground-rgb: var(--white-rgb);--foreground: rgb(var(--foreground-rgb));--link: var(--blue);--code-background: #0d1117;--code-foreground: #e2e7ec;width:1920px;height:1080px;padding:50px 60px 92px;background-color:var(--background);background-image:url("../../figures/bg-dark-logo.png");color:var(--foreground);font-family:var(--font-monospace);line-height:var(--font-line-height);letter-spacing:var(--font-letter-spacing);font-feature-settings:"palt" 1}div#\:\$p > svg > foreignObject > section::after{padding:0;bottom:24px;right:20px;font-size:14px;font-weight:700;text-shadow:0 0 3px var(--background);content:attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total)}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 14px;}div#\:\$p > svg > foreignObject > section :is(:is(h1, marp-h1), :is(h2, marp-h2), :is(h3, marp-h3), :is(h4, marp-h4), :is(h5, marp-h5), :is(h6, marp-h6), p, table, blockquote, :is(pre, marp-pre), ul, ol):last-child{margin-bottom:0}div#\:\$p > svg > foreignObject > section:where(.light){--background-rgb: var(--white-rgb);--foreground-rgb: var(--black-rgb);--code-background: var(--white);--code-foreground: #24292e;background-image:url("../../figures/bg-light-logo.png")}div#\:\$p > svg > foreignObject > section header, div#\:\$p > svg > foreignObject > section footer{font-size:calc(var(--marpit-root-font-size, 1rem) * 0.8);color:rgb(var(--foreground-rgb)/50%);position:absolute;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}div#\:\$p > svg > foreignObject > section header{top:20px;left:25px;right:25px}div#\:\$p > svg > foreignObject > section footer{bottom:20px;left:240px;right:240px;text-align:center}div#\:\$p > svg > foreignObject > section p{text-align:justify;text-align-last:left;display:block;margin:0 0 calc(var(--marpit-root-font-size, 1rem) * 0.6)}div#\:\$p > svg > foreignObject > section img{width:auto;height:auto}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1), div#\:\$p > svg > foreignObject > section :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section :is(h4, marp-h4), div#\:\$p > svg > foreignObject > section :is(h5, marp-h5), div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:0.5em 0 0.6em;font-weight:700;word-break:auto-phrase}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong, div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong, div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong, div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong, div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong, div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--blue);font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:100cqh}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:calc(var(--marpit-root-font-size, 1rem) * 2.1)}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:calc(var(--marpit-root-font-size, 1rem) * 1.5)}div#\:\$p > svg > foreignObject > section a{color:var(--link);text-decoration:none}div#\:\$p > svg > foreignObject > section a:hover{text-decoration:underline}div#\:\$p > svg > foreignObject > section blockquote{margin:calc(var(--marpit-root-font-size, 1rem) * 0.8) 0;background:rgb(var(--foreground-rgb)/7%);box-shadow:inset calc(var(--marpit-root-font-size, 1rem) * 0.4) 0 0 rgb(var(--foreground-rgb)/10%);border-radius:calc(var(--marpit-root-font-size, 1rem) * 0.4);padding:calc(var(--marpit-root-font-size, 1rem) * 0.4) calc(var(--marpit-root-font-size, 1rem) * 0.6) calc(var(--marpit-root-font-size, 1rem) * 0.4) calc(var(--marpit-root-font-size, 1rem) * 1);font-size:calc(var(--marpit-root-font-size, 1rem) * 0.85)}div#\:\$p > svg > foreignObject > section > :is(blockquote, ul, ol, :is(pre, marp-pre), table):first-child, div#\:\$p > svg > foreignObject > section > header:first-child + :is(blockquote, ul, ol, :is(pre, marp-pre), table){margin-top:0}div#\:\$p > svg > foreignObject > section ul, div#\:\$p > svg > foreignObject > section ol{margin:0 auto;padding:0 0 0 calc(var(--marpit-root-font-size, 1rem) * 1.2);text-align:left}div#\:\$p > svg > foreignObject > section ul > li, div#\:\$p > svg > foreignObject > section ol > li{margin:calc(var(--marpit-root-font-size, 1rem) * 0.4) 0}div#\:\$p > svg > foreignObject > section > ul, div#\:\$p > svg > foreignObject > section > ol{margin-top:calc(var(--marpit-root-font-size, 1rem) * 0.8);margin-bottom:calc(var(--marpit-root-font-size, 1rem) * 0.8)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre), div#\:\$p > svg > foreignObject > section code{background:var(--code-background);border:1px solid rgb(var(--foreground-rgb)/15%);border-radius:0.4em;border-bottom-width:0.2ex;border-right-width:0.2ex;color:var(--code-foreground);font-family:var(--font-monospace);font-variant-ligatures:none;font-size:0.75em;letter-spacing:0;line-height:1.3;padding:0.2em 0.4em;position:relative;top:-0.05em}div#\:\$p > svg > foreignObject > section code{--highlight-line-begin: 1;--highlight-lines: 0;--highlight-last-line:0;--highlight-line-color: rgb(var(--blue-rgb) / 50%);}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){padding:0.4em 0.6em;margin:calc(var(--marpit-root-font-size, 1rem) * 0.8) 0;text-align:left}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) > code{all:unset}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) > code::after{content:"";display:block;height:calc(1lh * var(--highlight-lines));position:absolute;inset:calc(1lh * var(--highlight-line-begin) - 1lh) 0 auto;background:var(--highlight-line-color);mix-blend-mode:screen}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) > code::before{content:"";display:block;height:1lh;position:absolute;inset:calc(1lh * var(--highlight-last-line) - 1lh) 0 auto;background:var(--highlight-line-color);mix-blend-mode:screen;pointer-events:none}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:calc(100cqh - 0.8em)}div#\:\$p > svg > foreignObject > section.light :is(pre, marp-pre){/*!
+<!DOCTYPE html><html lang="en"><head><title>Introduction To Shell Scripting</title><meta property="og:title" content="Introduction To Shell Scripting"><meta name="author" content="Seb Blair (CompEng0001)"><meta property="article:author" content="Seb Blair (CompEng0001)"><meta name="description" content="Lecture slides on Introduction To Shell Scripting"><meta property="og:description" content="Lecture slides on Introduction To Shell Scripting"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@keyframes marp-outgoing-transition-__builtin__fade{0%{opacity:1}to{opacity:0}}@keyframes marp-incoming-transition-__builtin__fade{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}</style><style>div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin:0.67em 0}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1920px 1080px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > section :where(*, *::before, *::after){box-sizing:border-box;margin:0;padding:0}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--black-rgb: 38 38 38;--white-rgb: 255 255 255;--navy-rgb: 1 3 60;--blue-rgb: 58 191 240;--black: rgb(var(--black-rgb));--white: rgb(var(--white-rgb));--navy: rgb(var(--navy-rgb));--blue: rgb(var(--blue-rgb));--font-sans: "DejaVu Sans Mono", "Courier New";--font-monospace: "DejaVu Sans Mono", "Courier New";--font-line-height: 1.5;--font-letter-spacing: 0.04em;font-size:32px}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--marpit-root-font-size: 32px;}div#\:\$p > svg > foreignObject > section{--background-rgb: var(--black-rgb);--background: rgb(var(--background-rgb));--foreground-rgb: var(--white-rgb);--foreground: rgb(var(--foreground-rgb));--link: var(--blue);--code-background: #0d1117;--code-foreground: #e2e7ec;width:1920px;height:1080px;padding:50px 60px 92px;background-color:var(--background);background-image:url("../../figures/bg-dark-logo.png");color:var(--foreground);font-family:var(--font-monospace);line-height:var(--font-line-height);letter-spacing:var(--font-letter-spacing);font-feature-settings:"palt" 1}div#\:\$p > svg > foreignObject > section::after{padding:0;bottom:24px;right:20px;font-size:14px;font-weight:700;text-shadow:0 0 3px var(--background);content:attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total)}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 14px;}div#\:\$p > svg > foreignObject > section :is(:is(h1, marp-h1), :is(h2, marp-h2), :is(h3, marp-h3), :is(h4, marp-h4), :is(h5, marp-h5), :is(h6, marp-h6), p, table, blockquote, :is(pre, marp-pre), ul, ol):last-child{margin-bottom:0}div#\:\$p > svg > foreignObject > section:where(.light){--background-rgb: var(--white-rgb);--foreground-rgb: var(--black-rgb);--code-background: var(--white);--code-foreground: #24292e;background-image:url("../../figures/bg-light-logo.png")}div#\:\$p > svg > foreignObject > section header, div#\:\$p > svg > foreignObject > section footer{font-size:calc(var(--marpit-root-font-size, 1rem) * 0.8);color:rgb(var(--foreground-rgb)/50%);position:absolute;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}div#\:\$p > svg > foreignObject > section header{top:20px;left:25px;right:25px}div#\:\$p > svg > foreignObject > section footer{bottom:20px;left:240px;right:240px;text-align:center}div#\:\$p > svg > foreignObject > section p{text-align:justify;text-align-last:left;display:block;margin:0 0 calc(var(--marpit-root-font-size, 1rem) * 0.6)}div#\:\$p > svg > foreignObject > section img{width:auto;height:auto}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1), div#\:\$p > svg > foreignObject > section :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section :is(h4, marp-h4), div#\:\$p > svg > foreignObject > section :is(h5, marp-h5), div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:0.5em 0 0.6em;font-weight:700;word-break:auto-phrase}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong, div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong, div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong, div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong, div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong, div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--blue);font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling), div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:100cqh}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:calc(var(--marpit-root-font-size, 1rem) * 2.1)}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:calc(var(--marpit-root-font-size, 1rem) * 1.5)}div#\:\$p > svg > foreignObject > section a{color:var(--link);text-decoration:none}div#\:\$p > svg > foreignObject > section a:hover{text-decoration:underline}div#\:\$p > svg > foreignObject > section blockquote{margin:calc(var(--marpit-root-font-size, 1rem) * 0.8) 0;background:rgb(var(--foreground-rgb)/7%);box-shadow:inset calc(var(--marpit-root-font-size, 1rem) * 0.4) 0 0 rgb(var(--foreground-rgb)/10%);border-radius:calc(var(--marpit-root-font-size, 1rem) * 0.4);padding:calc(var(--marpit-root-font-size, 1rem) * 0.4) calc(var(--marpit-root-font-size, 1rem) * 0.6) calc(var(--marpit-root-font-size, 1rem) * 0.4) calc(var(--marpit-root-font-size, 1rem) * 1);font-size:calc(var(--marpit-root-font-size, 1rem) * 0.85)}div#\:\$p > svg > foreignObject > section > :is(blockquote, ul, ol, :is(pre, marp-pre), table):first-child, div#\:\$p > svg > foreignObject > section > header:first-child + :is(blockquote, ul, ol, :is(pre, marp-pre), table){margin-top:0}div#\:\$p > svg > foreignObject > section ul, div#\:\$p > svg > foreignObject > section ol{margin:0 auto;padding:0 0 0 calc(var(--marpit-root-font-size, 1rem) * 1.2);text-align:left}div#\:\$p > svg > foreignObject > section ul > li, div#\:\$p > svg > foreignObject > section ol > li{margin:calc(var(--marpit-root-font-size, 1rem) * 0.4) 0}div#\:\$p > svg > foreignObject > section > ul, div#\:\$p > svg > foreignObject > section > ol{margin-top:calc(var(--marpit-root-font-size, 1rem) * 0.8);margin-bottom:calc(var(--marpit-root-font-size, 1rem) * 0.8)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre), div#\:\$p > svg > foreignObject > section code{background:var(--code-background);border:1px solid rgb(var(--foreground-rgb)/15%);border-radius:0.4em;border-bottom-width:0.2ex;border-right-width:0.2ex;color:var(--code-foreground);font-family:var(--font-monospace);font-variant-ligatures:none;font-size:0.75em;letter-spacing:0;line-height:1.3;padding:0.2em 0.4em;position:relative;top:-0.05em}div#\:\$p > svg > foreignObject > section code{--highlight-line-begin: 1;--highlight-lines: 0;--highlight-last-line:0;--highlight-line-color: rgb(var(--blue-rgb) / 50%);}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){padding:0.4em 0.6em;margin:calc(var(--marpit-root-font-size, 1rem) * 0.8) 0;text-align:left}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) > code{all:unset}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) > code::after{content:"";display:block;height:calc(1lh * var(--highlight-lines));position:absolute;inset:calc(1lh * var(--highlight-line-begin) - 1lh) 0 auto;background:var(--highlight-line-color);mix-blend-mode:screen}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) > code::before{content:"";display:block;height:1lh;position:absolute;inset:calc(1lh * var(--highlight-last-line) - 1lh) 0 auto;background:var(--highlight-line-color);mix-blend-mode:screen;pointer-events:none}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:calc(100cqh - 0.8em)}div#\:\$p > svg > foreignObject > section.light :is(pre, marp-pre){/*!
     Theme: GitHub
     Description: Light theme as seen on github.com
     Author: github.com
@@ -16,211 +16,136 @@
 
     Outdated base version: https://github.com/primer/github-syntax-dark
     Current colors taken from GitHub's CSS
-  */}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs{color:#c9d1d9;background:#0d1117}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-doctag, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-keyword, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-meta .hljs-keyword, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-template-tag, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-template-variable, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-type, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-variable.language_{color:#ff7b72}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-title, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-title.class_, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-title.class_.inherited__, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-title.function_{color:#d2a8ff}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-attr, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-attribute, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-literal, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-meta, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-number, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-operator, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-variable, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-attr, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-class, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-id{color:#79c0ff}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-regexp, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-string, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-meta .hljs-string{color:#a5d6ff}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-built_in, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-symbol{color:#ffa657}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-comment, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-code, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-formula{color:#8b949e}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-name, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-quote, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-tag, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-pseudo{color:#7ee787}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-subst{color:#c9d1d9}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-section{color:#1f6feb;font-weight:bold}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-bullet{color:#f2cc60}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-emphasis{color:#c9d1d9;font-style:italic}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-strong{color:#c9d1d9;font-weight:bold}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-addition{color:#aff5b4;background-color:#033a16}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-deletion{color:#ffdcd7;background-color:#67060c}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-char.escape_, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-link, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-params, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-property, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-punctuation, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-tag{}div#\:\$p > svg > foreignObject > section table{--border-color: currentcolor;--border-style: solid;border-collapse:collapse;margin:calc(var(--marpit-root-font-size, 1rem) * 0.8) auto}div#\:\$p > svg > foreignObject > section table > thead > tr > td, div#\:\$p > svg > foreignObject > section table > thead > tr > th, div#\:\$p > svg > foreignObject > section table > tbody > tr > td, div#\:\$p > svg > foreignObject > section table > tbody > tr > th{padding:0.3em 0.5em}div#\:\$p > svg > foreignObject > section table > thead:not(:has(:is(td, th):not(:empty))){display:none}div#\:\$p > svg > foreignObject > section table > thead > tr > td, div#\:\$p > svg > foreignObject > section table > thead > tr > th{border-bottom:4px var(--border-style) var(--border-color)}div#\:\$p > svg > foreignObject > section table > tbody > tr:not(:last-child) > td, div#\:\$p > svg > foreignObject > section table > tbody > tr:not(:last-child) > th{border-bottom:2px var(--border-style) var(--border-color)}div#\:\$p > svg > foreignObject > section.lead{display:flex;flex-direction:column;align-items:stretch;justify-content:center}div#\:\$p > svg > foreignObject > section.lead > :is(h1, marp-h1), div#\:\$p > svg > foreignObject > section.lead > :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section.lead > :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section.lead > :is(h4, marp-h4), div#\:\$p > svg > foreignObject > section.lead > :is(h5, marp-h5), div#\:\$p > svg > foreignObject > section.lead > :is(h6, marp-h6), div#\:\$p > svg > foreignObject > section.lead > p{text-align:center;text-align-last:center}div#\:\$p > svg > foreignObject > section.lead :is(blockquote, ul, ol, :is(pre, marp-pre), table){margin-top:0}div#\:\$p > svg > foreignObject > section img[title~=icon i]{background:transparent;height:1em;margin:0 0.05em 0 0.1em;vertical-align:-0.1em;width:1em}div#\:\$p > svg > foreignObject > section img[title~=centered i], div#\:\$p > svg > foreignObject > section .centered{display:block;margin:calc(var(--marpit-root-font-size, 1rem) * 0.8) auto;width:auto}div#\:\$p > svg > foreignObject > section .columns-2{display:flex;gap:calc(var(--marpit-root-font-size, 1rem) * 2);justify-content:space-between;align-items:flex-start}div#\:\$p > svg > foreignObject > section .columns-2 > *{flex:1;min-width:0}div#\:\$p > svg > foreignObject > section #img-right{float:right}div#\:\$p > svg > foreignObject > section img[alt~="center"]{display:block;margin:0 auto}div#\:\$p > svg > foreignObject > section table{border-collapse:collapse;font-size:22px}div#\:\$p > svg > foreignObject > section table, div#\:\$p > svg > foreignObject > section th, div#\:\$p > svg > foreignObject > section tr, div#\:\$p > svg > foreignObject > section td{border:none!important;vertical-align:middle}div#\:\$p > svg > foreignObject > section::after{content:attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
-</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="1" data-class="lead invert" data-footer="[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/main/content/Intro_To_Shell_Scripting/Intro_To_Shell_Scripting.pdf)" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="lead invert" style="--class:lead invert;--footer:[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/main/content/Intro_To_Shell_Scripting/Intro_To_Shell_Scripting.pdf);--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;">
-<h1 id="introduction-to-shell-scripting">Introduction to Shell Scripting</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>Module Code: ELEE1147
-
-Module Name: Programming for Engineers
-
-Module Leader: Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA
+  */}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs{color:#c9d1d9;background:#0d1117}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-doctag, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-keyword, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-meta .hljs-keyword, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-template-tag, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-template-variable, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-type, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-variable.language_{color:#ff7b72}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-title, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-title.class_, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-title.class_.inherited__, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-title.function_{color:#d2a8ff}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-attr, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-attribute, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-literal, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-meta, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-number, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-operator, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-variable, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-attr, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-class, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-id{color:#79c0ff}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-regexp, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-string, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-meta .hljs-string{color:#a5d6ff}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-built_in, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-symbol{color:#ffa657}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-comment, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-code, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-formula{color:#8b949e}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-name, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-quote, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-tag, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-selector-pseudo{color:#7ee787}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-subst{color:#c9d1d9}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-section{color:#1f6feb;font-weight:bold}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-bullet{color:#f2cc60}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-emphasis{color:#c9d1d9;font-style:italic}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-strong{color:#c9d1d9;font-weight:bold}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-addition{color:#aff5b4;background-color:#033a16}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-deletion{color:#ffdcd7;background-color:#67060c}div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-char.escape_, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-link, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-params, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-property, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-punctuation, div#\:\$p > svg > foreignObject > section:not(.light) :is(pre, marp-pre) .hljs-tag{}div#\:\$p > svg > foreignObject > section table{--border-color: currentcolor;--border-style: solid;border-collapse:collapse;margin:calc(var(--marpit-root-font-size, 1rem) * 0.8) auto}div#\:\$p > svg > foreignObject > section table > thead > tr > td, div#\:\$p > svg > foreignObject > section table > thead > tr > th, div#\:\$p > svg > foreignObject > section table > tbody > tr > td, div#\:\$p > svg > foreignObject > section table > tbody > tr > th{padding:0.3em 0.5em}div#\:\$p > svg > foreignObject > section table > thead:not(:has(:is(td, th):not(:empty))){display:none}div#\:\$p > svg > foreignObject > section table > thead > tr > td, div#\:\$p > svg > foreignObject > section table > thead > tr > th{border-bottom:4px var(--border-style) var(--border-color)}div#\:\$p > svg > foreignObject > section table > tbody > tr:not(:last-child) > td, div#\:\$p > svg > foreignObject > section table > tbody > tr:not(:last-child) > th{border-bottom:2px var(--border-style) var(--border-color)}div#\:\$p > svg > foreignObject > section.lead{display:flex;flex-direction:column;align-items:stretch;justify-content:center}div#\:\$p > svg > foreignObject > section.lead > :is(h1, marp-h1), div#\:\$p > svg > foreignObject > section.lead > :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section.lead > :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section.lead > :is(h4, marp-h4), div#\:\$p > svg > foreignObject > section.lead > :is(h5, marp-h5), div#\:\$p > svg > foreignObject > section.lead > :is(h6, marp-h6), div#\:\$p > svg > foreignObject > section.lead > p{text-align:center;text-align-last:center}div#\:\$p > svg > foreignObject > section.lead :is(blockquote, ul, ol, :is(pre, marp-pre), table){margin-top:0}div#\:\$p > svg > foreignObject > section img[title~=icon i]{background:transparent;height:1em;margin:0 0.05em 0 0.1em;vertical-align:-0.1em;width:1em}div#\:\$p > svg > foreignObject > section img[title~=centered i], div#\:\$p > svg > foreignObject > section .centered{display:block;margin:calc(var(--marpit-root-font-size, 1rem) * 0.8) auto;width:auto}div#\:\$p > svg > foreignObject > section .columns-2{display:flex;gap:calc(var(--marpit-root-font-size, 1rem) * 2);justify-content:space-between;align-items:flex-start}div#\:\$p > svg > foreignObject > section .columns-2 > *{flex:1;min-width:0}div#\:\$p > svg > foreignObject > section header em{font-style:normal;view-transition-name:header}div#\:\$p > svg > foreignObject > section header strong{font-weight:inherit;view-transition-name:header2}div#\:\$p > svg > foreignObject > section header:not:has(em){view-transition-name:header}div#\:\$p > svg > foreignObject > section header:not:has(strong){view-transition-name:header}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qyLmB8ek] :is(h1, marp-h1){view-transition-name:header;display:flex;align-items:center;margin:0 auto}div#\:\$p > svg > foreignObject > section[data-marpit-scope-Af1lpiII] :is(h1, marp-h1){view-transition-name:header2}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FdU2ihfF] :is(h1, marp-h1){view-transition-name:header2}div#\:\$p > svg > foreignObject > section[data-marpit-scope-3Aulk9CX] :is(h1, marp-h1){view-transition-name:header2}div#\:\$p > svg > foreignObject > section[data-marpit-scope-kY3oW3uB] :is(h1, marp-h1){view-transition-name:header2}div#\:\$p > svg > foreignObject > section[data-marpit-scope-nDXHk9rF] :is(h1, marp-h1){view-transition-name:header2}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="1" data-marpit-scope-qyLmB8ek="" data-class="lead title" data-footer="[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/main/content/Intro_To_Shell_Scripting/Intro_To_Shell_Scripting.pdf)" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead title" style="--class:lead title;--footer:[Download as a PDF](https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/main/content/Intro_To_Shell_Scripting/Intro_To_Shell_Scripting.pdf);--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<h1 id="introduction-to-shell-scripting">Introduction To Shell Scripting</h1>
+<div align=center style="font-size:76px; padding-left:300px;padding-right:300px;" >
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-py">module = Module(
+    code=<span class="hljs-string">&quot;ELEE1147&quot;</span>,
+    name=<span class="hljs-string">&quot;Programming for Engineers&quot;</span>,
+    credits=<span class="hljs-number">15</span>,
+    module_leader=<span class="hljs-string">&quot;Seb Blair BEng(H) PGCAP MIET MIHEEM FHEA&quot;</span>
+)
 </code></pre>
+</div>
 <footer><a href="https://github.com/UniOfGreenwich/ELEE1147_Lectures/raw/main/content/Intro_To_Shell_Scripting/Intro_To_Shell_Scripting.pdf">Download as a PDF</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="2" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="2" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="2" data-marpit-scope-Af1lpiII="" data-paginate="true" data-header="_Introduction To Shell Scripting_" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="2" style="--paginate:true;--header:_Introduction To Shell Scripting_;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em></header>
+<div style="padding-bottom:100px">
 <h2 id="scripting">Scripting</h2>
+</div>
+<div class="columns-2">
+<div>
 <ul>
-<li>
-<p>A series of commands within a file that is capable of being executed without being compiled, interpreted at runtime.</p>
-</li>
-<li>
-<p>Intended for automation of tasks</p>
-</li>
-<li>
-<p><strong>primitives</strong> (<code>if then else</code>,<code>case</code>,<code>for</code>,<code>while</code>, <code>until</code>, <code>function</code>,etc...)</p>
+<li>A series of commands within a file that is capable of being executed without being compiled, interpreted at runtime.</li>
+<li>Intended for automation of tasks</li>
+<li><strong>primitives</strong> (<code>if then else</code>,<code>case</code>,<code>for</code>,<code>while</code>, <code>until</code>, <code>function</code>,etc...)</li>
+</ul>
+</div>
+<div style="padding-top:70px">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh"><span class="hljs-meta">#! /usr/bin/env bash </span>
 
 :(){:|:&amp;};:
-
 </code></pre>
-<p>Do not do this.</p>
-</li>
-</ul>
-<footer>ELEE1147 | Programming for Engineers</footer>
+<p><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" data-marp-twemoji=""/> Do not do this.</p>
+</div>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="3" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="3" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="3" data-paginate="true" data-header="_Introduction To Shell Scripting_" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="3" style="--paginate:true;--header:_Introduction To Shell Scripting_;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em></header>
+<div>
 <h2 id="identifying-a-shell-script">Identifying a shell script</h2>
+</div>
+<div class="columns-2">
 <div style="font-size:26px">
 <ul>
-<li>naming convention -&gt; <code>.sh</code></li>
-<li>The first line in this file is the &quot;<strong>shebang</strong>&quot;/<strong>hashbang</strong>&quot; line.<pre is="marp-pre" data-auto-scaling="downscale-only"><code>#! /usr/bin/env bash
+<li>
+<p>naming convention -&gt; <code>.sh</code><br />
+<br /></p>
+</li>
+<li>
+<p>The first line in this file is the &quot;<strong>shebang</strong>&quot;/<strong>hashbang</strong>&quot; line.</p>
+<br />
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>#! /usr/bin/env bash
 </code></pre>
 </li>
+</ul>
+<br />
+<ul>
 <li>When you execute a file from the shell, the shell tries to run the file using the command specified on the shebang line.</li>
+</ul>
+<br />
+<ul>
 <li>The <code>!</code> is called the &quot;<em>bang</em>&quot;.  The <code>#</code> is not called the &quot;she&quot;, so sometimes the &quot;<em>shebang</em>&quot; line is also called the &quot;<em>hashbang</em>&quot;.</li>
-<li><code>#!</code> is encoded to the <strong>bytes 23 21</strong> which is the <strong>magic number</strong> of an executable script.
+</ul>
+</div>
+<div style="padding-top:180px;font-size:26px">
+<ul>
+<li><code>#!</code> is encoded to the <strong>bytes 23 21</strong> which is the <strong>magic number</strong> of an executable script.</li>
+</ul>
+<br />
 <ul>
 <li>A magic number is a sequence of bytes at the beginning of a file that allows to identify which is the type of a file, for example, a png file will always begin by the <strong>bytes 89 50 4E 47</strong></li>
 </ul>
-</li>
-</ul>
 </div>
-<footer>ELEE1147 | Programming for Engineers</footer>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="4" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="4" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="4" data-paginate="true" data-header="_Introduction To Shell Scripting_" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="4" style="--paginate:true;--header:_Introduction To Shell Scripting_;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em></header>
+<div>
 <h2 id="more-on">More on <code>#!</code></h2>
+</div>
+<div>
 <ul>
-<li>The <em>shebang</em> line was invented because scripts are not compiled, so they are not executable files, but people still want to &quot;<em>run</em>&quot; them.</li>
-<li>The shebang line specifies exactly how to run a script.
+<li>
+<p>The <em>shebang</em> line was invented because scripts are not compiled, so they are not executable files, but people still want to &quot;<em>run</em>&quot; them.<br />
+<br /></p>
+</li>
+<li>
+<p>The shebang line specifies exactly how to run a script.</p>
+<br />
 <ul>
-<li>In other words, this shebang line says that,</li>
-</ul>
+<li>
+<p>In other words, this shebang line says that:</p>
+<br />
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh">$ ./basics.py
 </code></pre>
+</li>
+</ul>
+<br />
 <ul>
 <li>the shell will actuall run <code>/usr/bin/env python basics.py</code></li>
 <li>We use <code>#!/usr/bin/env python</code></li>
@@ -228,48 +153,37 @@ section::after {
 </ul>
 </li>
 </ul>
-<footer>ELEE1147 | Programming for Engineers</footer>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="5" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="5" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
-<h2 id="task-1">Task 1.</h2>
-<div style="font-size:23px">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="5" data-marpit-scope-FdU2ihfF="" data-paginate="true" data-header="_Introduction To Shell Scripting_" data-class="lead" data-footer="https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-1--shebanghashbang" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="5" style="--paginate:true;--header:_Introduction To Shell Scripting_;--class:lead;--footer:https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-1--shebanghashbang;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em></header>
+
+<h1 id="task-1">Task 1.</h1>
+<footer><a href="https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-1--shebanghashbang">https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-1--shebanghashbang</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="6" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 1.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="6" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 1.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 1.</strong></header>
+<div class="columns-2">
+<div style="padding-top:100px">
 <p>The <code>#!</code> tells to the kernel which interpreter is to be used to run the commands present in the file. If you run a script without specifying the interpreter, the shell will spawn another instance of itself and try to run the commands in the script.</p>
+</div>
+<div style="padding-top:50px">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ nano script.sh
 </code></pre>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh"><span class="hljs-meta">#! /usr/bin/env cat</span>
@@ -285,46 +199,23 @@ VAR3=Goodbye
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ chmod +x script.sh &amp;&amp; ./script.sh
 </code></pre>
 </div>
-<footer>ELEE1147 | Programming for Engineers</footer>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="6" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="6" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="7" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 1.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="7" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 1.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 1.</strong></header>
+<div>
 <h2 id="chmod-vs-bash"><code>chmod</code> vs <code>bash</code></h2>
+</div>
+<div class="columns-2">
+<div style="padding-top:60px">
 <ul>
 <li>
 <p><code>chmod</code> change file mode bits</p>
@@ -341,51 +232,27 @@ section::after {
 </li>
 <li>
 <p><code>./script.sh</code> takes the <code>#!</code> and passes the script to the command</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code> #! /usr/bin/env cat script.sh
-
- #! /usr/bin/env bash script.sh 
-</code></pre>
 </li>
 </ul>
-<footer>ELEE1147 | Programming for Engineers</footer>
+</div>
+<div style="padding-top:300px">
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>#! /usr/bin/env cat script.sh
+
+#! /usr/bin/env bash script.sh 
+</code></pre>
+</div>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="7" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="7" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="8" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 1.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="8" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 1.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 1.</strong></header>
 <h2 id="note-of-file-permissions">Note of file permissions</h2>
 <table  style="font-size:26px">
 <tr>
@@ -419,53 +286,30 @@ section::after {
 </td>
 </tr>
 </table>
-<footer>ELEE1147 | Programming for Engineers</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="8" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="8" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="9" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 1.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="9" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 1.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 1.</strong></header>
+<div>
 <h2 id="variables">Variables</h2>
-<div style="font-size:23px">
+</div>
+<div class="columns-2">
+<div style="">
 <ul>
-<li>
-<p>Bash does not have a <strong>type system</strong>, <code>int</code>,<code>char</code>,<code>var</code>..,etc</p>
-</li>
-<li>
-<p>Bash only saves them as a string</p>
+<li>Bash does not have a <strong>type system</strong>, <code>int</code>,<code>char</code>,<code>var</code>..,etc</li>
+<li>Bash only saves them as a string</li>
+<li>We can declare variables in a Bash script. Unlike other programming languages,it can only save <code>string</code> values. Hence internally, Bash saves them as a <code>string</code></li>
+<li>To declare a variable and assign with a value, use <code>VARIABLE_NAME=VALUE</code> expression (with no spaces in between).</li>
+</ul>
+</div>
+<div style="padding-top:150px">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh">GREETING=Hi
 STATEMENT=<span class="hljs-string">&quot;my name is,&quot;</span>
 INTERROGATIVEPRONOUN1=what?
@@ -475,54 +319,20 @@ CONFUSION=huh?
 ALLITERATION=chka-chka
 NUMBER=<span class="hljs-variable">${:-default}</span>
 </code></pre>
-</li>
-<li>
-<p>We can declare variables in a Bash script. Unlike other programming languages,it can only save <code>string</code> values. Hence internally, Bash saves them as a <code>string</code></p>
-</li>
-<li>
-<p>To declare a variable and assign with a value, use <code>VARIABLE_NAME=VALUE</code> expression (with no spaces in between).</p>
-</li>
-</ul>
 </div>
-<footer>ELEE1147 | Programming for Engineers</footer>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="9" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="9" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="10" data-paginate="true" data-header="Introduction To Shell Scripting &gt; Task 1." data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="10" style="--paginate:true;--header:Introduction To Shell Scripting &gt; Task 1.;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header>Introduction To Shell Scripting &gt; Task 1.</header>
+
 <h2 id="calculations">Calculations</h2>
 <ul>
 <li>Arithmetic Expansion
@@ -546,49 +356,40 @@ U=$((<span class="hljs-variable">${Z}</span>/<span class="hljs-number">2</span>)
 </ul>
 </li>
 </ul>
-<footer>ELEE1147 | Programming for Engineers</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="10" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="10" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
-<h2 id="task-2">Task 2.</h2>
-<div style="font-size:23px">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="11" data-marpit-scope-3Aulk9CX="" data-paginate="true" data-header="Introduction To Shell Scripting" data-class="lead" data-footer="https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-2-variables" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="11" style="--paginate:true;--header:Introduction To Shell Scripting;--class:lead;--footer:https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-2-variables;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header>Introduction To Shell Scripting</header>
+
+<h1 id="task-2">Task 2.</h1>
+<footer><a href="https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-2-variables">https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-2-variables</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="12" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 2.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="12" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 2.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 2.</strong></header>
+<div class="columns-2">
+<div style="padding-top:15px">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ nano int-or-string.sh
 </code></pre>
+<br />
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ chmod +x int-or-string.sh &amp;&amp; ./int-or-string.sh
+</code></pre>
+</div>
+<div>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh"><span class="hljs-meta">#! /usr/bin/env bash</span>
 A=2334                   <span class="hljs-comment"># Integer... though still a string</span>
 <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;A = <span class="hljs-variable">${A}</span> &quot;</span>         <span class="hljs-comment"># a = 2335</span>
@@ -596,53 +397,29 @@ A=$(( <span class="hljs-variable">${A}</span> + <span class="hljs-number">1</spa
 <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;A = <span class="hljs-variable">${A}</span> &quot;</span>         <span class="hljs-comment"># a = 2335, Integer, still.</span>
 <span class="hljs-built_in">echo</span>                     <span class="hljs-comment"># new empty line</span>
 </code></pre>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ chmod +x int-or-string.sh &amp;&amp; ./int-or-string.sh
-</code></pre>
 </div>
-<footer>ELEE1147 | Programming for Engineers</footer>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="11" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="11" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="13" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 2.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="13" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 2.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 2.</strong></header>
+<div>
 <h2 id="conditionals">Conditionals</h2>
+</div>
+<div class="columns-2">
+<div style="padding-top:250px">
 <ul>
 <li>Spacing matters</li>
 </ul>
-<div style="font-size:24px">
+</div>
+<div>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh"><span class="hljs-meta">#! /usr/bin/env bash</span>
 
 <span class="hljs-keyword">if</span> [[<span class="hljs-variable">$1</span> -lt 10]];<span class="hljs-keyword">then</span> <span class="hljs-comment"># error</span>
@@ -663,129 +440,55 @@ section::after {
 <span class="hljs-keyword">fi</span>
 </code></pre>
 </div>
-<footer>ELEE1147 | Programming for Engineers</footer>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="12" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="12" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="14" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 2.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="14" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 2.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 2.</strong></header>
+<div>
 <h2 id="for-loops"><code>For</code> Loops</h2>
+</div>
+<div class="columns-2">
+<div style="padding-top:100px">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh"><span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> 1 2 3 ; <span class="hljs-keyword">do</span>
 	<span class="hljs-built_in">touch</span> foo_<span class="hljs-variable">$a</span>
 <span class="hljs-keyword">done</span>
 </code></pre>
+</div>
+<div style="padding-top:100px">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh"><span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> $( <span class="hljs-built_in">seq</span> 1 10 ) ; <span class="hljs-keyword">do</span>
 	<span class="hljs-built_in">touch</span> foo_<span class="hljs-variable">$a</span>
 <span class="hljs-keyword">done</span>
 </code></pre>
-<footer>ELEE1147 | Programming for Engineers</footer>
+</div>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="13" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="18" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://d33wubrfki0l68.cloudfront.net/27925e8bd91c9c5dbce06ed487cb799317d7a521/b5dd3/assets/images/posts/road-runner/meme.jpg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="50%" height="1080"><section id="13" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="13" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="18" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; Task 2." data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="15" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; Task 2.;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://d33wubrfki0l68.cloudfront.net/27925e8bd91c9c5dbce06ed487cb799317d7a521/b5dd3/assets/images/posts/road-runner/meme.jpg&quot;);background-size:90%;filter:drop-shadow(0 5px 10px rgba(0,0,0,.4));"></figure></div></section></foreignObject><foreignObject width="50%" height="1080"><section id="15" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; Task 2." data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="15" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; Task 2.;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<header><em>Introduction To Shell Scripting</em> &gt; Task 2.</header>
+
 <h2 id="whileuntil"><code>while</code>,<code>until</code></h2>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh">counter=1
 <span class="hljs-keyword">while</span> [ <span class="hljs-variable">$counter</span> -le 10 ]
@@ -801,64 +504,35 @@ section::after {
 ((counter++))
 <span class="hljs-keyword">done</span>
 </code></pre>
-<footer>ELEE1147 | Programming for Engineers</footer>
 </section>
-</foreignObject><foreignObject width="1920" height="1080" data-marpit-advanced-background="pseudo"><section data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="13" style="" data-marpit-pagination-total="18" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="14" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="14" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
-<h2 id="task-3">Task 3.</h2>
+</foreignObject><foreignObject width="1920" height="1080" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; Task 2." data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="15" style="" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="16" data-marpit-scope-kY3oW3uB="" data-paginate="true" data-header="Introduction To Shell Scripting" data-class="lead" data-footer="https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-3-loops" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="16" style="--paginate:true;--header:Introduction To Shell Scripting;--class:lead;--footer:https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-3-loops;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header>Introduction To Shell Scripting</header>
+
+<h1 id="task-3">Task 3.</h1>
+<footer><a href="https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-3-loops">https://uniofgreenwich.github.io/ELEE1147_Exercises/Learning_Shell/Learning_Shell.html#task-3-loops</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="17" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 3.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="17" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 3.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 3.</strong></header>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh"><span class="hljs-meta">#! /usr/bin/env bash</span>
 DIR=<span class="hljs-string">&quot;task5&quot;</span>
 
@@ -873,45 +547,17 @@ DIR=<span class="hljs-string">&quot;task5&quot;</span>
 <span class="hljs-keyword">done</span>
 
 </code></pre>
-<footer>ELEE1147 | Programming for Engineers</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="15" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="15" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="18" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 3.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="18" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 3.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 3.</strong></header>
 <h2 id="flags">Flags</h2>
 <ul>
 <li>
@@ -936,45 +582,18 @@ section::after {
 </div>
 </li>
 </ul>
-<footer>ELEE1147 | Programming for Engineers</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="16" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="16" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="19" data-paginate="true" data-header="Introduction To Shell Scripting &gt; Task 3." data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="19" style="--paginate:true;--header:Introduction To Shell Scripting &gt; Task 3.;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header>Introduction To Shell Scripting &gt; Task 3.</header>
+
 <h2 id="shell-special-parameters">Shell Special Parameters</h2>
 <ul>
 <li><code>$!</code> is used to reference the PID of the most recently executed command in background.</li>
@@ -985,47 +604,40 @@ section::after {
 <li><code>$*</code> Expands to the the positional parameters starting from one.</li>
 <li><code>&quot;$*&quot;</code> Does the same thing but creates spaces between each argument</li>
 </ul>
-<footer>ELEE1147 | Programming for Engineers</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="17" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="17" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
-<h2 id="tasks-4">Tasks 4.</h2>
-<div style="font-size:24px">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="20" data-marpit-scope-nDXHk9rF="" data-paginate="true" data-header="Introduction To Shell Scripting" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="20" style="--paginate:true;--header:Introduction To Shell Scripting;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header>Introduction To Shell Scripting</header>
+
+<h1 id="tasks-4">Tasks 4.</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="21" data-paginate="true" data-header="_Introduction To Shell Scripting_ &gt; **Task 4.**" data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="21" style="--paginate:true;--header:_Introduction To Shell Scripting_ &gt; **Task 4.**;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header><em>Introduction To Shell Scripting</em> &gt; <strong>Task 4.</strong></header>
+<div class="columns-2">
+<div style="padding-top:50px">
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ ./parameters.sh -f 'Slim Shady' -a 25 -u Marshall
+</code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh">Username : Marshall
+Age: 25
+Full Name: Slim Shady
+</code></pre>
+</div>
+<div>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh"><span class="hljs-meta">#! /usr/bin/env bash</span>
 
 <span class="hljs-keyword">while</span> <span class="hljs-built_in">getopts</span> u:a:f: flag
@@ -1038,55 +650,28 @@ section::after {
 <span class="hljs-keyword">done</span>
 <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Username: <span class="hljs-variable">$username</span>&quot;</span> <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Age: <span class="hljs-variable">$age</span>&quot;</span> <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Full Name: <span class="hljs-variable">$fullname</span>&quot;</span>
 </code></pre>
-<p><code>$ ./parameters.sh -f 'Slim Shady' -a 25 -u Marshall</code></p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh">Username : Marshall
-Age: 25
-Full Name: Slim Shady
-</code></pre>
 </div>
-<footer>ELEE1147 | Programming for Engineers</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="18" data-class="gaia" data-footer="ELEE1147 | Programming for Engineers" data-paginate="true" data-style="#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-" data-theme="vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u" lang="POSIX" class="gaia" data-marpit-pagination="18" style="--class:gaia;--footer:ELEE1147 | Programming for Engineers;--paginate:true;--style:#img-right{
-  float: right;
-}
-img[alt~=&quot;center&quot;] {
-  display: block;
-  margin: 0 auto;
-}
-table {
-  border-collapse: collapse;
-  font-size: 22px;
-}
-table, th,tr, td {
-  border: none!important;
-  vertical-align: middle;
-}
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-;--theme:vmtf0xk06exjguj6gjpdc9mky9lh90dglpe47yks4u;" data-marpit-pagination-total="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1920 1080"><foreignObject width="1920" height="1080"><section id="22" data-paginate="true" data-header="Introduction To Shell Scripting &gt; Task 5." data-class="lead" data-lang="en" data-style="header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+" data-theme="605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm" lang="en" class="lead" data-marpit-pagination="22" style="--paginate:true;--header:Introduction To Shell Scripting &gt; Task 5.;--class:lead;--lang:en;--style:header em { font-style: normal; view-transition-name: header; }
+header strong { font-weight: inherit; view-transition-name: header2; }
+header:not:has(em) { view-transition-name: header; }
+header:not:has(strong) { view-transition-name: header; }
+;--theme:605c25wboeqftqrqwi9ex7zmhtl8y9pfpx2i62p4phhm;" data-marpit-pagination-total="22" data-transition-back="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}" data-transition="{&quot;name&quot;:&quot;fade&quot;,&quot;duration&quot;:&quot;250ms&quot;,&quot;builtinFallback&quot;:true}">
+<header>Introduction To Shell Scripting &gt; Task 5.</header>
+<div>
 <h2 id="task-5-reading-from-cli">Task 5: Reading from CLI</h2>
+</div>
+<div class="columns-2">
+<div style="padding-top:150px">
 <ul>
 <li>Using the <code>stdin</code> stream by invocating <code>read</code></li>
 </ul>
+</div>
+<div>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh"><span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Enter your name:&quot;</span>
 <span class="hljs-built_in">read</span> NAME
 <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your name is:&quot;</span> <span class="hljs-variable">${NAME}</span>
@@ -1101,10 +686,11 @@ section::after {
 <span class="hljs-built_in">echo</span> <span class="hljs-variable">${WORDS[0]}</span>
 <span class="hljs-built_in">echo</span> <span class="hljs-variable">${WORDS[1]}</span>
 </code></pre>
-<footer>ELEE1147 | Programming for Engineers</footer>
+</div>
+</div>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),h=Symbol();const g=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[h]||(Object.defineProperty(window,h,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await g()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const w=Symbol(),b=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();(o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o))&&a!==HTMLElement?i||customElements.define(s,r(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[w])return e[w];const i=v({target:e}),n=()=>{i(),delete e[w]},l=Object.assign(n,{cleanup:n,update:()=>b(e)});return Object.defineProperty(e,w,{configurable:!0,value:l}),l},y=document.currentScript;b(y?y.getRootNode():document)}();
-</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>The above is actually a fork bomb. It operates by creating a function called ':', which calls itself twice, once in the foreground and once in the background. The function executes repeatedly and in doing so, consumes all the system resources resulting in a system crash.</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>- p means prompt
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>- p means prompt
 - s means sensitive
 - t timeout in seconds
 - a array</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.1.2/lib/bespoke.js.LICENSE.txt */
