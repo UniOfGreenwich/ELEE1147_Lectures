@@ -1,0 +1,555 @@
+/**
+ * @theme uog-theme
+ * @auto-scaling true
+ */
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors rgb */
+  --black-rgb: 38 38 38;
+  --white-rgb: 255 255 255;
+  --navy-rgb: 1 3 60;
+  --blue-rgb: 58 191 240;
+  /* Colors */
+  --black: rgb(var(--black-rgb));
+  --white: rgb(var(--white-rgb));
+  --navy: rgb(var(--navy-rgb));
+  --blue: rgb(var(--blue-rgb));
+  /* Fonts */
+  --font-sans: "DejaVu Sans Mono", "Courier New";
+  --font-monospace: "DejaVu Sans Mono", "Courier New";
+  --font-line-height: 1.5;
+  --font-letter-spacing: 0.04em;
+  font-size: 32px;
+}
+
+section {
+  /* Default color scheme */
+  --background-rgb: var(--black-rgb);
+  --background: rgb(var(--background-rgb));
+  --foreground-rgb: var(--white-rgb);
+  --foreground: rgb(var(--foreground-rgb));
+  --link: var(--blue);
+  --code-background: #0d1117;
+  --code-foreground: #e2e7ec;
+  width: 1920px;
+  height: 1080px;
+  padding: 50px 60px 92px;
+  background-color: var(--background);
+  background-image: url("../../figures/bg-dark-logo.png");
+  color: var(--foreground);
+  font-family: var(--font-monospace);
+  line-height: var(--font-line-height);
+  letter-spacing: var(--font-letter-spacing);
+  font-feature-settings: "palt" 1;
+  /* Variants */
+}
+section::after {
+  padding: 0;
+  bottom: 24px;
+  right: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 0 3px var(--background);
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+}
+
+section :is(h1, h2, h3, h4, h5, h6, p, table, blockquote, pre, ul, ol):last-child {
+  margin-bottom: 0;
+}
+section:where(.light) {
+  --background-rgb: var(--white-rgb);
+  --foreground-rgb: var(--black-rgb);
+  --code-background: var(--white);
+  --code-foreground: #24292e;
+  background-image: url("../../figures/bg-light-logo.png");
+}
+
+/*** Elements ***/
+header,
+footer {
+  font-size: 0.8rem;
+  color: rgb(var(--foreground-rgb)/50%);
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+header {
+  top: 20px;
+  left: 25px;
+  right: 25px;
+}
+
+footer {
+  bottom: 20px;
+  left: 240px;
+  right: 240px;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+  text-align-last: left;
+  display: block;
+  margin: 0 0 0.6rem;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0 0.6em;
+  font-weight: 700;
+  word-break: auto-phrase;
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  color: var(--blue);
+  font-weight: inherit;
+}
+h1::part(auto-scaling),
+h2::part(auto-scaling),
+h3::part(auto-scaling),
+h4::part(auto-scaling),
+h5::part(auto-scaling),
+h6::part(auto-scaling) {
+  max-height: 100cqh;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+blockquote {
+  margin: 0.8rem 0;
+  background: rgb(var(--foreground-rgb)/7%);
+  box-shadow: inset 0.4rem 0 0 rgb(var(--foreground-rgb)/10%);
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.6rem 0.4rem 1rem;
+  font-size: 0.85rem;
+}
+
+section > :is(blockquote, ul, ol, pre, table):first-child,
+section > header:first-child + :is(blockquote, ul, ol, pre, table) {
+  margin-top: 0;
+}
+
+ul,
+ol {
+  margin: 0 auto;
+  padding: 0 0 0 1.2rem;
+  text-align: left;
+}
+ul > li,
+ol > li {
+  margin: 0.4rem 0;
+}
+
+section > ul,
+section > ol {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+pre,
+code {
+  background: var(--code-background);
+  border: 1px solid rgb(var(--foreground-rgb)/15%);
+  border-radius: 0.4em;
+  border-bottom-width: 0.2ex;
+  border-right-width: 0.2ex;
+  color: var(--code-foreground);
+  font-family: var(--font-monospace);
+  font-variant-ligatures: none;
+  font-size: 0.75em;
+  letter-spacing: 0;
+  line-height: 1.3;
+  padding: 0.2em 0.4em;
+  position: relative;
+  top: -0.05em;
+}
+
+code {
+  --highlight-line-begin: 1;
+  --highlight-lines: 0;
+  --highlight-last-line:0;
+  --highlight-line-color: rgb(var(--blue-rgb) / 50%);
+}
+
+pre {
+  padding: 0.4em 0.6em;
+  margin: 0.8rem 0;
+  text-align: left;
+}
+pre > code {
+  all: unset;
+}
+pre > code::after {
+  content: "";
+  display: block;
+  height: calc(1lh * var(--highlight-lines));
+  position: absolute;
+  inset: calc(1lh * var(--highlight-line-begin) - 1lh) 0 auto;
+  background: var(--highlight-line-color);
+  mix-blend-mode: screen;
+}
+/* Single last-line highlight */
+pre > code::before {
+  content: "";
+  display: block;
+  height: 1lh;
+  position: absolute;
+  inset: calc(1lh * var(--highlight-last-line) - 1lh) 0 auto;
+  background: var(--highlight-line-color);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+pre::part(auto-scaling) {
+  max-height: calc(100cqh - 0.8em);
+}
+
+section.light pre {
+  /*!
+    Theme: GitHub
+    Description: Light theme as seen on github.com
+    Author: github.com
+    Maintainer: @Hirse
+    Updated: 2021-05-15
+
+    Outdated base version: https://github.com/primer/github-syntax-light
+    Current colors taken from GitHub's CSS
+  */
+}
+section.light pre pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+section.light pre code.hljs {
+  padding: 3px 5px;
+}
+section.light pre .hljs {
+  color: #24292e;
+  background: #ffffff;
+}
+section.light pre .hljs-doctag,
+section.light pre .hljs-keyword,
+section.light pre .hljs-meta .hljs-keyword,
+section.light pre .hljs-template-tag,
+section.light pre .hljs-template-variable,
+section.light pre .hljs-type,
+section.light pre .hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49;
+}
+section.light pre .hljs-title,
+section.light pre .hljs-title.class_,
+section.light pre .hljs-title.class_.inherited__,
+section.light pre .hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1;
+}
+section.light pre .hljs-attr,
+section.light pre .hljs-attribute,
+section.light pre .hljs-literal,
+section.light pre .hljs-meta,
+section.light pre .hljs-number,
+section.light pre .hljs-operator,
+section.light pre .hljs-variable,
+section.light pre .hljs-selector-attr,
+section.light pre .hljs-selector-class,
+section.light pre .hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5;
+}
+section.light pre .hljs-regexp,
+section.light pre .hljs-string,
+section.light pre .hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62;
+}
+section.light pre .hljs-built_in,
+section.light pre .hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209;
+}
+section.light pre .hljs-comment,
+section.light pre .hljs-code,
+section.light pre .hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d;
+}
+section.light pre .hljs-name,
+section.light pre .hljs-quote,
+section.light pre .hljs-selector-tag,
+section.light pre .hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a;
+}
+section.light pre .hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e;
+}
+section.light pre .hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold;
+}
+section.light pre .hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f;
+}
+section.light pre .hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic;
+}
+section.light pre .hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold;
+}
+section.light pre .hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4;
+}
+section.light pre .hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+section.light pre .hljs-char.escape_,
+section.light pre .hljs-link,
+section.light pre .hljs-params,
+section.light pre .hljs-property,
+section.light pre .hljs-punctuation,
+section.light pre .hljs-tag {
+  /* purposely ignored */
+}
+
+section:not(.light) pre {
+  /*!
+    Theme: GitHub Dark
+    Description: Dark theme as seen on github.com
+    Author: github.com
+    Maintainer: @Hirse
+    Updated: 2021-05-15
+
+    Outdated base version: https://github.com/primer/github-syntax-dark
+    Current colors taken from GitHub's CSS
+  */
+}
+section:not(.light) pre pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+section:not(.light) pre code.hljs {
+  padding: 3px 5px;
+}
+section:not(.light) pre .hljs {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+section:not(.light) pre .hljs-doctag,
+section:not(.light) pre .hljs-keyword,
+section:not(.light) pre .hljs-meta .hljs-keyword,
+section:not(.light) pre .hljs-template-tag,
+section:not(.light) pre .hljs-template-variable,
+section:not(.light) pre .hljs-type,
+section:not(.light) pre .hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #ff7b72;
+}
+section:not(.light) pre .hljs-title,
+section:not(.light) pre .hljs-title.class_,
+section:not(.light) pre .hljs-title.class_.inherited__,
+section:not(.light) pre .hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #d2a8ff;
+}
+section:not(.light) pre .hljs-attr,
+section:not(.light) pre .hljs-attribute,
+section:not(.light) pre .hljs-literal,
+section:not(.light) pre .hljs-meta,
+section:not(.light) pre .hljs-number,
+section:not(.light) pre .hljs-operator,
+section:not(.light) pre .hljs-variable,
+section:not(.light) pre .hljs-selector-attr,
+section:not(.light) pre .hljs-selector-class,
+section:not(.light) pre .hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #79c0ff;
+}
+section:not(.light) pre .hljs-regexp,
+section:not(.light) pre .hljs-string,
+section:not(.light) pre .hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #a5d6ff;
+}
+section:not(.light) pre .hljs-built_in,
+section:not(.light) pre .hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #ffa657;
+}
+section:not(.light) pre .hljs-comment,
+section:not(.light) pre .hljs-code,
+section:not(.light) pre .hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #8b949e;
+}
+section:not(.light) pre .hljs-name,
+section:not(.light) pre .hljs-quote,
+section:not(.light) pre .hljs-selector-tag,
+section:not(.light) pre .hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #7ee787;
+}
+section:not(.light) pre .hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #c9d1d9;
+}
+section:not(.light) pre .hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #1f6feb;
+  font-weight: bold;
+}
+section:not(.light) pre .hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #f2cc60;
+}
+section:not(.light) pre .hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #c9d1d9;
+  font-style: italic;
+}
+section:not(.light) pre .hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #c9d1d9;
+  font-weight: bold;
+}
+section:not(.light) pre .hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #aff5b4;
+  background-color: #033a16;
+}
+section:not(.light) pre .hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+section:not(.light) pre .hljs-char.escape_,
+section:not(.light) pre .hljs-link,
+section:not(.light) pre .hljs-params,
+section:not(.light) pre .hljs-property,
+section:not(.light) pre .hljs-punctuation,
+section:not(.light) pre .hljs-tag {
+  /* purposely ignored */
+}
+
+table {
+  --border-color: currentcolor;
+  --border-style: solid;
+  border-collapse: collapse;
+  margin: 0.8rem auto;
+}
+table > thead > tr > td,
+table > thead > tr > th,
+table > tbody > tr > td,
+table > tbody > tr > th {
+  padding: 0.3em 0.5em;
+}
+table > thead:not(:has(:is(td, th):not(:empty))) {
+  display: none;
+}
+table > thead > tr > td,
+table > thead > tr > th {
+  border-bottom: 4px var(--border-style) var(--border-color);
+}
+table > tbody > tr:not(:last-child) > td,
+table > tbody > tr:not(:last-child) > th {
+  border-bottom: 2px var(--border-style) var(--border-color);
+}
+
+/*** Variants ***/
+section.lead {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+section.lead > h1,
+section.lead > h2,
+section.lead > h3,
+section.lead > h4,
+section.lead > h5,
+section.lead > h6,
+section.lead > p {
+  text-align: center;
+  text-align-last: center;
+}
+section.lead :is(blockquote, ul, ol, pre, table) {
+  margin-top: 0;
+}
+
+/*** Images ***/
+img[title~=icon i] {
+  background: transparent;
+  height: 1em;
+  margin: 0 0.05em 0 0.1em;
+  vertical-align: -0.1em;
+  width: 1em;
+}
+
+img[title~=centered i],
+section .centered {
+  display: block;
+  margin: 0.8rem auto;
+  width: auto;
+}
+
+
+.columns-2 {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.columns-2 > * {
+  flex: 1;
+  min-width: 0;
+}
+
+/*# sourceMappingURL=uog-theme.css.map */

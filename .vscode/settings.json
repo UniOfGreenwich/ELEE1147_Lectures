@@ -1,0 +1,6 @@
+{
+    "markdown.marp.themes": [
+      "./themes/uog-theme.css"
+    ],
+    "markdown.marp.html": "all"
+  }
